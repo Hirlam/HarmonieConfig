@@ -401,6 +401,12 @@
                   "edkf",
                   "edmfm"
                 ],
+                "options" : {
+                  "enum_titles" : [
+                    "edkf : AROME-MF version",
+                    "edmfm : Eddy Diffusivity Mass Flux Meso scale (KNMI)"
+                  ]
+                },
                 "default": "edmfm"
               }
             }
