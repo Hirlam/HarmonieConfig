@@ -26,8 +26,13 @@
         "placeholder": "Enter datetime",
         "flatpickr": {
           "hourIncrement": 3,
-          "time_24hr": true,
-          "dateFormat": "YmdH",
+          "altInput": true,
+          "altFormat": "YmdH",
+          "allowInput" : true,
+"time_24hr": true,
+  
+          "altInput": true,
+          "altFormat": "YmdH",
           "allowInput" : true,
           "defaultHour": 0
         }
@@ -43,7 +48,8 @@
         "flatpickr": {
           "hourIncrement": 3,
           "time_24hr": true,
-          "dateFormat": "YmdH",
+          "altInput": true,
+          "altFormat": "YmdH",
           "allowInput" : true,
           "defaultHour": 0
         }
