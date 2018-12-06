@@ -1,4 +1,5 @@
 {
+  "$schema" : "https://roelstappers.github.io/harmonie2.schema.json",
   "Model Geometry": {
     "DOMAIN": "DKCOEXP",
     "TOPO_SOURCE": "gmted2010",

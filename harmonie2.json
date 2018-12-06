@@ -1,5 +1,10 @@
 {
-  "title": "Harmonie experiment configuration",
+    "theme": "bootstrap3",
+    "template": "handlebars",
+    "iconlib": "bootstrap3",
+    "schema": {
+
+  "title" : "Harmonie experiment configuration", 
   "options": {
     "disable_properties": true,
     "disable_edit_json": true,
@@ -17,37 +22,36 @@
     "Observations"
   ],
   "properties": {
-    "DTGBEG": {
-      "type": "string",
-      "format": "datetime-local",
-      "title": "DTGBEG",
-      "options": {
-        "grid_columns": 4,
-        "placeholder": "Enter datetime",
-        "flatpickr": {
-          "hourIncrement": 3,
-          "time_24hr": true,
-          "dateFormat": "YmdH",
-          "allowInput" : true,
-          "defaultHour": 0
-        }
-      }
+    "DTGBEG" : {
+       "type": "string",
+       "format": "datetime-local",
+       "title": "DTGBEG",
+       "options": {
+         "grid_columns": 4,
+         "placeholder": "Enter datetime",
+         "flatpickr": {
+           "hourIncrement": 3,
+           "time_24hr": true,
+           "dateFormat" : "YmdH",
+           "defaultHour" : 0
+         }
+       } 
+
     },
-    "DTGEND": {
-      "type": "string",
-      "format": "datetime-local",
-      "title": "DTGEND",
-      "options": {
-        "grid_columns": 4,
-        "placeholder": "Enter datetime",
-        "flatpickr": {
-          "hourIncrement": 3,
-          "time_24hr": true,
-          "dateFormat": "YmdH",
-          "allowInput" : true,
-          "defaultHour": 0
-        }
-      }
+    "DTGEND" : {
+          "type": "string",
+          "format": "datetime-local",
+          "title": "DTGEND",
+          "options": {
+            "grid_columns": 4,
+            "placeholder": "Enter datetime",
+            "flatpickr": {
+            "hourIncrement": 3,
+            "time_24hr": true,
+            "dateFormat" : "YmdH",
+            "defaultHour" : 0
+           }
+       } 
     },
     "Geometry": {
       "type": "object",
@@ -250,39 +254,27 @@
       }
     },
     "Assimilation": {
-      "type": "object",
+      "type" : "object",
       "options": {
         "disable_properties": true,
         "disable_edit_json": true,
         "disable_collapse": true
       },
-      "required": [
-        "LSMIXBC",
-        "ANAATMO"
-      ],
-      "properties": {
-        "ANAATMO": {
-          "type": "string",
-          "enum": [
-            "3DVAR",
-            "4DVAR",
-            "blending",
-            "none"
-          ],
-          "options": {
-            "hidden": true
-          }
+      "required" : ["LSMIXBC","ANAATMO"],
+      "properties" : {
+        "ANAATMO" : {
+            "type" : "string",
+            "enum" : ["3DVAR","4DVAR","blending","none"], 
+            "options" : {"hidden" : true} 
         },
-        "LSMIXBC": {
-          "type": "string",
-          "enum": [
-            "yes",
-            "no"
-          ],
-          "title": "Large scale mixing"
-        }
-      },
-      "additionalProperties": false,
+        "LSMIXBC" : {
+           "type" : "string",
+           "enum" : ["yes", "no"],
+           "title" : "Large scale mixing" 
+        } 
+
+       },
+      "additionalProperties" : false, 
       "oneOf": [
         {
           "title": "3DVAR",
@@ -295,9 +287,7 @@
               "default": "3DVAR"
             },
             "LSMIXBC": {
-              "enum": [
-                "yes"
-              ],
+              "enum" : ["yes"],
               "default": "yes"
             }
           }
@@ -305,11 +295,7 @@
         {
           "title": "4DVAR",
           "type": "object",
-          "required": [
-            "NOUTERLOOP",
-            "ILRES",
-            "TSTEP4D"
-          ],
+          "required" : ["NOUTERLOOP", "ILRES", "TSTEP4D"],
           "properties": {
             "ANAATMO": {
               "type": "string",
@@ -334,40 +320,33 @@
               "type": "string",
               "default": "2,2"
             },
-            "TSTEP4D": {
+             "TSTEP4D": {
               "type": "string",
               "default": "120,120"
             },
-            "LSMIXBC": {
-              "default": "no"
-            }
+            "LSMIXBC" : {
+               "default" : "no"
+            } 
           }
         },
         {
-          "title": "blending",
-          "properties": {
-            "ANAATMO": {
-              "default": "blending"
-            }
-          }
+          "title" : "blending",
+          "properties" : { "ANAATMO" : { "default" : "blending" }} 
         },
         {
-          "title": "none",
-          "properties": {
-            "ANAATMO": {
-              "default": "none"
-            }
-          }
+          "title" : "none",
+          "properties" : { "ANAATMO" : { "default" : "none" }}
         }
       ]
     },
     "Physics": {
-      "type": "object",
+      "type" : "object",
       "options": {
         "disable_properties": true,
         "disable_edit_json": true,
         "disable_collapse": true
       },
+      "additionalProperties" : false,
       "oneOf": [
         {
           "title": "Arome",
@@ -399,12 +378,6 @@
                 "edkf",
                 "edmfm"
               ],
-              "options": {
-                "enum_titles": [
-                  "edkf : AROME-MF version",
-                  "edmfm : Eddy Diffusivity Mass Flux Meso scale (KNMI)"
-                ]
-              },
               "default": "edmfm"
             }
           }
@@ -442,7 +415,7 @@
     "Observations": {
       "type": "object",
       "options": {
-        "collapsed": false
+        "collapsed": false 
       },
       "required": [
         "OBDIR",
@@ -477,17 +450,10 @@
         }
       }
     },
-    "EPS": {
-      "type": "object"
-    },
-    "EDA": {
-      "type": "object"
-    },
-    "Postprocessing": {
-      "type": "object"
-    },
-    "Archiving": {
-      "type": "object"
-    }
+      "EPS": {"type" : "object"},
+      "EDA": {"type" : "object"},
+      "Postprocessing": {"type" : "object"},
+      "Archiving": {"type" : "object"},
   }
+
 }
