@@ -29,7 +29,7 @@
           "altInput": true,
           "altFormat": "YmdH",
           "allowInput" : true,
-"time_24hr": true,
+          "time_24hr": true,
   
           "altInput": true,
           "altFormat": "YmdH",

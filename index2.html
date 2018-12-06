@@ -55,11 +55,13 @@
   $.getJSON("https://roelstappers.github.io/harmonie2.schema.json",getjsoncallback)  
 
   function getjsoncallback(data) {
-   var options; 
-   options.iconlib='fontawesome3';
-   options.theme='bootstrap2';
-   options.template="handlebars";
-   options.schema = data;
+    var options = {  
+            iconlib  : 'fontawesome3',
+            theme :  'bootstrap2',
+            template :'handlebars',
+            schema : data
+        };
+
     var element = document.getElementById('form');
     var editor = new JSONEditor(element, options);
   }
