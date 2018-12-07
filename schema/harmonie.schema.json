@@ -1,5 +1,5 @@
 {
-  "$id": " https://roelstappers.github.io/schema/harmonie.schema.json",
+  "$id": "https://roelstappers.github.io/schema/harmonie.schema.json",
   "title": "Harmonie experiment configuration",
   "options": {
     "disable_properties": true,
