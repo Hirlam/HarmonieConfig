@@ -14,7 +14,12 @@
     "Nesting",
     "Assimilation",
     "Physics",
-    "Observations"
+    "Surfex",
+    "Observations",
+    "EPS",
+    "EDA",
+    "Postprocessing",
+    "Archiving"
   ],
   "properties": {
     "Main": {
