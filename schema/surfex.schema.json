@@ -6,6 +6,17 @@
       "href": "https://www.umr-cnrm.fr/surfex/"
     }
   ],
+  "required": [
+    "CISBA",
+    "CSNOW",
+    "CROUGH",
+    "SURFEX_SEA_ICE",
+    "SURFEX_OUTPUT_FORMAT",
+    "NPATCH",
+    "LISBA_CANOPY",
+    "SURFEX_LAKES",
+    "MODIFY_LAKES"
+  ],
   "properties": {
     "CISBA": {
       "type": "string",
@@ -74,7 +85,7 @@
     "SURFEX_LAKES": {
       "type": "string",
       "title": "Treatment of lakes in surfex",
-      "enum:": [
+      "enum": [
         "WATFLX",
         "FLAKE"
       ],
@@ -83,7 +94,7 @@
     "MODIFY_LAKES": {
       "type": "string",
       "title": "Use Vanern/Vattern as Sea, requires new climate files",
-      "enum:": [
+      "enum": [
         "F",
         "T"
       ],
