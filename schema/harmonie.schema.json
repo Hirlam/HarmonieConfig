@@ -18,22 +18,22 @@
   ],
   "properties": {
     "Main": {
-      "$ref": "main.schema.json"
+      "$ref": "schema/main.schema.json"
     },
     "Geometry": {
-      "$ref": "geometry.schema.json"
+      "$ref": "schema/geometry.schema.json"
     },
     "Nesting": {
-      "$ref": "nesting.schema.json"
+      "$ref": "schema/nesting.schema.json"
     },
     "Assimilation": {
-      "$ref": "assimilation.schema.json"
+      "$ref": "schema/assimilation.schema.json"
     },
     "Physics": {
-      "$ref": "physics.schema.json"
+      "$ref": "schema/physics.schema.json"
     },
     "Observations": {
-      "$ref": "observations.schema.json"
+      "$ref": "schema/observations.schema.json"
     },
     "EPS": {
       "type": "object"
