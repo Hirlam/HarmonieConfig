@@ -1,25 +1,26 @@
 {
-  "Model Geometry": {
+  "$schema"  : "https://roelstappers.github.io/harmonie2.schema.json",
+  "Geometry": {
     "DOMAIN": "DKCOEXP",
-    "TOPO_SOURCE": "gmted2010",
+    "TOPO_SOURCE": "gtopo30",
     "GRID_TYPE": "LINEAR",
     "VLEV": "65"
   },
   "Nesting": {
-    "HOST_MODEL": "ifs",
-    "HOST_SURFEX": "no",
+    "HOST_MODEL": "ald",
+    "HOST_SURFEX": "yes",
     "BDSTRATEGY": "simulate_operational",
-    "BDINT": 1
+    "BDINT": 3 
   },
   "Assimilation": {
-    "ANAATMO": "3DVAR",
+    "ANAATMO": "4DVAR",
     "ANASURF": "CANARI_OI_MAIN",    
     "LSMIXBC" : "yes"
   },
   "Physics": {
     "PHYSICS": "arome",
-    "HARATU": true,
-    "MASS_FLUX_SCHEME": "edmfm"
+    "HARATU": false,
+    "MASS_FLUX_SCHEME": "edkf"
   },
   "Observations": {
     "OBDIR": "$HMDATA/observations",

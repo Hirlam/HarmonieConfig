@@ -1,0 +1,127 @@
+    "Geometry": {
+      "type": "object",
+      "options": {
+        "disable_properties": true,
+        "disable_edit_json": true,
+        "disable_collapse": true,
+        "collapsed": false
+      },
+      "required": [
+        "DOMAIN",
+        "TOPO_SOURCE",
+        "GRID_TYPE",
+        "VLEV"
+      ],
+      "properties": {
+        "DOMAIN": {
+          "type": "string",
+          "enum": [
+            "TRAINING_10",
+            "TRAINING_2.5",
+            "TRAINING_2.0",
+            "HarmEPS_1",
+            "TURKEY_2.5",
+            "CANARIAS_2.5",
+            "HMS_ALD_8",
+            "MUSC",
+            "SWEDEN_2.5",
+            "TEST_11",
+            "TEST_11_4DVAR",
+            "TEST_1",
+            "NORWAY_SOUTH_500",
+            "TEST_11_BIG",
+            "TEST_8",
+            "IRELAND150",
+            "IRELAND25",
+            "IRELAND25_090",
+            "NORWAY_POLAR",
+            "RCR_POLAR",
+            "AROME_2.5",
+            "TEST_2.5",
+            "SCANDINAVIA",
+            "SCANDINAVIA_ROTM",
+            "SCANDINAVIA_5.5",
+            "SWEDEN_NORTH",
+            "SWEDEN_SOUTH",
+            "SWEDEN_5.5",
+            "FINLAND_SOUTH",
+            "FINLAND",
+            "FRANCE_7.5",
+            "FRANCE_2.5",
+            "GLAMEPS_v0",
+            "GLAMEPSV2",
+            "NORWAY",
+            "NORWAY_2.5KM",
+            "NORWAY_4KM",
+            "NORWAY_5.5",
+            "DENMARK",
+            "DKCOEXP",
+            "DKA",
+            "NEA",
+            "IGA",
+            "GREENLAND",
+            "NARSARSUAQ",
+            "GLA",
+            "GLB",
+            "H2500",
+            "ICELAND0",
+            "ICELAND",
+            "IBERIA",
+            "IBERIA_8",
+            "IBERIA_2.5",
+            "IBERIA_2.5_30_24",
+            "IBERIAxxm_2.5",
+            "IBERIAxl_2.5",
+            "LACE",
+            "MEDITERRANEAN",
+            "NETHERLAND",
+            "METCOOP25B",
+            "METCOOP25C",
+            "AROME_ARCTIC",
+            "AROME_ARCTIC_ACCESS",
+            "LITHUANIA",
+            "TEST_OBS"
+          ],
+          "default": "DKCOEXP"
+        },
+        "TOPO_SOURCE": {
+          "type": "string",
+          "title": "Input source for orography",
+          "enum": [
+            "gmted2010",
+            "gtopo30"
+          ],
+          "default": "gmted2010"
+        },
+        "GRID_TYPE": {
+          "type": "string",
+          "title": "Type of grid",
+          "enum": [
+            "LINEAR",
+            "QUADRATIC",
+            "CUBIC"
+          ],
+          "default": "LINEAR"
+        },
+        "VLEV": {
+          "type": "string",
+          "title": "Vertical level definition",
+          "enum": [
+            "ECMWF_90",
+            "HMS_49",
+            "ECMWF_60",
+            "HIRLAM_40",
+            "HIRLAM_60",
+            "MF_60",
+            "MF_70",
+            "MF_90",
+            "40",
+            "65",
+            "Prague_87",
+            "37"
+          ],
+          "default": "65"
+        }
+      }
+    },
+    "Nesting": {
