@@ -1,12 +1,11 @@
 {
   "type": "object",
-  "links" : [ 
+  "links": [
     {
-      "rel" : "Surfex documentation",
-      "href" : "https://www.umr-cnrm.fr/surfex/"
-    },
-  
-  ], 
+      "rel": "Surfex documentation",
+      "href": "https://www.umr-cnrm.fr/surfex/"
+    }
+  ],
   "properties": {
     "CISBA": {
       "type": "string",
