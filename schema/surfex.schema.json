@@ -1,0 +1,94 @@
+{
+  "type": "object",
+  "links" : [ 
+    {
+      "rel" : "Surfex documentation",
+      "href" : "https://www.umr-cnrm.fr/surfex/"
+    },
+  
+  ], 
+  "properties": {
+    "CISBA": {
+      "type": "string",
+      "title": "ISBA scheme",
+      "enum": [
+        "3-L",
+        "2-L",
+        "DIF"
+      ],
+      "default": "3-L"
+    },
+    "CSNOW": {
+      "type": "string",
+      "title": "Snow Scheme",
+      "enum": [
+        "D95",
+        "3-L"
+      ],
+      "default": "3-L"
+    },
+    "CROUGH": {
+      "type": "string",
+      "title": "SSO scheme",
+      "enum": [
+        "NONE",
+        "Z01D",
+        "BE04"
+      ],
+      "default": "NONE"
+    },
+    "SURFEX_SEA_ICE": {
+      "type": "string",
+      "enum": [
+        "none",
+        "sice"
+      ],
+      "default": "none"
+    },
+    "SURFEX_OUTPUT_FORMAT": {
+      "type": "string",
+      "enum": [
+        "fa",
+        "lfi"
+      ],
+      "default": "fa"
+    },
+    "NPATCH": {
+      "type": "integer",
+      "title": "Number of patches over land (see also LISBA_CANOPY)",
+      "enum": [
+        1,
+        2
+      ],
+      "default": 1
+    },
+    "LISBA_CANOPY": {
+      "type": "string",
+      "title": "Activate surface boundary multi layer scheme over land",
+      "description": "Must be .FALSE. for NPATCHES>1 ",
+      "enum": [
+        ".TRUE.",
+        ".FALSE."
+      ],
+      "default": ".TRUE."
+    },
+    "SURFEX_LAKES": {
+      "type": "string",
+      "title": "Treatment of lakes in surfex",
+      "enum:": [
+        "WATFLX",
+        "FLAKE"
+      ],
+      "default": "WATFLX"
+    },
+    "MODIFY_LAKES": {
+      "type": "string",
+      "title": "Use Vanern/Vattern as Sea, requires new climate files",
+      "enum:": [
+        "F",
+        "T"
+      ],
+      "default": "F"
+    }
+  }
+}
