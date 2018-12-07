@@ -16,34 +16,36 @@
     "Physics",
     "Observations"
   ],
-  "Main": {
-    "$ref": "main.schema.json"
-  },
-  "Geometry": {
-    "$ref": "geometry.schema.json"
-  },
-  "Nesting": {
-    "$ref": "nesting.schema.json"
-  },
-  "Assimilation": {
-    "$ref": "assimilation.schema.json"
-  },
-  "Physics": {
-    "$ref": "physics.schema.json"
-  },
-  "Observations": {
-    "$ref": "observations.schema.json"
-  },
-  "EPS": {
-    "type": "object"
-  },
-  "EDA": {
-    "type": "object"
-  },
-  "Postprocessing": {
-    "type": "object"
-  },
-  "Archiving": {
-    "type": "object"
+  "properties": {
+    "Main": {
+      "$ref": "main.schema.json"
+    },
+    "Geometry": {
+      "$ref": "geometry.schema.json"
+    },
+    "Nesting": {
+      "$ref": "nesting.schema.json"
+    },
+    "Assimilation": {
+      "$ref": "assimilation.schema.json"
+    },
+    "Physics": {
+      "$ref": "physics.schema.json"
+    },
+    "Observations": {
+      "$ref": "observations.schema.json"
+    },
+    "EPS": {
+      "type": "object"
+    },
+    "EDA": {
+      "type": "object"
+    },
+    "Postprocessing": {
+      "type": "object"
+    },
+    "Archiving": {
+      "type": "object"
+    }
   }
 }
