@@ -1,0 +1,74 @@
+{
+  "type": "object",
+  "options": {
+    "disable_properties": true,
+    "disable_edit_json": true,
+    "disable_collapse": true,
+    "collapsed": false
+  },
+  "required": [
+    "HOST_MODEL",
+    "HOST_SURFEX",
+    "SURFEX_INPUT_FORMAT",
+    "BDSTRATEGY",
+    "BDINT"
+  ],
+  "properties": {
+    "HOST_MODEL": {
+      "type": "string",
+      "enum": [
+        "ifs",
+        "hir",
+        "ald",
+        "ala",
+        "aro"
+      ],
+      "default": "ifs"
+    },
+    "HOST_SURFEX": {
+      "title": "host model has run with surfex?",
+      "type": "string",
+      "enum": [
+        "yes",
+        "no"
+      ],
+      "default": "no"
+    },
+    "SURFEX_INPUT_FORMAT": {
+      "type": "string",
+      "title": "Input format for host model run with surfex",
+      "default": "lfi",
+      "enum": [
+        "fa",
+        "lfi"
+      ]
+    },
+    "BDSTRATEGY": {
+      "type": "string",
+      "enum": [
+        "available",
+        "simulate_operational",
+        "same_forecast",
+        "analysis_only",
+        "e40",
+        "era5",
+        "latest",
+        "RCR_operational"
+      ],
+      "default": "simulate_operational"
+    },
+    "BDINT": {
+      "type": "integer",
+      "description": "Boundary interval in hours",
+      "enum": [
+        1,
+        2,
+        3,
+        6,
+        12,
+        24
+      ],
+      "default": 1
+    }
+  }
+}

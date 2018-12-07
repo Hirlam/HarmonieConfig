@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "required": [
+    "OBDIR",
+    "SINGLEOBS",
+    "USE_MSG",
+    "MSG_PATH"
+  ],
+  "properties": {
+    "OBDIR": {
+      "type": "string",
+      "default": "$HMDATA/observations"
+    },
+    "SINGLEOBS": {
+      "type": "string",
+      "enum": [
+        "yes",
+        "no"
+      ],
+      "default": "no"
+    },
+    "USE_MSG": {
+      "type": "string",
+      "enum": [
+        "yes",
+        "no"
+      ],
+      "default": "no"
+    },
+    "MSG_PATH": {
+      "type": "string",
+      "default": "$SCRATCH/CLOUDS"
+    }
+  }
+}

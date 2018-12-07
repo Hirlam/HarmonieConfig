@@ -1,0 +1,112 @@
+{
+  "type": "object",
+  "options": {
+    "disable_properties": true,
+    "disable_edit_json": true,
+    "disable_collapse": true
+  },
+  "required": [
+    "LSMIXBC",
+    "ANAATMO"
+  ],
+  "properties": {
+    "ANAATMO": {
+      "type": "string",
+      "enum": [
+        "3DVAR",
+        "4DVAR",
+        "blending",
+        "none"
+      ],
+      "options": {
+        "hidden": true
+      }
+    },
+    "LSMIXBC": {
+      "type": "string",
+      "enum": [
+        "yes",
+        "no"
+      ],
+      "title": "Large scale mixing"
+    }
+  },
+  "additionalProperties": false,
+  "oneOf": [
+    {
+      "title": "3DVAR",
+      "type": "object",
+      "properties": {
+        "ANAATMO": {
+          "enum": [
+            "3DVAR"
+          ],
+          "default": "3DVAR"
+        },
+        "LSMIXBC": {
+          "enum": [
+            "yes"
+          ],
+          "default": "yes"
+        }
+      }
+    },
+    {
+      "title": "4DVAR",
+      "type": "object",
+      "required": [
+        "NOUTERLOOP",
+        "ILRES",
+        "TSTEP4D"
+      ],
+      "properties": {
+        "ANAATMO": {
+          "type": "string",
+          "enum": [
+            "4DVAR"
+          ],
+          "default": "4DVAR",
+          "options": {
+            "hidden": "true"
+          }
+        },
+        "NOUTERLOOP": {
+          "type": "integer",
+          "enum": [
+            1,
+            2,
+            3
+          ],
+          "default": 2
+        },
+        "ILRES": {
+          "type": "string",
+          "default": "2,2"
+        },
+        "TSTEP4D": {
+          "type": "string",
+          "default": "120,120"
+        },
+        "LSMIXBC": {
+          "default": "no"
+        }
+      }
+    },
+    {
+      "title": "blending",
+      "properties": {
+        "ANAATMO": {
+          "default": "blending"
+        }
+      }
+    },
+    {
+      "title": "none",
+      "properties": {
+        "ANAATMO": {
+          "default": "none"
+        }
+      }
+    }
+  ]
+}
