@@ -52,11 +52,16 @@
     return ts ? new Date(ts * 1000) : 'empty';
   });
 
-  $.getJSON("https://roelstappers.github.io/harmonie.schema.json",getjsoncallback)  
+  $.getJSON("https://roelstappers.github.io/harmonie2.schema.json",getjsoncallback)  
 
-  function getjsoncallback(options) { 
-   options.iconlib='fontawesome3';
-   options.theme='bootstrap2'; 
+  function getjsoncallback(data) {
+    var options = {  
+            iconlib  : 'bootstrap3',
+            theme :  'bootstrap3',
+            template :'handlebars',
+            schema : data
+        };
+
     var element = document.getElementById('form');
     var editor = new JSONEditor(element, options);
   }
