@@ -1,5 +1,5 @@
 {
-  "$id" : " https://roelstappers.github.io/harmonie2.schema.json",
+  "$id": " https://roelstappers.github.io/harmonie2.schema.json",
   "title": "Harmonie experiment configuration",
   "options": {
     "disable_properties": true,
@@ -7,81 +7,43 @@
     "disable_collapse": true
   },
   "format": "categories",
-  "basicCategoryTitle": "Main",
   "type": "object",
   "required": [
-    "DTGBEG",
+    "Main",
     "Geometry",
     "Nesting",
     "Assimilation",
     "Physics",
     "Observations"
   ],
-  "properties": {
-    "DTGBEG": {
-      "type": "string",
-      "format": "datetime-local",
-      "title": "DTGBEG",
-      "options": {
-        "grid_columns": 4,
-        "placeholder": "Enter datetime",
-        "flatpickr": {
-          "hourIncrement": 3,
-          "altInput": true,
-          "altFormat": "YmdH",
-          "allowInput" : true,
-          "time_24hr": true,
-  
-          "altInput": true,
-          "altFormat": "YmdH",
-          "allowInput" : true,
-          "defaultHour": 0
-        }
-      }
-    },
-    "DTGEND": {
-      "type": "string",
-      "format": "datetime-local",
-      "title": "DTGEND",
-      "options": {
-        "grid_columns": 4,
-        "placeholder": "Enter datetime",
-        "flatpickr": {
-          "hourIncrement": 3,
-          "time_24hr": true,
-          "altInput": true,
-          "altFormat": "YmdH",
-          "allowInput" : true,
-          "defaultHour": 0
-        }
-      }
-    },
-    "Geometry": {
-      "$ref" : "geometry.schema.json"
-    },
-    "Nesting": {
-      "$ref" : "nesting.schema.json"
-    },
-    "Assimilation": {
-      "$ref" : "assimilation.schema.json"
-    },
-    "Physics": {
-      "$ref" : "physics.schema.json"
-    },
-    "Observations": {
-      "$ref" : "observations.schema.json"
-    },
-    "EPS": {
-      "type": "object"
-    },
-    "EDA": {
-      "type": "object"
-    },
-    "Postprocessing": {
-      "type": "object"
-    },
-    "Archiving": {
-      "type": "object"
-    }
+  "Main": {
+    "$ref": "main.schema.json"
+  },
+  "Geometry": {
+    "$ref": "geometry.schema.json"
+  },
+  "Nesting": {
+    "$ref": "nesting.schema.json"
+  },
+  "Assimilation": {
+    "$ref": "assimilation.schema.json"
+  },
+  "Physics": {
+    "$ref": "physics.schema.json"
+  },
+  "Observations": {
+    "$ref": "observations.schema.json"
+  },
+  "EPS": {
+    "type": "object"
+  },
+  "EDA": {
+    "type": "object"
+  },
+  "Postprocessing": {
+    "type": "object"
+  },
+  "Archiving": {
+    "type": "object"
   }
 }
