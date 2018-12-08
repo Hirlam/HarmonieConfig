@@ -39,12 +39,26 @@
     },
     "CROUGH": {
       "type": "string",
-      "title": "SSO scheme",
+      "title": "type of orographic roughness length",
+      "links": [
+        {
+         "rel": "CROUGH Surfex documentation",
+         "href": "http://www.umr-cnrm.fr/surfex/spip.php?article126"
+        }
+      ],
       "enum": [
         "NONE",
         "Z01D",
         "BE04"
       ],
+      "options" : {
+        "enum_titles" : [ 
+            "NONE | no orographic treatment",
+            "Z01D | orographic roughness length does not depend on wind direction",
+            "BE04 | Beljaars 2004 orographic drag"
+        ]
+      },
+
       "default": "NONE"
     },
     "SURFEX_SEA_ICE": {
