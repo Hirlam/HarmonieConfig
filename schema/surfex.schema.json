@@ -15,7 +15,8 @@
     "NPATCH",
     "LISBA_CANOPY",
     "SURFEX_LAKES",
-    "MODIFY_LAKES"
+    "MODIFY_LAKES",
+    "NAM_TEB"
   ],
   "properties": {
     "CISBA": {
@@ -113,6 +114,10 @@
         "T"
       ],
       "default": "F"
+    },
+    "NAM_TEB" : { 
+       "$ref" : "https://roelstappers.github.io/schema/surfex/nam_teb.schema.json"
     }
+
   }
 }

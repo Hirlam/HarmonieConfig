@@ -37,18 +37,13 @@
     "Physics": {
       "$ref": "https://roelstappers.github.io/schema/physics.schema.json"
     },
-
     "Surfex": {
       "$ref": "https://roelstappers.github.io/schema/surfex.schema.json"
     },
-
     "Observations": {
       "$ref": "https://roelstappers.github.io/schema/observations.schema.json"
     },
     "EPS": {
-      "type": "object"
-    },
-    "EDA": {
       "type": "object"
     },
     "Postprocessing": {

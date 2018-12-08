@@ -1,0 +1,70 @@
+{
+  "type": "object",
+  "title": "NAM_TEB",
+  "options": {
+        "collapsed": true
+  },
+  "properties" : { 
+    "NROAD_LAYER": {
+      "type": "integer",
+      "description" : "number of layers in roads", 
+      "default": 5
+    },
+    "NROOF_LAYER": {
+      "type": "integer",
+      "default": 5
+    },
+    "NWALL_LAYER": {
+      "type": "integer",
+      "default": 5
+    },
+    "NFLOOR_LAYER": {
+      "type": "integer",
+      "default": 5
+    },
+    "NTEB_PATCH": {
+      "type": "integer",
+      "default": 1
+    },
+    "CBEM": {
+      "type": "string",
+      "enum": [
+        "DEF",
+        "BEM"
+      ],
+      "default": "DEF"
+    },
+    "CCOOL_COIL": {
+      "type": "string",
+      "enum": [
+        "IDEAL ",
+        "'DXCOIL"
+      ],
+      "default": "IDEAL "
+    },
+    "CHEAT_COIL": {
+      "type": "string",
+      "enum": [
+        "IDEAL ",
+        "FINCAP"
+      ],
+      "default": "IDEAL "
+    },
+    "LAUTOSIZE": {
+      "type": "boolean",
+      "default": false
+    },
+    "LGREENROOF": {
+      "type": "boolean",
+      "default": false
+    },
+    "LHYDRO": {
+      "type": "boolean",
+      "default": false
+    },
+    "LSOLAR_PANEL": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
