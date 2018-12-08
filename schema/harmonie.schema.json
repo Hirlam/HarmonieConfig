@@ -3,7 +3,7 @@
   "title": "Harmonie experiment configuration",
   "options": {
     "disable_properties": true,
-    "disable_edit_json": true,
+    "disable_edit_json": false,
     "disable_collapse": true
   },
   "format": "categories",
