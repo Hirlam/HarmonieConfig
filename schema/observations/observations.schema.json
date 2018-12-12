@@ -30,6 +30,10 @@
     "MSG_PATH": {
       "type": "string",
       "default": "$SCRATCH/CLOUDS"
+    },
+    "LISTE_LOC"  : { 
+       "href" : "liste_loc.schema.json"
+
     }
   }
 }
