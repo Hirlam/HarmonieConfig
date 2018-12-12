@@ -30,7 +30,7 @@
         "default": "E"
       },
       "obstype": {
-        "ref" : "obstype.schema.json"
+        "$ref" : "obstype.schema.json"
       },
       "codetype": {
         "type": "integer",
