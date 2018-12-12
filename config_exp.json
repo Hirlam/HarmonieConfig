@@ -10,7 +10,8 @@
     "HOST_MODEL": "ald",
     "HOST_SURFEX": "yes",
     "BDSTRATEGY": "simulate_operational",
-    "BDINT": 3 
+    "BDINT": 5,
+    "SURFEX_INPUT_FORMAT": "fa"
   },
   "Assimilation": {
     "ANAATMO": "4DVAR",
@@ -27,5 +28,7 @@
     "SINGLEOBS": "no",
     "USE_MSG": "no",
     "MSG_PATH": "$SCRATCH/CLOUDS"
-  }
+  },
+  "Surfex": {"CISBA": "3-L"}
+
 }

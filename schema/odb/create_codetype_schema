@@ -1,0 +1,23 @@
+
+
+var=$1
+
+#var is one of 
+# reporttype
+# subtype
+# obstype
+# satobkind
+# etc. 
+
+
+
+names=$(wget -qO- https://apps.ecmwf.int/odbgov/$var.json/ | jq .data[][1])
+numbers=$(wget -qO- https://apps.ecmwf.int/odbgov/$var.json/ | jq .data[][0])
+
+jq -n --arg names "$names" '{"enum_titles": $names}'
+
+#echo $codetypenumbers
+#echo "\"enum_title\" : $codetypenames"
+
+
+
