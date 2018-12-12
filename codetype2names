@@ -1,1 +1,0 @@
-jq .data[][1] codetype.json
