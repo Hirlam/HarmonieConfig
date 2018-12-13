@@ -6,10 +6,10 @@
   ],
   "properties": {
     "DTGBEG": {
-      "ref": "date.schema.json"
+      "$ref": "date.schema.json"
     },
     "DTGEND": {
-      "ref": "date.schema.json"
+      "$ref": "date.schema.json"
     },
     "GITBRANCH" : { 
       "type" : "string",
@@ -22,6 +22,15 @@
       "description" : "Recipient(s) to send mail to when a task aborts",
       "format" : "email",
       "pattern" : "^[a-z0-9]+(\\.[_a-z0-9]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,15})$"
-    }
+    },
+    "Paths" : {
+      "$ref" : "paths.schema.json"
+    },
+    "Config" : {
+      "$ref" : "config.schema.json"
+    },
+    "hostdescriptions" : {
+      "$ref" : "hostdescriptions.schema.json"
+    } 
   }
 }

@@ -1,5 +1,5 @@
 {
-  "$schema"  : "https://roelstappers.github.io/schema/harmonie.schema.json",
+  "$schema"  : "https://roelstappers.github.io/harmonie.schema.json",
   "Geometry": {
     "DOMAIN": "DKCOEXP",
     "TOPO_SOURCE": "gtopo30",

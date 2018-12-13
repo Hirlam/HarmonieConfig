@@ -1,0 +1,56 @@
+{
+  "type": "object",
+  "options" : {
+    "collapsed" : "true"
+  },
+  "required": [
+    "HM_DATA0",
+    "HM_LIB0",
+    "HM_DATA1",
+    "HM_LIB1",
+    "DTGBEG",
+    "DTGEND",
+    "BUILD",
+    "PLAYFILE"
+  ],
+  "properties": {
+    "HM_DATA0": {
+      "type": "string"
+    },
+    "HM_LIB0": {
+      "type": "string"
+    },
+    "HM_DATA1": {
+      "type": "string"
+    },
+    "HM_LIB1": {
+      "type": "string"
+    },
+    "DTGBEG": {
+      "type": "string"
+    },
+    "DTGEND": {
+      "type": "string"
+    },
+    "HM_REV": {
+      "type": "string"
+    },
+    "HM_WD": {
+      "type": "string"
+    },
+    "BUILD": {
+      "type": "string",
+      "enum": [
+        "yes",
+        "no"
+      ]
+    },
+    "PLAYFILE": {
+      "type": "string",
+      "enum": [
+        "harmonie"
+      ],
+      "default": "harmonie"
+    }
+  }
+}

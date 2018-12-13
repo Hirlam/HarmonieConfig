@@ -11,6 +11,9 @@
     "GSIZE"
   ],
   "properties": {
+    "TSTEP" : {
+      "type" : "integer"
+    },
     "NLON": {
       "type": "integer"
     },
@@ -30,13 +33,14 @@
       "type": "number"
     },
     "GSIZE": {
-      "type": "number"
+      "type": "number",
+      "title" : "Grid size in meters" 
     }
   },
   "enum": [
     {
       "NAME": "TRAINING_10",
-      "TSTEP": 240,
+      "TSTEP":  240,
       "NLON": 150,
       "NLAT": "150",
       "LONC": "14.8",
@@ -755,7 +759,7 @@
       "LON0": -25,
       "LAT0": 77.5,
       "GSIZE": 2500,
-      "GRID_TYPE": "INEAR"
+      "GRID_TYPE": "LINEAR"
     },
     {
       "NAME": "AROME_ARCTIC_ACCESS",

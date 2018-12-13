@@ -1,0 +1,235 @@
+#
+# HARMONIE system configuration for ecgb and cca
+#
+
+# 1.  Identify and describe your system
+
+export COMPCENTRE
+COMPCENTRE=ECMWF		# computer centre
+
+# 1.0 define hosts and the location of this file on each host
+
+# lvfs: large volatile file system, should be fast
+   HOST0=`uname -n` export HOST0
+   SMSHOST=${SMSHOST-$HOST0}       # default is to run on HOST0
+
+# at ECMWF, define second, compute host:
+   hostc=cca-batch			# compute host
+   HOST1=$hostc export HOST1
+   HOST_INSTALL=0:1		# : separated list of hosts where the system will be needed
+
+# lvfs on the different hosts: replace 'home' in $HOME by ... see also below
+   lvfshost0=`echo $HOME | sed "s.home.scratch."`
+   lvfshost1=`echo $HOME | sed "s.home.scratch."`
+export HOST_INSTALL
+
+SMSHOST=${SMSHOST-$HOST0}	# default is to run on HOST0
+
+# 1.1 Location of archive directory
+
+export HM_ARC		# mass storage system. Access by script Access_lpfs
+HM_ARC=`perl -e '$_="'$HOME'"; s~^/.*/~/~; print $_, "/harmonie"'`
+
+# 2.  Set HARMONIE variables
+
+# 2.1 Climate and satellite coefficient data directories
+
+export HM_CLDATA E923_DATA_PATH PGD_DATA_PATH GMTED2010_DATA_PATH 
+
+HM_CLDATA=/project/hirlam/harmonie/climate
+E923_DATA_PATH=$HM_CLDATA/E923_DATA/43h2.1
+PGD_DATA_PATH=$HM_CLDATA/PGD
+GMTED2010_DATA_PATH=$HM_CLDATA/GMTED2010 # Hires DEM
+
+export HM_SAT_CONST
+HM_SAT_CONST=/project/hirlam/harmonie/sat_const/cy38h1.2  # Satellite const directory
+
+
+# 2.3 Experiment identifier and directories
+
+export HM_DATA HM_EXP HM_LIB HM_CMODS PARCH
+export HARMONIE_CONFIG
+
+EXP=${EXP?"Give 'experiment' identifier EXP before running this script"}
+
+export SCHEDULER=${SCHEDULER-ECFLOW}
+export ECFLOWUI=${ECFLOWUI-ecflowview}
+
+export MAKEUP=${MAKEUP-yes}                    # Use makeup build?
+if [[ $HOST0 =~ ecgb ]] && [[ $SMSHOST =~ ecgb ]] ; then
+
+  # Load appropriate modules for ecgb
+  source /usr/local/apps/module/init/bash
+
+  module purge
+  module load version/3.2.10
+  module load verbose/true
+  module load ecmwf/1.0
+  module unload gnu
+  module load gnu/7.3.0
+  module load ecflow/4.7.1
+  module load subversion/1.8.9
+  module load gdal/1.11.1
+  module load netcdf4/4.4.1
+
+  HM_DATA=$lvfshost0/hm_home/$EXP	# HM_DATA on main HARMONIE host
+  HM_LIB=$HM_DATA/lib
+  #HM_LIB=$PERM/build_harmonie/$EXP/lib		        # Directory for scripts, compiled objects, executables
+  PARCH=/hpc$PERM/HARMONIE/archive/$EXP
+  HARMONIE_CONFIG=ecgb			    # GNU-make (FFLAGS, etc)
+
+else
+
+  HM_DATA=$lvfshost1/hm_home/$EXP	# HM_DATA on host HOST1
+  HM_LIB=$HM_DATA/lib		        # Directory for scripts, compiled objects, executables
+  #HM_LIB=$PERM/build_harmonie/$EXP/lib
+  PARCH=$PERM/HARMONIE/archive/$EXP
+
+  HARMONIE_CONFIG=cca
+  export HM_CS=${HM_CS-gnu}				# compiling system
+  HARMONIE_CONFIG=${HARMONIE_CONFIG}.${HM_CS}
+
+  # Load appropriate modules for cca 
+  [[ -s $HM_LIB/config-sh/choose_PrgEnv.cca ]] && \
+  source $HM_LIB/config-sh/choose_PrgEnv.cca ${HM_CS}
+
+  # Set fortran version
+  export LIBFRT=$HM_CS
+
+  # Fewer warnings from Makeup_configure
+  export CPP="cpp -w"
+
+fi
+
+export PRECOMPILED=
+# Set MAKE_OWN_PRECOMPILED=yes if you want to make your own pre-compiled binaries.
+# These will be placed in $PRECOMPILED. If $PRECOMPILED already exists, HARMONIE will be 
+# built on top of PRECOMPILED's compiled binaries.
+export MAKE_OWN_PRECOMPILED=no
+
+HM_EXP=$HM_ARC/$EXP		# experiment archive directory in LPFS
+HM_CMODS=/hm_common_mods	# user modifications to all experiments, in FPFS
+# Disable the re-location of the build until the makeup recompilation/rsync is solved
+export MAKEUP_BUILD_DIR=$HM_LIB
+
+
+# Disk cleaning levels. See SaniDisk.pl for the options and settings
+export CLEANING_LEVEL=fast
+
+
+# Add HARMONIE to the path
+export PATH
+PATH=/ms_perm/hirlam/local/bin:$HM_LIB/scr:$HM_LIB/$HARMONIE_CONFIG/bin:$HM_DATA/bin:$HM_LIB/msms:$HM_LIB:$PATH
+
+# BUFR
+export BUFR_TABLES=$HM_LIB/util/auxlibs/bufr_405/bufrtables/	# directory with BUFR tables
+
+# 4. Utilities
+
+# 4.1 for the main unix platform
+
+export MAKE MKDIR RSH RCP RSYNC
+MAKE=gmake
+MKDIR="mkdir -p"
+RSH=ssh
+RCP=scp
+RSYNC="rsync -e $RSH"
+
+# Fewer warnings from Makeup_configure 
+export CPP="cpp -w" 
+
+export CDP
+CDP=${CDP-$HM_LIB/msms/sms_cdp}
+
+export PERL_TK		# Perl with Tk
+PERL_TK=perl
+
+export SMSTASKMAX
+SMSTASKMAX=20
+
+# 6.5 mini-SMS
+
+export PERLTKDIR		# the directory of the Perl-Tk toolkit
+PERLTKDIR=
+
+# JOBOUTDIR, as known on ecgate
+export JOBOUTDIR		# directory of job stdout/stderr files
+JOBOUTDIR=`echo $HOME | sed "s/home/hpc\/perm/"`/HARMONIE
+
+# How to send signals from tasks to scheduler
+export mSMS_SIGNAL_TRANSPORT    # "http" or "file"
+mSMS_SIGNAL_TRANSPORT=http
+
+# SMSFLAGDIR, as known on ecgate (ignored if http transport)
+export SMSFLAGDIR		# directory of mSMS semaphore files
+SMSFLAGDIR=`echo $HOME | sed "s/home/hpc\/perm/"`/HARMONIE/$EXP
+
+# SMSFLAGDIR, as known on cca (ignored if http transport)
+export SMSFLAGDIRH1		# directory of mSMS semaphore files
+SMSFLAGDIRH1=`echo $HOME | sed "s/home/perm/"`/HARMONIE/$EXP
+
+export COLLECTLOG_SLEEP=10
+
+# GDAL Python library
+
+export LD_LIBRARY_PATH=/usr/local/apps/gdal/1.11.1/lib:$LD_LIBRARY_PATH
+export PYTHONPATH=/usr/local/apps/gdal/1.11.1/lib64/python2.6/site-packages:$PYTHONPATH
+
+# 6.6 ECCODES
+
+export ECCODES_DEFINITION_PATH=$HM_LIB/util/gl_grib_api/definitions:$ECCODES_DIR/share/eccodes/definitions
+export MAKEUP_BUILD_GRIB_API_FLAG=""
+
+
+
+# 6.8 GMKPACK
+
+export GMKROOT=$HM_LIB/util/gmkpack
+export ROOTPACK=/scratch/ms/spsehlam/hlam/common_rootpack
+export GMKFILE=XC30.$HARMONIE_CONFIG
+export GMKTMP=$HM_DATA/gmktmp
+export PATH=.:$GMKROOT/util:$PATH
+export HOMEPACK=$HM_LIB
+export HOMEBIN=$HM_LIB
+export AUXLIBS=/project/hirlam/harmonie/auxlibs/gnu/40h1
+
+# 6.9 GRIBEX
+
+export LOCAL_DEFINITION_TEMPLATES=$HM_LIB/util/auxlibs/gribex_000370/gribtemplates
+export ECMWF_LOCAL_TABLE_PATH=$HM_LIB/util/auxlibs/gribex_000370/gribtables
+
+# 8.  Derived environment variables
+
+# 9.  Obsolescing
+
+export HM_COMDAT
+HM_COMDAT=$HM_DATA/..
+
+# Directories to exclude when rsync the repository
+# leave empty to keep svn functionallity
+export RSYNC_EXCLUDE="--exclude=.svn --exclude=Precompiled --exclude=ecgate/ --exclude=ecgb/ --exclude=$HM_REV/config-sh/hm_rev"
+export SVN=svn
+
+#export PERM=/perm/ms/$GROUP/$USER
+
+# Run mSMS as a batch job
+export QSUB=yes 
+
+# MARS
+export MARS_MULTITARGET_STRICT_FORMAT=1
+
+#MPI
+#export MP_SHARED_MEMORY=no
+
+# DrHook stuff
+export DR_HOOK=${DR_HOOK-1}
+if [ $DR_HOOK -eq 1 ]; then
+  export DR_HOOK_SHOW_PROCESS_OPTIONS=0
+##  export DR_HOOK_OPT=prof
+##  export DR_HOOK_PROFILE=drhook.prof.%d
+else
+  export DR_HOOK_INIT_SIGNALS=0
+fi
+
+# Reduce amount of useless zeros at end
+export EC_PROFILE_HEAP=0

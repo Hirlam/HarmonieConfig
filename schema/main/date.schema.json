@@ -1,7 +1,6 @@
 {
   "type": "string",
   "format": "datetime-local",
-  "title": "DTGBEG",
   "options": {
     "grid_columns": 4,
     "placeholder": "Enter datetime",
