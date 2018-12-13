@@ -116,7 +116,7 @@
       "default": "F"
     },
     "NAM_TEB" : { 
-       "$ref" : "https://roelstappers.github.io/schema/surfex/nam_teb.schema.json"
+       "$ref" : "nam_teb.schema.json"
     }
 
   }

@@ -1,0 +1,17 @@
+{
+  "type": "string",
+  "format": "datetime-local",
+  "title": "DTGBEG",
+  "options": {
+    "grid_columns": 4,
+    "placeholder": "Enter datetime",
+    "flatpickr": {
+      "hourIncrement": 3,
+      "altInput": true,
+      "altFormat": "YmdH",
+      "allowInput": true,
+      "time_24hr": true,
+      "defaultHour": 0
+    }
+  }
+}

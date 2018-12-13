@@ -6,41 +6,21 @@
   ],
   "properties": {
     "DTGBEG": {
-      "type": "string",
-      "format": "datetime-local",
-      "title": "DTGBEG",
-      "options": {
-        "grid_columns": 4,
-        "placeholder": "Enter datetime",
-        "flatpickr": {
-          "hourIncrement": 3,
-          "altInput": true,
-          "altFormat": "YmdH",
-          "allowInput" : true,
-          "time_24hr": true,
-          "altInput": true,
-          "altFormat": "YmdH",
-          "allowInput" : true,
-          "defaultHour": 0
-        }
-      }
+      "ref": "date.schema.json"
     },
     "DTGEND": {
-      "type": "string",
-      "format": "datetime-local",
-      "title": "DTGEND",
-      "options": {
-        "grid_columns": 4,
-        "placeholder": "Enter datetime",
-        "flatpickr": {
-          "hourIncrement": 3,
-          "time_24hr": true,
-          "altInput": true,
-          "altFormat": "YmdH",
-          "allowInput" : true,
-          "defaultHour": 0
-        }
-      }
+      "ref": "date.schema.json"
+    },
+    "GITBRANCH" : { 
+      "type" : "string",
+      "format" : "url",
+      "default" : "git.hirlam.org/<username>/<branch>"
+    },
+    "MAIL_ON_ABORT" : {
+      "type" : "string",
+      "title" : "email",
+      "description" : "Recipient(s) to send mail to when a task aborts",
+      "format" : "email" 
     }
   }
 }

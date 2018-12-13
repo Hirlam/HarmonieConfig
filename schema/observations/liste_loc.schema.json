@@ -1,7 +1,7 @@
 {
   "type": "array",
   "format": "tabs",
-  "title": "LIST_LOC",
+  "description" : "This is not working properly yet but kept here to not forget about it",
   "uniqueItems": true,
   "items": {
     "type": "object",

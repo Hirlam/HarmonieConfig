@@ -1,10 +1,7 @@
 {
   "type": "object",
   "options": {
-    "disable_properties": true,
-    "disable_edit_json": true,
     "disable_collapse": true,
-    "collapsed": false
   },
   "required": [
     "HOST_MODEL",
