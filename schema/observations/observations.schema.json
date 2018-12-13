@@ -7,6 +7,74 @@
     "MSG_PATH"
   ],
   "properties": {
+    "SYNOP_OBS": {
+      "type": "integer",
+      "enum": [
+        0,
+        1
+      ],
+      "default": 1
+    },
+    "MODESEHS_OBS": {
+      "type": "integer",
+      "descriptin": "Mode-S EHS",
+      "enum": [
+        0,
+        1
+      ],
+      "default": 0
+    },
+    "AIRCRAFT_OBS": {
+      "type": "integer",
+      "description": "AMDAR, AIREP, ACARS",
+      "enum": [
+        0,
+        1
+      ],
+      "default": 1
+    },
+    "BOUY_OBS": {
+      "type": "integer",
+      "enum": [
+        0,
+        1
+      ],
+      "default": 1
+    },
+    "TEMP_OBS": {
+      "type": "integer",
+      "description": "TEMP, TEMPSHIP",
+      "enum": [
+        0,
+        1
+      ],
+      "default": 1
+    },
+    "PILOT_OBS": {
+      "type": "integer",
+      "description": "Pilot, Europrofiler",
+      "enum": [
+        0,
+        1
+      ],
+      "default": 1
+    },
+    "GNSS_OBS": {
+      "type": "integer",
+      "enum": [
+        0,
+        1
+      ],
+      "default": 0
+    },
+    "SGNSS_OBS": {
+      "type": "integer",
+      "enum": [
+        0,
+        1
+      ],
+      "default": 0
+    },
     "OBDIR": {
       "type": "string",
       "default": "$HMDATA/observations"
@@ -31,9 +99,8 @@
       "type": "string",
       "default": "$SCRATCH/CLOUDS"
     },
-    "LISTE_LOC"  : { 
-       "$ref" : "liste_loc.schema.json"
-
+    "LISTE_LOC": {
+      "$ref": "liste_loc.schema.json"
     }
   }
 }
