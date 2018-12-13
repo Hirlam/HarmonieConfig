@@ -1,7 +1,7 @@
 {
   "type": "object",
   "options": {
-    "disable_collapse": true,
+    "disable_collapse": true
   },
   "required": [
     "HOST_MODEL",
