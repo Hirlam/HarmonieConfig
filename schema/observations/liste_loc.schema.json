@@ -1,7 +1,7 @@
 {
   "type": "array",
   "format": "tabs",
-  "description" : "This is not working properly yet but kept here to not forget about it",
+  "description" : "This needs more work. Included here as an example",
   "uniqueItems": true,
   "items": {
     "type": "object",

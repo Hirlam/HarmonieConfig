@@ -17,11 +17,7 @@
       "default" : "git.hirlam.org/<username>/<branch>"
     },
     "MAIL_ON_ABORT" : {
-      "type" : "string",
-      "title" : "email",
-      "description" : "Recipient(s) to send mail to when a task aborts",
-      "format" : "email",
-      "pattern" : "^[a-z0-9]+(\\.[_a-z0-9]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,15})$"
+      "$ref" : "emails.schema.json"
     },
     "Paths" : {
       "$ref" : "paths.schema.json"
