@@ -25,22 +25,22 @@
       "$ref": "schema/main/main.schema.json"
     },
     "Geometry": {
-      "$ref": "https://roelstappers.github.io/schema/geometry/geometry.schema.json"
+      "$ref": "schema/geometry/geometry.schema.json"
     },
     "Nesting": {
-      "$ref": "https://roelstappers.github.io/schema/nesting/nesting.schema.json"
+      "$ref": "schema/nesting/nesting.schema.json"
     },
     "Assimilation": {
-      "$ref": "https://roelstappers.github.io/schema/assimilation/assimilation.schema.json"
+      "$ref": "schema/assimilation/assimilation.schema.json"
     },
     "Physics": {
-      "$ref": "https://roelstappers.github.io/schema/physics/physics.schema.json"
+      "$ref": "schema/physics/physics.schema.json"
     },
     "Surfex": {
-      "$ref": "https://roelstappers.github.io/schema/surfex/surfex.schema.json"
+      "$ref": "schema/surfex/surfex.schema.json"
     },
     "Observations": {
-      "$ref": "https://roelstappers.github.io/schema/observations/observations.schema.json"
+      "$ref": "schema/observations/observations.schema.json"
     },
     "EPS": {
       "type": "object"
