@@ -2,7 +2,14 @@
   "type" : "object", 
   "required" : [
     "DTGBEG",
-    "DTGEND"
+    "DTGEND",
+    "GITURL",
+    "GITBRANCH",
+    "RUNNING_MODE",
+    "SIMULATION_TYPE",
+    "Paths",
+    "Config",
+    "MAIL_ON_ABORT"
   ],
   "properties": {
     "DTGBEG": {
@@ -11,13 +18,32 @@
     "DTGEND": {
       "$ref": "date.schema.json"
     },
-    "GITBRANCH" : { 
+    
+    "GITURL" : { 
       "type" : "string",
       "format" : "url",
-      "default" : "git.hirlam.org/<username>/<branch>"
+      "default" : "https://git.hirlam.org/Harmonie_experiments"
     },
-    "MAIL_ON_ABORT" : {
-      "$ref" : "emails.schema.json"
+    "GITBRANCH" : { 
+      "type" : "string",
+      "description" : "We run: git clone -b $GITBRANCH --single-branch $GITURL" 
+    },
+
+    "RUNNING_MODE" : {
+      "type" : "string",
+      "enum" : [
+        "research", 
+        "operational"
+      ],
+      "default" : "research"
+    },
+    "SIMULATION_TYPE" : { 
+      "type" : "string",
+      "enum" : [ 
+        "nwp",
+        "climate"
+      ],
+      "default" : "nwp" 
     },
     "Paths" : {
       "$ref" : "paths.schema.json"
@@ -27,6 +53,9 @@
     },
     "hostdescriptions" : {
       "$ref" : "hostdescriptions.schema.json"
-    } 
+    }, 
+    "MAIL_ON_ABORT" : {
+      "$ref" : "emails.schema.json"
+    }
   }
 }
