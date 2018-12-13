@@ -6,10 +6,10 @@
   ],
   "properties": {
     "DTGBEG": {
-      "ref": "main/date.schema.json"
+      "ref": "date.schema.json"
     },
     "DTGEND": {
-      "ref": "main/date.schema.json"
+      "ref": "date.schema.json"
     },
     "GITBRANCH" : { 
       "type" : "string",

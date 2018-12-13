@@ -22,7 +22,7 @@
   ],
   "properties": {
     "Main": {
-      "$ref": "main.schema.json"
+      "$ref": "https://roelstappers.github.io/schema/main/main.schema.json"
     },
     "Geometry": {
       "$ref": "https://roelstappers.github.io/schema/geometry/geometry.schema.json"
