@@ -20,7 +20,8 @@
       "type" : "string",
       "title" : "email",
       "description" : "Recipient(s) to send mail to when a task aborts",
-      "format" : "email" 
+      "format" : "email",
+      "pattern" : "\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b"
     }
   }
 }
