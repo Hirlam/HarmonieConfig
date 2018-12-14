@@ -1,0 +1,25 @@
+{
+  "title": "Alaro",
+  "type": "object",
+  "required": [
+    "ALARO_VERSION",
+    "PHYSICS"
+  ],
+  "properties": {
+    "PHYSICS": {
+      "type": "string",
+      "enum": [
+        "alaro"
+      ],
+      "default": "alaro"
+    },
+    "ALARO_VERSION": {
+      "type": "integer",
+      "enum": [
+        0,
+        1
+      ],
+      "default": 0
+    }
+  }
+}

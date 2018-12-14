@@ -20,16 +20,16 @@
     "NLAT": {
       "type": "integer"
     },
-    "NLONC": {
+    "LONC": {
       "type": "number"
     },
-    "NLATC": {
+    "LATC": {
       "type": "number"
     },
-    "NLON0": {
+    "LON0": {
       "type": "number"
     },
-    "NLAT0": {
+    "LAT0": {
       "type": "number"
     },
     "GSIZE": {

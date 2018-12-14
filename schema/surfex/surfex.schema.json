@@ -1,11 +1,5 @@
 {
   "type": "object",
-  "links": [
-    {
-      "rel": "Surfex documentation",
-      "href": "https://www.umr-cnrm.fr/surfex/"
-    }
-  ],
   "required": [
     "CISBA",
     "CSNOW",
@@ -118,6 +112,11 @@
     "NAM_TEB" : { 
        "$ref" : "nam_teb.schema.json"
     }
-
-  }
+  },
+  "links": [
+    {
+      "rel": "Surfex documentation",
+      "href": "https://www.umr-cnrm.fr/surfex/"
+    }
+  ]
 }

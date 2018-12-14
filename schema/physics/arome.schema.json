@@ -1,0 +1,37 @@
+{
+  "title": "Arome",
+  "type": "object",
+  "required": [
+    "PHYSICS",
+    "MASS_FLUX_SCHEME",
+    "HARATU"
+  ],
+  "properties": {
+    "PHYSICS": {
+      "type": "string",
+      "enum": [
+        "arome"
+      ],
+      "default": "arome"
+    },
+    "HARATU": {
+      "type": "boolean",
+      "default": true
+    },
+    "MASS_FLUX_SCHEME": {
+      "type": "string",
+      "description": "edkf: AROME-MF version, edmfm: Eddy Diffusivity Mass Flux  Meso-scale (KNMI)",
+      "enum": [
+        "edkf",
+        "edmfm"
+      ],
+      "options": {
+        "enum_titles": [
+          "edkf : AROME-MF version",
+          "edmfm : Eddy Diffusivity Mass Flux Meso scale (KNMI)"
+        ]
+      },
+      "default": "edmfm"
+    }
+  }
+}
