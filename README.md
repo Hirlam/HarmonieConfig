@@ -1,6 +1,6 @@
 # Harmonie json-schema definitions 
 
-Harmonie uses json-schema to validate the configation files of experiments. This repository contains the json-schema files 
+Harmonie will use json-schema to validate the json configuration files of experiments. This repository contains the json-schema files 
 
 Usage: open the file config_exp.json in Visual Studio Code or another editor that supports json schema
 
