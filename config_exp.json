@@ -2,7 +2,18 @@
   "$schema"  : "https://roelstappers.github.io/harmonie.schema.json",
     
   "Geometry": {
-    "DOMAIN": "DKCOEXP",
+    "DOMAIN":{
+      "NAME": "H2500",
+      "TSTEP": "60",
+      "NLON": "1000",
+      "NLAT": "750",
+      "LONC": "8.0",
+      "LATC": "58.0",
+      "LON0": "8.0",
+      "LAT0": "58.0",
+      "GSIZE": "2500."
+    }
+    },
     "TOPO_SOURCE": "gtopo30",
     "GRID_TYPE": "LINEAR",
     "VLEV": "65"

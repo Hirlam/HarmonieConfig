@@ -20,7 +20,6 @@
     },
     "MASS_FLUX_SCHEME": {
       "type": "string",
-      "description": "edkf: AROME-MF version, edmfm: Eddy Diffusivity Mass Flux  Meso-scale (KNMI)",
       "enum": [
         "edkf",
         "edmfm"

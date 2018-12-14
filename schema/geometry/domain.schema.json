@@ -34,8 +34,8 @@
     },
     "GSIZE": {
       "type": "number",
-      "title" : "Grid size in meters"
-      "default" : 2500.
+      "title" : "Grid size in meters",
+      "default" : 2500.0
     }
   },
   "enum": [
