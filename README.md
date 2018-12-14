@@ -11,7 +11,7 @@ code config_exp.json
 If no internet connection change the first line in config_exp.json to 
 
 ```bash
-"$schema"  : "file://path/to/cloned/gitrepository/harmonie.schema.json",
+"$schema"  : "file:/path/to/cloned/gitrepository/harmonie.schema.json",
 ```
 
 Alternative open the file index.html in a browser to have a gui of the schema or go to https://roelstappers.github.io
