@@ -1,5 +1,6 @@
 {
   "$schema"  : "https://roelstappers.github.io/harmonie.schema.json",
+    
   "Geometry": {
     "DOMAIN": "DKCOEXP",
     "TOPO_SOURCE": "gtopo30",
@@ -9,9 +10,10 @@
   "Nesting": {
     "HOST_MODEL": "ald",
     "HOST_SURFEX": "yes",
-    "BDSTRATEGY": "simulate_operational",
+    "BDSTRATEGY": "e40",
     "BDINT": 5,
     "SURFEX_INPUT_FORMAT": "fa"
+    
   },
   "Assimilation": {
     "ANAATMO": "4DVAR",

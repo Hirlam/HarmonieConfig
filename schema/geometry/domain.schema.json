@@ -15,10 +15,10 @@
       "type" : "integer"
     },
     "NLON": {
-      "type": "integer"
+      "$ref" : "nlon_nlat.schema.json"
     },
     "NLAT": {
-      "type": "integer"
+      "$ref" : "nlon_nlat.schema.json"
     },
     "LONC": {
       "type": "number"
