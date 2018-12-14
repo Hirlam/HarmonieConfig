@@ -62,8 +62,7 @@
           "era5",
           "latest",
           "RCR_operational"
-        ],
-
+        ]
       },
 
       "default": "simulate_operational"
