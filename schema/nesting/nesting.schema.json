@@ -52,6 +52,20 @@
         "latest",
         "RCR_operational"
       ],
+      "options" : {
+         "enum_titles" :  [
+          "available",
+          "simulate_operational",
+          "same_forecast | Use all boundaries from the same forecast, start from analysis",
+          "analysis_only",
+          "e40",
+          "era5",
+          "latest",
+          "RCR_operational"
+        ],
+
+      },
+
       "default": "simulate_operational"
     },
     "BDINT": {
