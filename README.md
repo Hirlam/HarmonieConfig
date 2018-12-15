@@ -20,17 +20,17 @@ Alternative open the file index.html in a browser to have a gui of the schema or
 - handling of  EPS configation 
 
 ## to do
-- include all namelists
-- include info from param_bator.cfg, LISTE_NOIRE_DIAP, etc.
-- include codetype obstype from the ECMWF odb json files.
-- include submit.ecgb-cca submit.LinuxPC etc.
-- include submission.db information
-- include build configation including compiler options
-- include selection mechanism for VarBC predictors
-- include information from the MARS request files
-- include information from the ECMWF operational model for different cycles (resolution, levels etc.). This should allow e.g. to validate BDINT etc. better. Also it should warn if ECMWF cycles changes during the time range (DTGBEG DTGEND). 
-- (include schema for ecflow) 
-- include schema for harmonie testbed
-- For each script (ecflowtask) document what the input and output files are in a json file, such that the graphviz figure can be generated automatically. 
+- Add schema for all namelists
+- Add schema for param_bator.cfg, LISTE_NOIRE_DIAP, etc.
+- Add schema for codetype obstype from the ECMWF odb json files.
+- Add schema for submit.ecgb-cca submit.LinuxPC etc.
+- Add schema for submission.db information
+- Add schema fro build configation including compiler options
+- Add schema for selection mechanism for VarBC predictors
+- Add schema for MARS request files
+- Add schema for ECMWF cycles. This should allow e.g. to validate BDINT etc. better. Also it should warn if ECMWF cycles changes during the time range (DTGBEG DTGEND). 
+- Add schema for ecflow  tasks/families
+- Add schema for harmonie testbed
+- Add schema for script. (document input output, such that the graphviz figure can be generated automatically)` 
 
 
