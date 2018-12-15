@@ -1,13 +1,7 @@
 {
-  "$id" : "#obstype",
   "type": "integer",
 
   "description": "specifies the observation subtype (BUFR code) or the satellite channel for images.",
-  "links": [
-    {
-      "href": "https://apps.ecmwf.int/odbgov/obstype/"
-    }
-  ],
   "enum": [
     1,
     2,
@@ -45,5 +39,11 @@
       "16 ALLSKY",
       "17 Rain Gauge"
     ]
-  }
+  },
+  "links": [
+    {
+      "rel" : "ECMWF documentation", 
+      "href": "https://apps.ecmwf.int/odbgov/obstype/"
+    }
+  ]
 }
