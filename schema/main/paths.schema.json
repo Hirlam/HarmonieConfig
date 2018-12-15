@@ -1,7 +1,15 @@
 {
   "type" : "object",
+  "title" : "Paths",
+  "description" : "Location of observations, boundaries etc.",
   "options" : {
      "collapsed" : "true"
+  },
+  "properties" : {
+    "OBDIR": {
+      "type": "string",
+      "default": "$HMDATA/observations"
+    }
   }
 
 }
