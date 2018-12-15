@@ -5,7 +5,7 @@
     "DTGEND",
     "GITURL",
     "GITBRANCH",
-    "Paths",
+    "PATHS",
     "MAIL_ON_ABORT"
   ],
   "properties": {
@@ -18,14 +18,14 @@
     
     "GITURL" : { 
       "type" : "string",
-      "format" : "url",
+      "format" : "uri",
       "default" : "https://git.hirlam.org/Harmonie_experiments"
     },
     "GITBRANCH" : { 
       "type" : "string",
       "description" : "We run: git clone -b $GITBRANCH --single-branch $GITURL" 
     },
-   "Paths" : {
+   "PATHS" : {
       "$ref" : "paths.schema.json"
     },
     "MAIL_ON_ABORT" : {
