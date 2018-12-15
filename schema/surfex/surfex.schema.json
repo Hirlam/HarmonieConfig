@@ -21,7 +21,6 @@
     "CISBA": {
       "type": "string",
       "title": "ISBA scheme",
-      "readOnly" : true,
       "enum": [
         "3-L",
         "2-L",
@@ -96,8 +95,7 @@
     },
     "LISBA_CANOPY": {
       "type": "string",
-      "title": "Activate surface boundary multi layer scheme over land",
-      "description": "Must be .FALSE. for NPATCHES>1 ",
+      "description": "Activate surface boundary multi layer scheme over land. Must be .FALSE. for NPATCHES>1",
       "enum": [
         ".TRUE.",
         ".FALSE."
@@ -124,7 +122,7 @@
       "default": "F"
     },
     "NAMELIST" : { 
-       "$ref" : "surfex_namelist.schema.json"
+       "$ref" : "namelist/surfex_namelist.schema.json"
     }
   },
 

@@ -2,7 +2,6 @@
   "type": "string",
   "format": "datetime-local",
   "options": {
-    "grid_columns": 4,
     "placeholder": "Enter datetime",
     "flatpickr": {
       "hourIncrement": 3,

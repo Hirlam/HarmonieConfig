@@ -11,6 +11,7 @@
       "enum": [
         "alaro"
       ],
+      "readOnly" : true,
       "default": "alaro"
     },
     "ALARO_VERSION": {
