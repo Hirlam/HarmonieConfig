@@ -1,7 +1,7 @@
 {
   "type" : "object",
   "description" : "These variables need to be put in a category or removed (moved to the scripts). Click properties to see if there are more variables.",
-  "required" : ["test","RUNNING_MODE", "SIMULATION_TYPE", "SINGLEOBS", "USE_MSG", "MSG_PATH", "Config", "hostdescriptions"],
+  "required" : ["RUNNING_MODE", "SIMULATION_TYPE", "SINGLEOBS", "USE_MSG", "MSG_PATH", "Config", "hostdescriptions"],
   "properties" : {
      "RUNNING_MODE" : {
       "type" : "string",
@@ -45,18 +45,6 @@
     },
     "hostdescriptions" : {
       "$ref" : "hostdescriptions.schema.json"
-    }, 
-    "test" : {
-       "title": "Video filename",
-      "type": "string",
-        "links": [
-          {
-             "href": "https://www.youtube.com/watch?v=OXbkpx-_fjM",
-             "mediaType": "video/webm"
-           }
-        ] 
-    }
-    
-
+    } 
   }
 }
