@@ -89,5 +89,11 @@
       "description": "solar panels on roofs",
       "default": false
     }
-  }
+  },
+  "links" : [
+    {
+      "rel" : "4.1.6. Namelist NAM_TEB",
+      "href" : "http://www.umr-cnrm.fr/surfex/spip.php?article126"
+    }
+  ]
 }

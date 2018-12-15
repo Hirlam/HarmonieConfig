@@ -34,6 +34,7 @@
         }
       ]
     },
+    "test" : {}, 
     "CSNOW": {
       "type": "string",
       "title": "Snow Scheme",
@@ -64,7 +65,6 @@
             "BE04 | Beljaars 2004 orographic drag"
         ]
       },
-
       "default": "NONE"
     },
     "SURFEX_SEA_ICE": {
@@ -126,6 +126,10 @@
        "$ref" : "surfex_namelist.schema.json"
     }
   },
+
+  "dependencies" : {
+     "CROUGH" : ["NAMELIST.NAM_TEB"]
+  },  
   "links": [
     {
       "rel": "Surfex documentation",
