@@ -1,8 +1,7 @@
 {
-  "$schema"  : "https://roelstappers.github.io/harmonie.schema.json",
-    
+  "$schema": "./harmonie.schema.json",
   "Geometry": {
-    "DOMAIN":{
+    "DOMAIN": {
       "NAME": "H2500",
       "TSTEP": "60",
       "NLON": "1000",
@@ -23,12 +22,11 @@
     "BDSTRATEGY": "e40",
     "BDINT": 5,
     "SURFEX_INPUT_FORMAT": "fa"
-    
   },
   "Assimilation": {
     "ANAATMO": "4DVAR",
-    "ANASURF": "CANARI_OI_MAIN",    
-    "LSMIXBC" : "yes"
+    "ANASURF": "CANARI_OI_MAIN",
+    "LSMIXBC": "yes"
   },
   "Physics": {
     "PHYSICS": "arome",
@@ -41,6 +39,7 @@
     "USE_MSG": "no",
     "MSG_PATH": "$SCRATCH/CLOUDS"
   },
-  "Surfex": {"CISBA": "3-L"}
-
+  "Surfex": {
+    "CISBA": "3-L"
+  }
 }
