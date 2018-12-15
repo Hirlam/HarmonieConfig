@@ -1,0 +1,53 @@
+{
+  "type" : "object",
+  "description" : "These variables need to be put in category or removed (moved to the scripts)",
+  "properties" : {
+     "RUNNING_MODE" : {
+      "type" : "string",
+      "description" : "Operational implies that Not STAGE is done for MARS requests and No assimilation is done if no obserations are found by Bator",
+      "enum" : [
+        "research", 
+        "operational"
+      ],
+      "default" : "research"
+    },
+    "SIMULATION_TYPE" : { 
+      "type" : "string",
+      "enum" : [ 
+        "nwp",
+        "climate"
+      ],
+      "default" : "nwp" 
+    },
+    "OBDIR": {
+      "type": "string",
+      "default": "$HMDATA/observations"
+    },
+    "SINGLEOBS": {
+      "type": "string",
+      "enum": [
+        "yes",
+        "no"
+      ],
+      "default": "no"
+    },
+    "USE_MSG": {
+      "type": "string",
+      "enum": [
+        "yes",
+        "no"
+      ],
+      "default": "no"
+    },
+    "MSG_PATH": {
+      "type": "string",
+      "default": "$SCRATCH/CLOUDS"
+    },
+    "Config" : {
+      "$ref" : "config.schema.json"
+    },
+    "hostdescriptions" : {
+      "$ref" : "hostdescriptions.schema.json"
+    } 
+  }
+}

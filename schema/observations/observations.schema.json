@@ -75,30 +75,6 @@
       ],
       "default": 0
     },
-    "OBDIR": {
-      "type": "string",
-      "default": "$HMDATA/observations"
-    },
-    "SINGLEOBS": {
-      "type": "string",
-      "enum": [
-        "yes",
-        "no"
-      ],
-      "default": "no"
-    },
-    "USE_MSG": {
-      "type": "string",
-      "enum": [
-        "yes",
-        "no"
-      ],
-      "default": "no"
-    },
-    "MSG_PATH": {
-      "type": "string",
-      "default": "$SCRATCH/CLOUDS"
-    },
     "LISTE_LOC": {
       "$ref": "liste_loc.schema.json"
     }

@@ -5,10 +5,7 @@
     "DTGEND",
     "GITURL",
     "GITBRANCH",
-    "RUNNING_MODE",
-    "SIMULATION_TYPE",
     "Paths",
-    "Config",
     "MAIL_ON_ABORT"
   ],
   "properties": {
@@ -28,33 +25,9 @@
       "type" : "string",
       "description" : "We run: git clone -b $GITBRANCH --single-branch $GITURL" 
     },
-
-    "RUNNING_MODE" : {
-      "type" : "string",
-      "description" : "Operational implies that Not STAGE is done for MARS requests and No assimilation is done if no obserations are found by Bator",
-      "enum" : [
-        "research", 
-        "operational"
-      ],
-      "default" : "research"
-    },
-    "SIMULATION_TYPE" : { 
-      "type" : "string",
-      "enum" : [ 
-        "nwp",
-        "climate"
-      ],
-      "default" : "nwp" 
-    },
-    "Paths" : {
+   "Paths" : {
       "$ref" : "paths.schema.json"
     },
-    "Config" : {
-      "$ref" : "config.schema.json"
-    },
-    "hostdescriptions" : {
-      "$ref" : "hostdescriptions.schema.json"
-    }, 
     "MAIL_ON_ABORT" : {
       "$ref" : "emails.schema.json"
     }

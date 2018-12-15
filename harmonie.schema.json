@@ -51,6 +51,9 @@
     },
     "Archiving": {
       "type": "object"
+    },
+    "Aux": {
+      "$ref": "schema/aux/aux.schema.json"
     }
   }
 }
