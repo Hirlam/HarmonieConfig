@@ -1,11 +1,6 @@
 {
   "type": "object",
-  "required": [
-    "OBDIR",
-    "SINGLEOBS",
-    "USE_MSG",
-    "MSG_PATH"
-  ],
+  "description" : "Example of using the grid layout style. Current on/off style based on include.ass. Better to use booleans in which can we can use select box. Alternative is to use a single array with multi-select",
   "properties": {
     "SYNOP_OBS": {
       "type": "integer",
@@ -78,5 +73,6 @@
     "LISTE_LOC": {
       "$ref": "liste_loc.schema.json"
     }
-  }
+  },
+  "format" : "grid"
 }
