@@ -21,6 +21,7 @@
     "CISBA": {
       "type": "string",
       "title": "ISBA scheme",
+      "readOnly" : true,
       "enum": [
         "3-L",
         "2-L",
