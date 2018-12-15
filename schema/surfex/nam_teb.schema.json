@@ -42,7 +42,9 @@
       "enum_titles" : [
         "DEF, default version force-restore model from Masson et al. 2002",
         "BEM, Building Energy Model Bueno et al. 2011"
-      ], 
+      ],
+      "minLength" : 3,
+      "maxLength" : 3,
       "default": "DEF"
     },
     "CCOOL_COIL": {
@@ -52,6 +54,8 @@
         "IDEAL ",
         "DXCOIL"
       ],
+      "minLength" : 6,
+      "maxLength" : 6,
       "default": "IDEAL "
     },
     "CHEAT_COIL": {
@@ -61,6 +65,8 @@
         "IDEAL ",
         "FINCAP"
       ],
+      "minLength" : 6,
+      "maxLength" : 6,
       "default": "IDEAL "
     },
     "LAUTOSIZE": {
