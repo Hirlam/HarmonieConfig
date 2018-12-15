@@ -5,6 +5,7 @@
   "options": {
         "collapsed": true
   },
+  "additionalProperties" : false,
   "properties" : { 
     "NROAD_LAYER": {
       "type": "integer",

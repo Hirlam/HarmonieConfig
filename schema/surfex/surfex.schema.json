@@ -5,7 +5,6 @@
     "disable_properties": true
   },
   "format" : "grid",
-  "description" : "SURFEX (Surface Externalisée, in French) is a surface modelling platform developed by Météo-France in cooperation with the scientific community.",
   "required": [
     "CISBA",
     "CSNOW",
@@ -16,7 +15,7 @@
     "LISBA_CANOPY",
     "SURFEX_LAKES",
     "MODIFY_LAKES",
-    "NAM_TEB"
+    "NAMELIST"
   ],
   "properties": {
     "CISBA": {
@@ -27,7 +26,13 @@
         "2-L",
         "DIF"
       ],
-      "default": "3-L"
+      "default": "3-L",
+      "links" : [
+        {
+          "rel" : "ISBA documentation",
+          "href" : "https://www.umr-cnrm.fr/isbadoc/model.html"
+        }
+      ]
     },
     "CSNOW": {
       "type": "string",
@@ -117,8 +122,8 @@
       ],
       "default": "F"
     },
-    "NAM_TEB" : { 
-       "$ref" : "nam_teb.schema.json"
+    "NAMELIST" : { 
+       "$ref" : "surfex_namelist.schema.json"
     }
   },
   "links": [
