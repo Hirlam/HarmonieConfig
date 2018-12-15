@@ -2,6 +2,7 @@
   "$id": "~/git/roelstappers.github.io/harmonie.schema.json",
   "$schema" : "http://json-schema.org/schema#",
   "title": "Harmonie experiment configuration",
+  "description" : "Look at the Surfex and Observations tabs for examples. See in Observations/LISTE_LOC obstype how enum_titles can be used to give meaningfull names to integers. See Geometry/domain how we can insert information directly in the config_exp.json (Click JSON. no need for perl). See surfex/Namelist how namelist can be included (no need for perl). ",
   "options": {
     "disable_properties": true,
     "disable_edit_json": false,
