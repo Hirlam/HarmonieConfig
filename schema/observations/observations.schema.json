@@ -1,9 +1,26 @@
 {
   "type": "object",
-  "description" : "Example of using the grid layout style. Current on/off style based on include.ass. Better to use booleans in which can we can use select box. Alternative is to use a single array with multi-select",
+  "description": "Example of using the grid layout style. Current on/off style based on include.ass. Better to use booleans in which can we can use select box. Alternative is to use a single array with multi-select. We need url's for each obstype here",
+  "options": {
+    "disable_collapse": true,
+    "disable_properties": true
+  },
+  "required": [
+    "SYNOP_OBS",
+    "MODESEHS_OBS",
+    "AIRCRAFT_OBS",
+    "BOUY_OBS",
+    "TEMP_OBS",
+    "PILOT_OBS",
+    "GNSS_OBS",
+    "SGNSS_OBS",
+    "LISTE_LOC"
+  ],
+  "format": "grid",
   "properties": {
     "SYNOP_OBS": {
       "type": "integer",
+      "title": "Synop",
       "enum": [
         0,
         1
@@ -12,7 +29,8 @@
     },
     "MODESEHS_OBS": {
       "type": "integer",
-      "descriptin": "Mode-S EHS",
+      "title": "Mode-S",
+      "description": "Mode S Enhanced Surveillance",
       "enum": [
         0,
         1
@@ -21,6 +39,7 @@
     },
     "AIRCRAFT_OBS": {
       "type": "integer",
+      "title": "Aircraft",
       "description": "AMDAR, AIREP, ACARS",
       "enum": [
         0,
@@ -30,6 +49,7 @@
     },
     "BOUY_OBS": {
       "type": "integer",
+      "title": "Bouy",
       "enum": [
         0,
         1
@@ -38,6 +58,7 @@
     },
     "TEMP_OBS": {
       "type": "integer",
+      "title": "Temp",
       "description": "TEMP, TEMPSHIP",
       "enum": [
         0,
@@ -47,6 +68,7 @@
     },
     "PILOT_OBS": {
       "type": "integer",
+      "title": "Pilot",
       "description": "Pilot, Europrofiler",
       "enum": [
         0,
@@ -56,6 +78,8 @@
     },
     "GNSS_OBS": {
       "type": "integer",
+      "title": "GNSS",
+      "description": "Global Navigation Satellite System",
       "enum": [
         0,
         1
@@ -64,6 +88,8 @@
     },
     "SGNSS_OBS": {
       "type": "integer",
+      "title": "SGNSS",
+      "description": "Slant GNSS",
       "enum": [
         0,
         1
@@ -73,6 +99,5 @@
     "LISTE_LOC": {
       "$ref": "liste_loc.schema.json"
     }
-  },
-  "format" : "grid"
+  }
 }

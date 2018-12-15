@@ -3,6 +3,9 @@
   "title": "Emails",
   "description": "Recipient(s) to send mail to when a task aborts",
   "uniqueItems": true,
+  "options" : {
+    "collapsed" : "true"
+  },
   "items": {
     "type": "string",
     "title": "email",

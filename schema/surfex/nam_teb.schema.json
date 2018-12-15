@@ -1,6 +1,7 @@
 {
   "type": "object",
   "title": "NAM_TEB",
+  "description" : "Namelist for town energy balance",
   "options": {
         "collapsed": true
   },

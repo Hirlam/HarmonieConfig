@@ -1,5 +1,10 @@
 {
-  "type" : "object", 
+  "type" : "object",
+  "options": {
+    "disable_collapse": true,
+    "disable_properties": true
+  },
+  "additionalProperties" : false,
   "required" : [
     "DTGBEG",
     "DTGEND",

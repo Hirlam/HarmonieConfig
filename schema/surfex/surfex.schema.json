@@ -1,5 +1,11 @@
 {
   "type": "object",
+  "options": {
+    "disable_collapse": true,
+    "disable_properties": true
+  },
+  "format" : "grid",
+  "description" : "SURFEX (Surface Externalisée, in French) is a surface modelling platform developed by Météo-France in cooperation with the scientific community.",
   "required": [
     "CISBA",
     "CSNOW",
@@ -74,7 +80,8 @@
     },
     "NPATCH": {
       "type": "integer",
-      "title": "Number of patches over land (see also LISBA_CANOPY)",
+      "title": "Number of patches over land",
+      "description" : "see also LISBA_CANOPY",
       "enum": [
         1,
         2
@@ -102,7 +109,8 @@
     },
     "MODIFY_LAKES": {
       "type": "string",
-      "title": "Use Vanern/Vattern as Sea, requires new climate files",
+      "title": "Use Vanern/Vattern as Sea", 
+      "description" : "requires new climate files",
       "enum": [
         "F",
         "T"
