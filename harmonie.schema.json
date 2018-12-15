@@ -19,7 +19,8 @@
     "Observations",
     "EPS",
     "Postprocessing",
-    "Archiving"
+    "Archiving",
+    "Aux"
   ],
   "properties": {
     "Main": {

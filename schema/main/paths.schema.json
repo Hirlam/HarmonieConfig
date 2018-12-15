@@ -5,7 +5,7 @@
   "options" : {
      "collapsed" : "true"
   },
-  "required" : ["OBDIR"]
+  "required" : ["OBDIR"],
   "properties" : {
     "OBDIR": {
       "type": "string",

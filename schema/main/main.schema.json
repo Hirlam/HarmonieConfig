@@ -4,6 +4,7 @@
     "disable_collapse": true,
     "disable_properties": true
   },
+  "description" : "Look at the Surfex and Observations tabs for examples",
   "additionalProperties" : false,
   "required" : [
     "DTGBEG",
