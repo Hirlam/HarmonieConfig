@@ -127,9 +127,6 @@
     }
   },
 
-  "dependencies" : {
-     "CROUGH" : ["NAMELIST.NAM_TEB"]
-  },  
   "links": [
     {
       "rel": "Surfex documentation",
