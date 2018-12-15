@@ -1,12 +1,12 @@
 {
   "type": "array",
-  "title" : "Emails",
-  "description" : "Recipient(s) to send mail to when a task aborts",
+  "title": "Emails",
+  "description": "Recipient(s) to send mail to when a task aborts",
   "uniqueItems": true,
   "items": {
-      "type" : "string",
-      "title" : "email",
-      "format" : "email",
-      "pattern" : "^[a-z0-9]+(\\.[_a-z0-9]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,15})$"
-    }
+    "type": "string",
+    "title": "email",
+    "format": "email",
+    "pattern": "^[a-z0-9]+(\\.[_a-z0-9]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,15})$"
+  }
 }
