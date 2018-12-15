@@ -1,0 +1,48 @@
+{
+  "type": "object",
+  "title": "NAM_SSOn",
+  "description": "Namelist for roughness parameterization for orography",
+  "options": {
+    "collapsed": true
+  },
+  "additionalProperties": false,
+  "properties": {
+    "CROUGH": {
+      "type": "string",
+      "description": "type of orographic roughness length",
+      "minLength": 4,
+      "maxLength": 4,
+      "enum": [
+        "Z01D",
+        "Z04D",
+        "BE04",
+        "NONE"
+      ],
+      "options": {
+        "enum_titles": [
+          "Z01D | orographic roughness length does not depend on wind direction",
+          "Z04D | orographic roughness length depends on wind direction",
+          "BE04 | Beljaars 2004 orographic drag",
+          "NONE | no orographic treatment"
+        ]
+      },
+      "default": "BE04"
+    },
+    "XFRACZ0": {
+      "type": "number",
+      "description": "Z0=Min(Z0, Href/XFRACZ0)",
+      "default": 2.0
+    },
+    "XCOEFBE": {
+      "type": "number",
+      "description": "coefficient for Beljaars calculation of SSO drag",
+      "default": 2.0
+    }
+  },
+  "links" : [
+    {
+      "rel" : "6.1.4. Namelist NAM_SSOn",
+      "href" : "http://www.umr-cnrm.fr/surfex/spip.php?article126"
+    }
+  ]
+}
