@@ -1,0 +1,31 @@
+{
+  "type" : "object",
+  "title" : "Git branch",
+  "enum" : 
+[
+  {
+    "name": "cy43",
+    "commit": {
+      "sha": "571811786e682e586a9c732bc30cdde44448d9ba",
+      "url": "https://api.github.com/repos/roelstappers/hm_home/commits/571811786e682e586a9c732bc30cdde44448d9ba"
+    }
+  },
+  {
+    "name": "cy43_3dvar_exp",
+    "commit": {
+      "sha": "ffaf8338f0ed5f40e4f50467d2995037e60ca227",
+      "url": "https://api.github.com/repos/roelstappers/hm_home/commits/ffaf8338f0ed5f40e4f50467d2995037e60ca227"
+    }
+  },
+  {
+    "name": "my_4dvar_experiment",
+    "commit": {
+      "sha": "daf1ca10054ae8268c890a4e5b5551db25ce1c70",
+      "url": "https://api.github.com/repos/roelstappers/hm_home/commits/daf1ca10054ae8268c890a4e5b5551db25ce1c70"
+    }
+  }
+],
+
+ "options" : {"enum_titles" : ["cy43", "cy43_3dvar_exp" , "my_4dvar_experiment"]}
+
+}
