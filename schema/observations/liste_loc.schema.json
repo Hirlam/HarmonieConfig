@@ -6,11 +6,12 @@
   "items": {
     "type": "object",
     "title": "item",
-    "headerTemplate": "{{ self.action }}  {{ self.obstype }} {{ self.codetype }}",
+    "headerTemplate": "{{ self.action }}  {{ self.obstype }} {{ self.codetype }} {{ self.varno }}",
     "required": [
       "action",
       "obstype",
-      "codetype"
+      "codetype",
+      "varno"
     ],
     "properties": {
       "action": {
@@ -30,10 +31,10 @@
         "default": "E"
       },
       "obstype": {
-        "$ref" : "obstype.schema.json"
+        "$ref" : "odb/obstype.schema.json"
       },
       "codetype": {
-        "$ref" : "codetype.schema.json"
+        "$ref" : "odb/codetype.schema.json"
       },
       "ident": {
         "type": "integer",
@@ -44,8 +45,7 @@
         "description" : "Not implemented yet"
       },
       "varno": {
-        "type": "integer",
-        "description" : "Not implemented yet"
+        "$ref" : "odb/varno.schema.json"
       },
       "code": {
         "type": "string",
