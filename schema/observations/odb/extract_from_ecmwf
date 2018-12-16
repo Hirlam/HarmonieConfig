@@ -10,13 +10,14 @@
 
 
 var=$1
-url="https://apps.ecmwf.int/odbgov/$var.json" 
-
-jsondata=$(wget -qO- $url) 
 
 
-echo $jsondata | jq -f ecfilter.jq --arg url "${url}"  --arg var ${var}
-
+for var in reporttype subtype obstype satobkind varno
+do 
+  url="https://apps.ecmwf.int/odbgov/$var.json" 
+  jsondata=$(wget -qO- $url) 
+  echo $jsondata | jq -f ecfilter.jq --arg url "${url}"  --arg var ${var}
+done 
 
 
 

@@ -4,7 +4,6 @@
     "disable_collapse": true,
     "disable_properties": true
   },
-  "format" : "grid",
   "additionalProperties" : false,
   "required" : [
     "DTGBEG",
@@ -24,12 +23,14 @@
     
     "GITURL" : { 
       "type" : "string",
+      "title" : "Git url",
       "format" : "uri",
-      "default" : "https://git.hirlam.org/Harmonie_experiments"
+      "readOnly" : true,
+      "default" : "https://github.com/roelstappers/hm_home/",
+      "description" : "We run: git clone -b $GITBRANCH --single-branch $GITURL" 
     },
     "GITBRANCH" : { 
-      "type" : "string",
-      "description" : "We run: git clone -b $GITBRANCH --single-branch $GITURL" 
+      "$ref" :  "branches.schema.json"  
     },
    "PATHS" : {
       "$ref" : "paths.schema.json"
