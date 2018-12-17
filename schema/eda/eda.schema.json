@@ -1,6 +1,6 @@
 {
-    "type" : "object",
-    "description" : "This part is for EDA with observations perturbation",
+    "type": "object",
+    "description": "This part is for EDA with observations perturbation",
     "required": [
         "PERTATMO",
         "PERTSURF",
@@ -8,57 +8,64 @@
         "SCALE_PERT",
         "EREF"
     ],
-    "properties" : {
+    "properties": {
         "PERTATMO": {
             "type": "string",
             "description": "",
             "enum": [
-              "ECMAIN",
-              "CCMA",
-              "none"
+                "ECMAIN",
+                "CCMA",
+                "none"
             ],
             "options": {
-              "enum_titles": [
-                "ECMAIN  | In-line observation perturbation using the default IFS way",
-                "CCMA | Perturbation of the active observations only (CCMA content) before the Minimization, using the PERTCMA executable.",
-                "none | no perturbation of upper-air observations"
-              ]
+                "enum_titles": [
+                    "ECMAIN  | In-line observation perturbation using the default IFS way",
+                    "CCMA | Perturbation of the active observations only (CCMA content) before the Minimization, using the PERTCMA executable.",
+                    "none | no perturbation of upper-air observations"
+                ]
             }
-          },
-          "PERTSURF" : {
-            "type" : "string",
+        },
+        "PERTSURF": {
+            "type": "string",
             "description": "",
-            "enum" : ["ECMA", "model", "none"],
-            "options" : {
-              "enum_titles" : [
-                "ECMA | perturb also the surface observation before Canari (recommended for EDA to have full perturbation of the initial state).",
-                "model | perturb surface fields in grid-point space (recursive filter)",
-                "none | no perturbation for surface observations"
-              ]
+            "enum": [
+                "ECMA",
+                "model",
+                "none"
+            ],
+            "options": {
+                "enum_titles": [
+                    "ECMA | perturb also the surface observation before Canari (recommended for EDA to have full perturbation of the initial state).",
+                    "model | perturb surface fields in grid-point space (recursive filter)",
+                    "none | no perturbation for surface observations"
+                ]
             },
-            "default" : ["none"]
-          },
-          "FESTAT" : {
-              "type": "string",
-              "description": "Extract differences and do Jb calculations",
-              "enum": ["yes","no"],
-              "default": "no"
-          },
-          "SCALE_PERT" : {
-              "type":"string",
-              "description": "Scale perturbations based on energy norm",
-              "enum": ["yes","no"],
-              "default":"no"
-          },
-          "EREF" : {
-              "type": "number",
-              "description": "Energy reference",
-              "default" : 35000.0
-          }
-
-
+            "default": [
+                "none"
+            ]
+        },
+        "FESTAT": {
+            "type": "string",
+            "description": "Extract differences and do Jb calculations",
+            "enum": [
+                "yes",
+                "no"
+            ],
+            "default": "no"
+        },
+        "SCALE_PERT": {
+            "type": "string",
+            "description": "Scale perturbations based on energy norm",
+            "enum": [
+                "yes",
+                "no"
+            ],
+            "default": "no"
+        },
+        "EREF": {
+            "type": "number",
+            "description": "Energy reference",
+            "default": 35000.0
+        }
     }
-
-
-
 }
