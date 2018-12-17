@@ -95,7 +95,7 @@
     },
     "LSPBDC": {
       "type": "string",
-      "description": "Spectral boundary contions option",
+      "description": "Spectral boundary conditions option",
       "enum": [
         "yes",
         "no"
