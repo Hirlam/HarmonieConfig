@@ -1,16 +1,95 @@
 {
-  "type" : "object",
-  "title" : "Paths",
-  "description" : "Location of observations, boundaries etc.",
-  "options" : {
-     "collapsed" : "true"
+  "type": "object",
+  "title": "Paths",
+  "format" : "grid",
+  "description": "Location of observations, boundaries etc.",
+  "options": {
+    "collapsed": "true"
   },
-  "required" : ["OBDIR"],
-  "properties" : {
+  "required": [
+    "OBDIR",
+    "BINDIR",
+    "WRK",
+    "ARCHIVE_ROOT",
+    "ECFSLOC",
+    "EXTRARCH",
+    "BDDIR",
+    "INT_BDFILE",
+    "MSG_PATH",
+    "ECFS_EPS_EC_BD_PATH",
+    "CLIMDIR",
+    "BDCLIM",
+    "MAPBIN"
+  ],
+  "properties": {
     "OBDIR": {
       "type": "string",
+      "description": "Observation file directory",
       "default": "$HMDATA/observations"
+    },
+    "BINDIR": {
+      "type": "string",
+      "description": "Binary directory",
+      "default": "$HM_DATA/bin"
+    },
+    "WRK": {
+      "type": "string",
+      "description": "Work directory",
+      "default": "$HM_DATA/$CYCLEDIR"
+    },
+    "ARCHIVE_ROOT": {
+      "type": "string",
+      "description": "Archive root directory",
+      "default": "$HM_DATA/archive"
+    },
+    "ECFSLOC": {
+      "type": "string",
+      "description": "Archiving site at ECMWF-ECFS",
+      "enum": [
+        "ectmp",
+        "ec"
+      ],
+      "default": "ectmp"
+    },
+    "EXTRARCH": {
+      "type": "string",
+      "description": "Archive for fld/obs-extractions",
+      "default": "$ARCHIVE_ROOT/extract"
+    },
+    "BDDIR": {
+      "type": "string",
+      "description": "Boundary file directory. For more information, read in scr/Boundary_strategy.pl",
+      "default": "$HM_DATA/${BDLIB}/archive/@YYYY@/@MM@/@DD@/@HH@"
+    },
+    "INT_BDFILE": {
+      "type": "string",
+      "description": "Interpolated boundary file name and location",
+      "default": "$WRK/ELSCF${CNMEXP}ALBC@NNN@"
+    },
+    "MSG_PATH": {
+      "type": "string",
+      "description": "Location of input MSG FA file, expected name is MSGcloudYYYYMMDDHH",
+      "default": "$SCRATCH/CLOUDS/"
+    },
+    "ECFS_EPS_EC_BD_PATH": {
+      "type": "string",
+      "description": "Location for rearchiving",
+      "default": "${ECFSLOC}:/$USER/harmonie/$EXP"
+    },
+    "CLIMDIR": {
+      "type": "string",
+      "description": "Climate files directory",
+      "default": "$HM_DATA/climate"
+    },
+    "BDCLIM": {
+      "type": "string",
+      "description": "Boundary climate files (ald2ald,ald2aro). This should point to intermediate aladin climate file in case of hir2aro,ifs2aro processes.",
+      "default": "$HM_DATA/${BDLIB}/climate"
+    },
+    "MAPBIN": {
+      "type": "string",
+      "description": "Monitoring maps for hirlam.org",
+      "default": "$HM_DATA/lib/util/mapbin"
     }
   }
-
 }
