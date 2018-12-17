@@ -41,6 +41,12 @@
         "lfi"
       ]
     },
+    "NATIVE_INPUT_LFI" : {
+      "type" : "string",
+      "description": "yes if host PGD/PREP are lfi files converted to fa. Only relevant if SURFEX_INPUT_FORMAT=fa",
+      "enum": ["yes","no"],
+      "default" : "no"
+    },
     "BDSTRATEGY": {
       "type": "string",
       "enum": [
