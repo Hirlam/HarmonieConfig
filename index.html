@@ -52,23 +52,29 @@
     return ts ? new Date(ts * 1000) : 'empty';
   });
 
-  $.getJSON("harmonie.schema.json",getjsoncallback)  
+  $.getJSON("config_exp.json",config_exp_ready)
 
-  function getjsoncallback(data) {
-    var options = {  
+  function config_exp_ready(config_exp_data) {
+
+    $.getJSON("harmonie.schema.json",schemacallback)  
+
+    function schemacallback(schema_data) {
+      var options = {  
             iconlib  : 'bootstrap3',
             theme :  'bootstrap3',
             template :'handlebars',
             ajax : true,
             required_by_default : false,
             display_required_only : true,
-            schema : data
+            schema : schema_data
+            
+
         };
 
     var element = document.getElementById('form');
     var editor = new JSONEditor(element, options);
-  }
- 
+   }
+ } 
   </script>
 <!-- json output could go here  
   <div class='span4 col-md-4 columns four large-4 col s4'>
