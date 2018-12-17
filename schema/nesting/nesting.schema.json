@@ -27,7 +27,7 @@
       "default": "ifs"
     },
     "HOST_SURFEX": {
-      "title": "host model has run with surfex?",
+      "description": "host model has run with surfex?",
       "type": "string",
       "enum": [
         "yes",
@@ -37,7 +37,7 @@
     },
     "SURFEX_INPUT_FORMAT": {
       "type": "string",
-      "title": "Input format for host model run with surfex",
+      "description": "Input format for host model run with surfex",
       "default": "lfi",
       "enum": [
         "fa",
