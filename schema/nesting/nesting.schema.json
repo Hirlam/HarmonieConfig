@@ -53,8 +53,8 @@
         "latest",
         "RCR_operational"
       ],
-      "options" : {
-         "enum_titles" :  [
+      "options": {
+        "enum_titles": [
           "available",
           "simulate_operational",
           "same_forecast | Use all boundaries from the same forecast, start from analysis",
@@ -65,7 +65,6 @@
           "RCR_operational"
         ]
       },
-
       "default": "simulate_operational"
     },
     "BDINT": {
@@ -80,6 +79,24 @@
         24
       ],
       "default": 1
+    },
+    "LSPBDC": {
+      "type": "string",
+      "description": "Spectral boundary contions option",
+      "enum": [
+        "yes",
+        "no"
+      ],
+      "default": "no"
+    },
+    "LUNBC": {
+      "type": "string",
+      "description": "Apply upper nested boundary condition",
+      "enum": [
+        "yes",
+        "no"
+      ],
+      "default": "yes"
     }
   }
 }
