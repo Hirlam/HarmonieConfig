@@ -3,7 +3,8 @@
   "description": "Example of using the grid layout style. Current on/off style based on include.ass. Better to use booleans in which can we can use select box. Alternative is to use a single array with multi-select. We need url's for each obstype here",
   "options": {
     "disable_collapse": true,
-    "disable_properties": true
+    "disable_properties": true,
+    "required_by_default" : true
   },
   "required": [
     "SYNOP_OBS",
@@ -14,6 +15,18 @@
     "PILOT_OBS",
     "GNSS_OBS",
     "SGNSS_OBS",
+    "AMV_OBS",
+    "AMSUA_OBS",
+    "AMSUB_OBS",
+    "IASI_OBS",
+    "SEV_OBS",
+    "SEVIRI_OBS",
+    "SCATT_OBS",
+    "ATMS_OBS",
+    "CRIS_OBS",
+    "PAOB_OBS",
+    "LIMB_OBS",
+    "RADAR_OBS",
     "LISTE_LOC"
   ],
   "format": "grid",
@@ -90,6 +103,137 @@
       "type": "integer",
       "title": "SGNSS",
       "description": "Slant GNSS",
+      "enum": [
+        0,
+        1
+      ],
+      "default": 0
+    },
+    "AMV_OBS": {
+      "type": "integer",
+      "title": "AMV",
+      "description": "Satob wind",
+      "enum": [
+        0,
+        1
+      ],
+      "default": 0
+    },
+    "AMSUA_OBS": {
+      "type": "integer",
+      "title": "AMSUA",
+      "description": "AMSUA",
+      "enum": [
+        0,
+        1
+      ],
+      "default": 0
+    },
+    "AMSUB_OBS": {
+      "type": "integer",
+      "title": "AMSUB",
+      "description": "AMSUB",
+      "enum": [
+        0,
+        1
+      ],
+      "default": 0
+    },
+    "IASI_OBS": {
+      "type": "integer",
+      "title": "IASI",
+      "description": "IASI",
+      "enum": [
+        0,
+        1
+      ],
+      "default": 0
+    },
+
+    "SEV_OBS": {
+      "type": "integer",
+      "title": "SEVIRI",
+      "description": "clear sky radiances",
+      "enum": [
+        0,
+        1
+      ],
+      "default": 0
+    },
+    "SEVIRI_OBS": {
+      "type": "integer",
+      "title": "SEVIRI",
+      "description": "",
+      "enum": [
+        0,
+        1
+      ],
+      "default": 0
+    },
+    "SCATT_OBS": {
+      "type": "integer",
+      "title": "Scatterometer",
+      "description": "Not defined everywhere",
+      "enum": [
+        0,
+        1
+      ],
+      "default": 0
+    },
+     "ATMS_OBS": {
+      "type": "integer",
+      "title": "ATMS",
+      "description": "",
+      "enum": [
+        0,
+        1
+      ],
+      "default": 0
+    },
+     "CRIS_OBS": {
+      "type": "integer",
+      "title": "CRIS",
+      "description": "",
+      "enum": [
+        0,
+        1
+      ],
+      "default": 0
+    },
+      "HIRS_OBS": {
+      "type": "integer",
+      "title": "HIRS",
+      "description": "",
+      "enum": [
+        0,
+        1
+      ],
+      "default": 0
+    },
+      "PAOB_OBS": {
+      "type": "integer",
+      "title": "PAOB",
+      "description": "",
+      "enum": [
+        0,
+        1
+      ],
+      "default": 0
+    },
+      "LIMB_OBS": {
+      "type": "integer",
+      "title": "LIMB",
+      "description": "Limb observations, GPS Radio Occultations",
+      "enum": [
+        0,
+        1
+      ],
+      "default": 0
+    },
+     "RADAR_OBS": {
+      "type": "integer",
+      "title": "Radar",
+      "description": "",
       "enum": [
         0,
         1
