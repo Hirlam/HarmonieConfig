@@ -8,7 +8,7 @@
   "properties": {
     "DYNAMICS": {
       "type": "string",
-      "description": "Hydrostatic or non-hydrostatic dynamics"
+      "description": "Hydrostatic or non-hydrostatic dynamics",
       "enum": [
         "h",
         "nh"
