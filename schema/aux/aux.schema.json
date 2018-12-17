@@ -59,7 +59,17 @@
       "enum" :[7200, 5400],
       "default" : 5400
     },
- 
+    "MULTITASK" : {
+      "type" : "string",
+      "description": "Submit jobs through the multi task script",
+      "enum"  :["yes","no"],
+      "default" : "no"
+    },
+    "BDLIB" : {
+      "type" : "string",
+      "description": "Boundary experiment",
+      "default" : "ECMWF"
+    },
     "NAMELIST_BASE": {
       "type": "string",
       "description": "Input for namelist generation (harmonie|alaro1)",
