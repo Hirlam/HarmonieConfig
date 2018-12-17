@@ -5,6 +5,7 @@
     "disable_properties": true
   },
   "additionalProperties": false,
+  "required" : ["DYNAMICS"],
   "properties": {
     "DYNAMICS": {
       "type": "string",
@@ -26,7 +27,7 @@
     
   },
 
-  "allOf": [
+  "oneOf": [
     {
       "$ref": "arome.schema.json"
     },
