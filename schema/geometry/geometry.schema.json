@@ -1,6 +1,5 @@
 {
   "type": "object",
-
   "options": {
     "disable_collapse": true,
     "disable_properties": true
@@ -9,11 +8,13 @@
     "DOMAIN",
     "TOPO_SOURCE",
     "GRID_TYPE",
-    "VLEV"
+    "VLEV",
+    "VERT_DISC",
+    "LGRADSP"
   ],
   "properties": {
-    "DOMAIN" : {
-       "$ref" : "domain.schema.json"
+    "DOMAIN": {
+      "$ref": "domain.schema.json"
     },
     "TOPO_SOURCE": {
       "type": "string",
@@ -52,6 +53,24 @@
         "37"
       ],
       "default": "65"
+    },
+    "VERT_DISC": {
+      "type": "string",
+      "description": "Discretization in the vertical. Note that vfe does not yet work in non-hydrostatic mode",
+      "enum": [
+        "vfd",
+        "vfe"
+      ],
+      "default": "vfd"
+    },
+    "LGRADSP": {
+      "type": "string",
+      "description": "Apply Wedi/Hortal vorticity dealiasing",
+      "enum": [
+        "yes",
+        "no"
+      ],
+      "default": "yes"
     }
   }
 }
