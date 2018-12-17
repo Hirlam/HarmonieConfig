@@ -4,13 +4,34 @@
     "disable_collapse": true,
     "disable_properties": true
   },
-  "additionalProperties" : false,
-  "oneOf": [
+  "additionalProperties": false,
+  "properties": {
+    "DYNAMICS": {
+      "type": "string",
+      "description": "Hydrostatic or non-hydrostatic dynamics"
+      "enum": [
+        "h",
+        "nh"
+      ],
+      "options": {
+        "enum_titles": [
+          "h | hydrostatic",
+          "nh | non hydrostatic"
+        ]
+      },
+      "default" : "nh"
+    }
+   
+
+    
+  },
+
+  "allOf": [
     {
-      "$ref" : "arome.schema.json"
+      "$ref": "arome.schema.json"
     },
     {
-      "$ref" : "alaro.schema.json"
+      "$ref": "alaro.schema.json"
     }
   ]
 }
