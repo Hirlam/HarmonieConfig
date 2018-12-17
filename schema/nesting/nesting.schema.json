@@ -8,8 +8,11 @@
     "HOST_MODEL",
     "HOST_SURFEX",
     "SURFEX_INPUT_FORMAT",
+    "NATIVE_INPUT_LFI",
     "BDSTRATEGY",
-    "BDINT"
+    "BDINT",
+    "LSPBDC",
+    "LUNBC"
   ],
   "properties": {
     "HOST_MODEL": {
@@ -41,11 +44,14 @@
         "lfi"
       ]
     },
-    "NATIVE_INPUT_LFI" : {
-      "type" : "string",
+    "NATIVE_INPUT_LFI": {
+      "type": "string",
       "description": "yes if host PGD/PREP are lfi files converted to fa. Only relevant if SURFEX_INPUT_FORMAT=fa",
-      "enum": ["yes","no"],
-      "default" : "no"
+      "enum": [
+        "yes",
+        "no"
+      ],
+      "default": "no"
     },
     "BDSTRATEGY": {
       "type": "string",
