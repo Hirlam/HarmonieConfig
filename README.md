@@ -29,8 +29,7 @@ Alternative open the file index.html in a browser to have a gui of the schema or
 - Add schema for selection mechanism for VarBC predictors
 - Add schema for MARS request files
 - Add schema for ECMWF cycles. This should allow e.g. to validate BDINT etc. better. Also it should warn if ECMWF cycles changes during the time range (DTGBEG DTGEND). 
-- Add schema for ecflow  tasks/families
+- Add schema for ecflow  tasks/families (document input output, such that the graphviz figure can be generated automatically)` 
 - Add schema for harmonie testbed
-- Add schema for script. (document input output, such that the graphviz figure can be generated automatically)` 
 
 
