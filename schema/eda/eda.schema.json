@@ -1,0 +1,44 @@
+{
+    "type" : "object",
+    "description" : "EDA setting",
+    "required": [
+        "PERTATMO",
+        "PERTSURF"
+    ],
+    "properties" : {
+        "PERTATMO": {
+            "type": "string",
+            "description": "",
+            "enum": [
+              "ECMAIN",
+              "CCMA",
+              "none"
+            ],
+            "options": {
+              "enum_titles": [
+                "ECMAIN  | In-line observation perturbation using the default IFS way",
+                "CCMA | Perturbation of the active observations only (CCMA content) before the Minimization, using the PERTCMA executable.",
+                "none | no perturbation of upper-air observations"
+              ]
+            }
+          },
+          "PERTSURF" : {
+            "type" : "string",
+            "description": "",
+            "enum" : ["ECMA", "model", "none"],
+            "options" : {
+              "enum_titles" : [
+                "ECMA | perturb also the surface observation before Canari (recommended for EDA to have full perturbation of the initial state).",
+                "model | perturb surface fields in grid-point space (recursive filter)",
+                "none | no perturbation for surface observations"
+              ]
+            },
+            "default" : ["none"]
+          }
+
+
+    }
+
+
+
+}
