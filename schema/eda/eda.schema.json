@@ -1,9 +1,12 @@
 {
     "type" : "object",
-    "description" : "EDA setting",
+    "description" : "This part is for EDA with observations perturbation",
     "required": [
         "PERTATMO",
-        "PERTSURF"
+        "PERTSURF",
+        "FESTAT",
+        "SCALE_PERT",
+        "EREF"
     ],
     "properties" : {
         "PERTATMO": {
@@ -34,6 +37,23 @@
               ]
             },
             "default" : ["none"]
+          },
+          "FESTAT" : {
+              "type": "string",
+              "description": "Extract differences and do Jb calculations",
+              "enum": ["yes","no"],
+              "default": "no"
+          },
+          "SCALE_PERT" : {
+              "type":"string",
+              "description": "Scale perturbations based on energy norm",
+              "enum": ["yes","no"],
+              "default":"no"
+          },
+          "EREF" : {
+              "type": "number",
+              "description": "Energy reference",
+              "default" : 35000.0
           }
 
 
