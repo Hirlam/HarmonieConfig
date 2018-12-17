@@ -55,6 +55,7 @@
     },
     "BDSTRATEGY": {
       "type": "string",
+      "description": "Which boundary strategy to follow as defined in scr/Boundary_strategy.pl",
       "enum": [
         "available",
         "simulate_operational",
