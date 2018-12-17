@@ -41,6 +41,25 @@
       ],
       "default": "hirald"
     },
+    "JB_INTERPOL" : {
+      "type" : "string",
+      "description": " Interpolation of structure functions from a pre-defined domain to your domain",
+      "enum" : ["yes","no"],
+      "default" : "no"
+    },
+    "TAUS" : {
+      "type" : "integer",
+      "description": "cut-off frequency in second",
+      "enum" :[7200, 5400],
+      "default" : 5400
+    },
+    "TSPAN" : { 
+      "type" : "integer",
+      "description": "cut-off frequency in second",
+      "enum" :[7200, 5400],
+      "default" : 5400
+    },
+ 
     "NAMELIST_BASE": {
       "type": "string",
       "description": "Input for namelist generation (harmonie|alaro1)",
