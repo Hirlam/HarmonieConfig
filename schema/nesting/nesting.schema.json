@@ -4,6 +4,7 @@
     "disable_collapse": true,
     "disable_properties": true
   },
+  "format": "grid",
   "required": [
     "HOST_MODEL",
     "HOST_SURFEX",
