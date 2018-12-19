@@ -1,0 +1,168 @@
+{
+    "type": "object",
+    "description": "Click properties to add properties.",
+    "required": [
+        "ARCHIVE_FORMAT",
+        "CONVERTFA",
+        "FIELDMONITOR",
+        "FLDEXTR",
+        "FLDEXTR_TASK",
+        "FLDVER",
+        "FLDVER_HOURS",
+        "FREQ_RESET_GUST",
+        "FREQ_RESET_TEMP",
+        "IO_SERVER",
+        "IO_SERVER_BD",
+        "MAKEGRIB_LISTENERS",
+        "NCNAMES",
+        "OBSEXTR",
+        "OBSMONITOR",
+        "POSTP",
+        "RCR_POSTP",
+        "VFLDEXP"
+    ],
+    "properties": {
+        "IO_SERVER": {
+            "type": "string",
+            "description": "Use IO server (yes|no). Set the number of cores to be used in your Env_submit",
+            "enum": [
+                "yes",
+                "no"
+            ],
+            "default": "no"
+        },
+        "IO_SERVER_BD": {
+            "type": "string",
+            "description": "Use IO server for reading of boundary data",
+            "enum": [
+                "yes",
+                "no"
+            ],
+            "default": "no"
+        },
+        "POSTP": {
+            "type": "string",
+            "description": "Postprocessing by Fullpos. See Setup_postp.pl for selection of fields",
+            "enum": [
+                "inline",
+                "offline",
+                "none"
+            ],
+            "options": {
+                "enum_titles": [
+                    "inline | this is run inside of the forecast",
+                    "offline | this is run in parallel to the forecast in a separate task",
+                    "none"
+                ]
+            }
+        },
+        "FREQ_RESET_TEMP": {
+            "type": "integer",
+            "description": "Reset frequency of max/min temperature values in hours, controls NRAZTS",
+            "defaut": 3
+        },
+        "FREQ_RESET_GUST": {
+            "type": "integer",
+            "description": "Reset frequency of max/min gust values in hours, controls NXGSTPERIOD Set to -1 to get the same frequency _AND_ reset behaviour as for min/max temperature See yomxfu.F90 for further information.",
+            "default": 1
+        },
+        "CONVERTFA": {
+            "type": "string",
+            "description": "Conversion of FA file to GRIB/nc (yes|no)",
+            "enum": [
+                "yes",
+                "no"
+            ],
+            "default": "yes"
+        },
+        "ARCHIVE_FORMAT": {
+            "type": "string",
+            "description": "Format of archive files (GRIB1|GRIB2|nc). nc format yet only available in climate mode",
+            "enum": [
+                "GRIB1",
+                "GRIB2",
+                "nc"
+            ],
+            "default": "GRIB2"
+        },
+        "NCNAMES": {
+            "type": "string",
+            "description": "Nameing of NetCDF files follows (climate|nwp) convention",
+            "enum": [
+                "nwp",
+                "climate"
+            ],
+            "default": "nwp"
+        },
+        "RCR_POSTP": {
+            "type": "string",
+            "description": "Produce a subset of fields from the history file for RCR monitoring. Only applicable if ARCHIVE_FORMAT=GRIB.",
+            "enum": [
+                "yes",
+                "no"
+            ],
+            "default": "no"
+        },
+        "MAKEGRIB_LISTENERS": {
+            "type": "integer",
+            "description": "Number of parallel listeners for Makegrib Only applicable if ARCHIVE_FORMAT=GRIB",
+            "default": 1
+        },
+        "OBSEXTR": {
+            "type": "string",
+            "description": "Extract observations from BUFR",
+            "enum": [
+                "yes",
+                "no"
+            ],
+            "default": "yes"
+        },
+        "FLDEXTR": {
+            "type": "string",
+            "description": "Extract model data for verification from model files",
+            "enum": [
+                "yes",
+                "no"
+            ],
+            "default": "yes"
+        },
+        "FLDEXTR_TASK": {
+            "type": "integer",
+            "description": "Number of parallel tasks for field extraction",
+            "default": 1
+        },
+        "VFLDEXP": {
+            "type": "string",
+            "description": "Experiment name on vfld files",
+            "default": "$EXP"
+        },
+        "FLDVER": {
+            "type": "string",
+            "description": "Main switch for field verification",
+            "enum": [
+                "yes",
+                "no"
+            ],
+            "default": "no"
+        },
+        "FLDVER_HOURS": {
+            "type": "string",
+            "description": "Hours for field verification",
+            "default": "06 12 18 24 30 36 42 48"
+        },
+        "OBSMONITOR": {
+            "type": "string",
+            "description": "Create Observation statistics plots. Format: OBSMONITOR=Option1:Option2:...:OptionN obstat: Daily usage maps and departures plotlog: IFS log statistics - Grid point and spectral norms evolution - Cost function evolution, if applicable - Observation usage from the minimization, if applicable no: Nothing at all. The assimilation related monitoring is only active if ANAATMO != none",
+            "default": "obstat"
+        },
+        "FIELDMONITOR": {
+            "type": "string",
+            "description": "Monitoring maps for hirlam.org. Note that at ECMWF this is run on ecgb (grads is only there) In  this version You must check out manually contrib/mapbin to the directory referred as MAPBIN",
+            "enum": [
+                "yes",
+                "no"
+            ],
+            "default": "no"
+        }
+    }
+}

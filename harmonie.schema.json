@@ -53,7 +53,7 @@
       "$ref": "schema/eda/eda.schema.json"
     },
     "Postprocessing": {
-      "type": "object"
+      "$ref" : "schema/postprocessing/postprocessing.schema.json"
     },
     "Archiving": {
       "type": "object"
