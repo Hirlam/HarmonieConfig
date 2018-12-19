@@ -15,12 +15,15 @@
     "LISBA_CANOPY",
     "SURFEX_LAKES",
     "MODIFY_LAKES",
+    "ECOCLIMAP_VERSION",
+    "LDB_VERSION",
+    "SOIL_TEXTURE_VERSION",
     "NAMELIST"
   ],
   "properties": {
     "CISBA": {
       "type": "string",
-      "title": "ISBA scheme",
+      "description": "ISBA scheme",
       "enum": [
         "3-L",
         "2-L",
@@ -37,7 +40,7 @@
     "test" : {}, 
     "CSNOW": {
       "type": "string",
-      "title": "Snow Scheme",
+      "description": "Snow Scheme",
       "enum": [
         "D95",
         "3-L"
@@ -46,7 +49,7 @@
     },
     "CROUGH": {
       "type": "string",
-      "title": "type of orographic roughness length",
+      "description": "type of orographic roughness length",
       "links": [
         {
          "rel": "CROUGH Surfex documentation",
@@ -69,6 +72,7 @@
     },
     "SURFEX_SEA_ICE": {
       "type": "string",
+      "description" :  "Treatment of sea ice in surfex",
       "enum": [
         "none",
         "sice"
@@ -85,8 +89,7 @@
     },
     "NPATCH": {
       "type": "integer",
-      "title": "Number of patches over land",
-      "description" : "see also LISBA_CANOPY",
+      "description": "Number of patches over land, see also LISBA_CANOPY",
       "enum": [
         1,
         2
@@ -104,7 +107,7 @@
     },
     "SURFEX_LAKES": {
       "type": "string",
-      "title": "Treatment of lakes in surfex",
+      "description": "Treatment of lakes in surfex",
       "enum": [
         "WATFLX",
         "FLAKE"
@@ -113,13 +116,30 @@
     },
     "MODIFY_LAKES": {
       "type": "string",
-      "title": "Use Vanern/Vattern as Sea", 
-      "description" : "requires new climate files",
+      "description": "Use Vanern/Vattern as Sea, requires new climate files",
       "enum": [
         "F",
         "T"
       ],
       "default": "F"
+    },
+    "ECOCLIMAP_VERSION"  : {
+      "type" : "string",
+      "description": "Version of ECOCLIMAP for surfex (1,2)",
+      "enum" : ["1.1", "1.2", "1.3", "1.4", "1.5", "2.0", "2.2.1", "2.5","2.5_plus"],
+      "default" : "2.5_plus"
+    },
+    "LDB_VERSION" : { 
+      "type" : "string",
+      "description": "Lake database version. Highly recommended 3.0 if you use FLake (and not important if you don't use it)",
+      "enum" : ["3.0"],
+      "default" : "3.0" 
+    },
+    "SOIL_TEXTURE_VERSION" : {
+      "type" : "string",
+      "description": "Soil texture input data",
+      "enum": ["FAO","HWSD_v2","SOILGRID"],
+      "default" : "FAO"
     },
     "NAMELIST" : { 
        "$ref" : "namelist/surfex_namelist.schema.json"
