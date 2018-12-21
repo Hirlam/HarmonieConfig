@@ -4,7 +4,6 @@
   "title" : "Namelist",
   "description" : "Namelists are empty by default. Click properties to customize properties. >  to unfold the namelist. JSON to see the current values. Only NAM_TEB and NAM_SSOn for now as an example.", 
   "options": {
-    "disable_collapse": true,
     "disable_properties": true
   },
   "required" : ["NAM_TEB", "NAM_SSOn"], 
