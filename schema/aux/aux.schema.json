@@ -1,25 +1,45 @@
 {
-  "type" : "object",
-
-  "required" : ["SINGLEOBS","USE_MSG"],
-  
-  "properties" : {
-  "SINGLEOBS": {
-    "type": "string",
-    "enum": [
-      "yes",
-      "no"
-    ],
-    "default": "no"
-  },
-  "USE_MSG": {
-    "type": "string",
-    "enum": [
-      "yes",
-      "no"
-    ],
-    "default": "no"
+  "type": "object",
+  "required": [
+    "SINGLEOBS",
+    "USE_MSG",
+    "MAKEODB2",
+    "JB_INTERPOL"
+  ],
+  "properties": {
+    "SINGLEOBS": {
+      "type": "string",
+      "enum": [
+        "yes",
+        "no"
+      ],
+      "default": "no"
+    },
+    "USE_MSG": {
+      "type": "string",
+      "enum": [
+        "yes",
+        "no"
+      ],
+      "default": "no"
+    },
+    "MAKEODB2": {
+      "type": "string",
+      "description": "Conversion of ODB-1 to ODB-2 using odb_migrator",
+      "enum": [
+        "yes",
+        "no"
+      ],
+      "default": "no"
+    },
+    "JB_INTERPOL": {
+      "type": "string",
+      "description": " Interpolation of structure functions from a pre-defined domain to your domain",
+      "enum": [
+        "yes",
+        "no"
+      ],
+      "default": "no"
     }
   }
-
 }
