@@ -22,6 +22,7 @@
     "EDA",
     "Postprocessing",
     "Archiving",
+    "System",
     "Aux",
     "ecflow"
   ],
@@ -59,7 +60,10 @@
     "Archiving": {
       "type": "object"
     },
-    "Aux": {
+    "System": {
+      "$ref": "schema/system/system.schema.json"
+    },
+    "Aux" : {
       "$ref": "schema/aux/aux.schema.json"
     },
     "ecflow": {
