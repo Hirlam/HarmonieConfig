@@ -1,45 +1,224 @@
 {
-  "$schema": "./harmonie.schema.json",
+  "Main": {
+    "DTGBEG": "",
+    "DTGEND": "",
+    "GITURL": "https://github.com/roelstappers/hm_home/",
+    "GITBRANCH": {
+      "name": "cy43",
+      "commit": {
+        "sha": "571811786e682e586a9c732bc30cdde44448d9ba",
+        "url": "https://api.github.com/repos/roelstappers/hm_home/commits/571811786e682e586a9c732bc30cdde44448d9ba"
+      }
+    },
+    "PATHS": {
+      "OBDIR": "$HMDATA/observations",
+      "BINDIR": "$HM_DATA/bin",
+      "WRK": "$HM_DATA/$CYCLEDIR",
+      "ARCHIVE_ROOT": "$HM_DATA/archive",
+      "ECFSLOC": "ectmp",
+      "EXTRARCH": "$ARCHIVE_ROOT/extract",
+      "BDDIR": "$HM_DATA/${BDLIB}/archive/@YYYY@/@MM@/@DD@/@HH@",
+      "INT_BDFILE": "$WRK/ELSCF${CNMEXP}ALBC@NNN@",
+      "MSG_PATH": "$SCRATCH/CLOUDS/",
+      "ECFS_EPS_EC_BD_PATH": "${ECFSLOC}:/$USER/harmonie/$EXP",
+      "CLIMDIR": "$HM_DATA/climate",
+      "BDCLIM": "$HM_DATA/${BDLIB}/climate",
+      "MAPBIN": "$HM_DATA/lib/util/mapbin"
+    },
+    "MAIL_ON_ABORT": []
+  },
   "Geometry": {
     "DOMAIN": {
-      "NAME": "H2500",
-      "TSTEP": "60",
-      "NLON": "1000",
-      "NLAT": "750",
-      "LONC": "8.0",
-      "LATC": "58.0",
-      "LON0": "8.0",
-      "LAT0": "58.0",
-      "GSIZE": "2500."
+      "NAME": "TRAINING_10",
+      "TSTEP": 240,
+      "NLON": 150,
+      "NLAT": 150,
+      "LONC": 14.8,
+      "LATC": 51.9,
+      "LON0": 20,
+      "LAT0": 50.2,
+      "GSIZE": 10000
     },
-    "TOPO_SOURCE": "gtopo30",
+    "TOPO_SOURCE": "gmted2010",
     "GRID_TYPE": "LINEAR",
-    "VLEV": "65"
+    "VLEV": "65",
+    "VERT_DISC": "vfd",
+    "LGRADSP": "yes"
   },
   "Nesting": {
-    "HOST_MODEL": "ald",
-    "HOST_SURFEX": "yes",
-    "BDSTRATEGY": "e40",
-    "BDINT": 5,
-    "SURFEX_INPUT_FORMAT": "fa"
+    "HOST_MODEL": "ifs",
+    "HOST_SURFEX": "no",
+    "SURFEX_INPUT_FORMAT": "lfi",
+    "NATIVE_INPUT_LFI": "no",
+    "BDSTRATEGY": "RCR_operational",
+    "BDINT": 1,
+    "LSPBDC": "no",
+    "LUNBC": "yes"
   },
   "Assimilation": {
-    "ANAATMO": "4DVAR",
+    "ANAATMO": "3DVAR",
+    "LSMIXBC": "yes",
     "ANASURF": "CANARI_OI_MAIN",
-    "LSMIXBC": "yes"
+    "ANASURF_MODE": "before",
+    "INCV": "1,1,1,1",
+    "INCO": "1,1,0"
   },
   "Physics": {
+    "DYNAMICS": "nh",
     "PHYSICS": "arome",
-    "HARATU": false,
-    "MASS_FLUX_SCHEME": "edkf"
-  },
-  "Observations": {
-    "OBDIR": "$HMDATA/observations",
-    "SINGLEOBS": "no",
-    "USE_MSG": "no",
-    "MSG_PATH": "$SCRATCH/CLOUDS"
+    "HARATU": true,
+    "MASS_FLUX_SCHEME": "edmfm"
   },
   "Surfex": {
-    "CISBA": "3-L"
+    "CISBA": "3-L",
+    "CSNOW": "3-L",
+    "CROUGH": "NONE",
+    "SURFEX_SEA_ICE": "none",
+    "SURFEX_OUTPUT_FORMAT": "fa",
+    "NPATCH": 1,
+    "LISBA_CANOPY": ".TRUE.",
+    "SURFEX_LAKES": "WATFLX",
+    "MODIFY_LAKES": "F",
+    "ECOCLIMAP_VERSION": "2.5_plus",
+    "LDB_VERSION": "3.0",
+    "SOIL_TEXTURE_VERSION": "FAO",
+    "NAMELIST": {
+      "NAM_TEB": {},
+      "NAM_SSOn": {}
+    }
+  },
+  "Observations": {
+    "SYNOP_OBS": 1,
+    "MODESEHS_OBS": 0,
+    "AIRCRAFT_OBS": 1,
+    "BOUY_OBS": 1,
+    "TEMP_OBS": 1,
+    "PILOT_OBS": 1,
+    "GNSS_OBS": 0,
+    "SGNSS_OBS": 0,
+    "AMV_OBS": 0,
+    "AMSUA_OBS": 0,
+    "AMSUB_OBS": 0,
+    "IASI_OBS": 0,
+    "SEV_OBS": 0,
+    "SEVIRI_OBS": 0,
+    "SCATT_OBS": 0,
+    "ATMS_OBS": 0,
+    "CRIS_OBS": 0,
+    "PAOB_OBS": 0,
+    "LIMB_OBS": 0,
+    "RADAR_OBS": 0,
+    "LISTE_LOC": []
+  },
+  "EPS": {},
+  "EDA": {
+    "PERTATMO": "ECMAIN",
+    "PERTSURF": "none",
+    "FESTAT": "no",
+    "SCALE_PERT": "no",
+    "EREF": 35000
+  },
+  "Postprocessing": {
+    "IO_SERVER": "no",
+    "IO_SERVER_BD": "no",
+    "POSTP": "inline",
+    "FREQ_RESET_TEMP": 0,
+    "FREQ_RESET_GUST": 1,
+    "CONVERTFA": "yes",
+    "ARCHIVE_FORMAT": "GRIB2",
+    "NCNAMES": "nwp",
+    "RCR_POSTP": "no",
+    "MAKEGRIB_LISTENERS": 1,
+    "OBSEXTR": "yes",
+    "FLDEXTR": "yes",
+    "FLDEXTR_TASK": 1,
+    "VFLDEXP": "$EXP",
+    "FLDVER": "no",
+    "FLDVER_HOURS": "06 12 18 24 30 36 42 48",
+    "OBSMONITOR": "obstat",
+    "FIELDMONITOR": "no"
+  },
+  "Archiving": {},
+  "System": {
+    "CNMEXP": "HARM",
+    "ARSTRATEGY": "medium",
+    "ECFSGROUP": "hirald",
+    "MULTITASK": "no",
+    "BDLIB": "ECMWF",
+    "NAMELIST_BASE": "harmonie",
+    "RUNNING_MODE": "research",
+    "SIMULATION_TYPE": "nwp",
+    "Config": {
+      "COMPCENTRE ": "LOCAL",
+      "HM_DATA": "$HOME/scratch/hm_home/$EXP",
+      "HM_LIB": "$HM_DATA/lib",
+      "MAKEUP": "yes",
+      "MAKE_OWN_PRECOMPILED": "no",
+      "MAKEUP_BUILD_DIR": "$HM_LIB",
+      "MAKEUP_BUILD_GRIB_API_FLAG": "-A",
+      "HARMONIE_CONFIG": "linuxgfortran",
+      "BUFR_TABLES": "$HM_LIB/util/auxlibs/bufr_405/bufrtables/",
+      "GRIB_TEMPLATES_PATH": "$HM_LIB/util/grib_api/samples",
+      "GRIB_SAMPLES_PATH": "$HM_LIB/util/grib_api/samples",
+      "GRIB_DEFINITION_PATH": "$HM_LIB/util/gl_grib_api/definitions:$HM_LIB/util/grib_api/definitions",
+      "LD_LIBRARY_PATH": "$LD_LIBRARY_PATH:${HM_LIB}/util/grib_api/fortran/.libs:${HM_LIB}/util/grib_api/src/.libs",
+      "LMPOFF": ".TRUE.",
+      "L_GATHERV_WRGP": ".FALSE.",
+      "HM_CLDATA": "$HOME/climdata",
+      "GMTED2010_INPUT_PATH": "$HM_CLDATA/GMTED",
+      "PERL_TK": "perl",
+      "PERLTKDIR": "",
+      "ROOTPACK": "$HM_DATA/../rootpack",
+      "GMKROOT": "$HM_LIB/util/gmkpack",
+      "GMKFILE": "GFORTRAN.LINUX",
+      "GMKTMP": "/tmp",
+      "RSYNC_EXCLUDE": "'--exclude=.svn'",
+      "HOST0": "`hostname`",
+      "HOST_INSTALL": "0",
+      "SMSHOST": "${SMSHOST-$HOST0}",
+      "HM_COMDAT": "$HM_DATA/..",
+      "PATH": ".:$HM_LIB/scr:$HM_LIB/msms:$HM_LIB:$GMKROOT/util:$PATH",
+      "MAKE": "make",
+      "MKDIR": "mkdir -p",
+      "CDP": "${CDP-$HM_LIB/msms/sms_cdp}",
+      "JOBOUTDIR": "$HM_DATA/sms_logfiles"
+    },
+    "hostdescriptions": {
+      "HM_DATA0": "",
+      "HM_LIB0": "",
+      "HM_DATA1": "",
+      "HM_LIB1": "",
+      "DTGBEG": "",
+      "DTGEND": "",
+      "BUILD": "yes",
+      "PLAYFILE": "harmonie"
+    }
+  },
+  "Aux": {
+    "SINGLEOBS": "no",
+    "USE_MSG": "no",
+    "MAKEODB2": "no",
+    "JB_INTERPOL": "no"
+  },
+  "ecflow": {
+    "Date": {
+      "Hour": {
+        "Cycle": {
+          "StartData": {},
+          "Analysis": {
+            "Addsurf": {},
+            "AnSFC": {
+              "Interpol_ec_sst": {},
+              "Canari": {
+                "Namelist": {
+                  "NAM_TEB": {},
+                  "NAM_SSOn": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
