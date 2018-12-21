@@ -1,0 +1,10 @@
+{
+  "type" : "array",
+  "format" : "tabs",
+  "uniqueItems": "true",
+  "title" : "member",
+  "items" :
+     { "$ref" : "harmonie.schema.json"}
+
+
+}
