@@ -2,10 +2,17 @@
     "type": "object",
     "title": "DFI",
     "required": [
+        "DFI",
         "TAUS",
         "TSPAN"
     ],
     "properties": {
+        "DFI" : {
+            "type" : "string",
+            "description" : "Digital filter initialization",
+            "enum" : ["none", "idfi","fdfi"],
+            "default" : "none"
+        },
         "TAUS": {
             "type": "integer",
             "description": "cut-off frequency in second",

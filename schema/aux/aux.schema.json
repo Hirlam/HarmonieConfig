@@ -1,4 +1,25 @@
 {
-  "type" : "object" 
+  "type" : "object",
+
+  "required" : ["SINGLEOBS","USE_MSG"],
+  
+  "properties" : {
+  "SINGLEOBS": {
+    "type": "string",
+    "enum": [
+      "yes",
+      "no"
+    ],
+    "default": "no"
+  },
+  "USE_MSG": {
+    "type": "string",
+    "enum": [
+      "yes",
+      "no"
+    ],
+    "default": "no"
+    }
+  }
 
 }
