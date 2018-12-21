@@ -6,6 +6,7 @@
         "ARCHIVE_FORMAT",
         "CONVERTFA",
         "MAKEGRIB_LISTENERS",
+        "RCR_POSTP",
         "NCNAMES"
     ],
     "properties": {
@@ -58,6 +59,15 @@
                 "climate"
             ],
             "default": "nwp"
+        },
+        "RCR_POSTP": {
+            "type": "string",
+            "description": "Produce a subset of fields from the history file for RCR monitoring. Only applicable if ARCHIVE_FORMAT=GRIB.",
+            "enum": [
+                "yes",
+                "no"
+            ],
+            "default": "no"
         }
     }
 }
