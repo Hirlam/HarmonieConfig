@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "title": "DFI",
+    "required": [
+        "TAUS",
+        "TSPAN"
+    ],
+    "properties": {
+        "TAUS": {
+            "type": "integer",
+            "description": "cut-off frequency in second",
+            "enum": [
+                7200,
+                5400
+            ],
+            "default": 5400
+        },
+        "TSPAN": {
+            "type": "integer",
+            "description": "cut-off frequency in second",
+            "enum": [
+                7200,
+                5400
+            ],
+            "default": 5400
+        }
+    }
+}
