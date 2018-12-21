@@ -1,20 +1,10 @@
 # Harmonie json-schema definitions 
 
-Harmonie will use json-schema to validate the json configuration files of experiments. This repository contains the json-schema files 
+This repository contains the json-schema files that will be used in Harmonie to validate experiment configuration files 
 
-Usage: open the file config_exp.json in Visual Studio Code or another editor that supports json schema
+Open the file config_exp.json in an editor that supports json-schema (e.g. VS code)
 
-```bash
-code config_exp.json
-```
-
-If no internet connection change the first line in config_exp.json to 
-
-```bash
-"$schema"  : "file:/path/to/cloned/gitrepository/harmonie.schema.json",
-```
-
-Alternative open the file index.html in a browser to have a gui of the schema or go to https://roelstappers.github.io
+Or open the file index.html in a browser. See also https://roelstappers.github.io
 
 ## Open issues 
 - handling of  EPS configation 
