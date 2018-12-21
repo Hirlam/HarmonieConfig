@@ -2,8 +2,6 @@
     "type": "object",
     "description": "Click properties to add properties.",
     "required": [
-        "ARCHIVE_FORMAT",
-        "CONVERTFA",
         "FIELDMONITOR",
         "FLDEXTR",
         "FLDEXTR_TASK",
@@ -13,8 +11,6 @@
         "FREQ_RESET_TEMP",
         "IO_SERVER",
         "IO_SERVER_BD",
-        "MAKEGRIB_LISTENERS",
-        "NCNAMES",
         "OBSEXTR",
         "OBSMONITOR",
         "POSTP",
@@ -66,34 +62,8 @@
             "description": "Reset frequency of max/min gust values in hours, controls NXGSTPERIOD Set to -1 to get the same frequency _AND_ reset behaviour as for min/max temperature See yomxfu.F90 for further information.",
             "default": 1
         },
-        "CONVERTFA": {
-            "type": "string",
-            "description": "Conversion of FA file to GRIB/nc (yes|no)",
-            "enum": [
-                "yes",
-                "no"
-            ],
-            "default": "yes"
-        },
-        "ARCHIVE_FORMAT": {
-            "type": "string",
-            "description": "Format of archive files (GRIB1|GRIB2|nc). nc format yet only available in climate mode",
-            "enum": [
-                "GRIB1",
-                "GRIB2",
-                "nc"
-            ],
-            "default": "GRIB2"
-        },
-        "NCNAMES": {
-            "type": "string",
-            "description": "Nameing of NetCDF files follows (climate|nwp) convention",
-            "enum": [
-                "nwp",
-                "climate"
-            ],
-            "default": "nwp"
-        },
+       
+        
         "RCR_POSTP": {
             "type": "string",
             "description": "Produce a subset of fields from the history file for RCR monitoring. Only applicable if ARCHIVE_FORMAT=GRIB.",
@@ -102,11 +72,6 @@
                 "no"
             ],
             "default": "no"
-        },
-        "MAKEGRIB_LISTENERS": {
-            "type": "integer",
-            "description": "Number of parallel listeners for Makegrib Only applicable if ARCHIVE_FORMAT=GRIB",
-            "default": 1
         },
         "OBSEXTR": {
             "type": "string",

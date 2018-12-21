@@ -1,0 +1,63 @@
+{
+    "type": "object",
+    "description": "Archiving settings",
+    "required": [
+        "ARSTRATEGY",
+        "ARCHIVE_FORMAT",
+        "CONVERTFA",
+        "MAKEGRIB_LISTENERS",
+        "NCNAMES"
+    ],
+    "properties": {
+        "ARSTRATEGY": {
+            "type": "string",
+            "description": "Archive strategy",
+            "enum": [
+                "minimum",
+                "medium",
+                "maximum"
+            ],
+            "options": {
+                "enum_titles": [
+                    "minimum | only logs and vfld file",
+                    "medium | main results",
+                    "maximum | everything"
+                ]
+            },
+            "default": "medium"
+        },
+        "ARCHIVE_FORMAT": {
+            "type": "string",
+            "description": "Format of archive files (GRIB1|GRIB2|nc). nc format yet only available in climate mode",
+            "enum": [
+                "GRIB1",
+                "GRIB2",
+                "nc"
+            ],
+            "default": "GRIB2"
+        },
+        "CONVERTFA": {
+            "type": "string",
+            "description": "Conversion of FA file to GRIB/nc (yes|no)",
+            "enum": [
+                "yes",
+                "no"
+            ],
+            "default": "yes"
+        },
+        "MAKEGRIB_LISTENERS": {
+            "type": "integer",
+            "description": "Number of parallel listeners for Makegrib Only applicable if ARCHIVE_FORMAT=GRIB",
+            "default": 1
+        },
+        "NCNAMES": {
+            "type": "string",
+            "description": "Nameing of NetCDF files follows (climate|nwp) convention",
+            "enum": [
+                "nwp",
+                "climate"
+            ],
+            "default": "nwp"
+        }
+    }
+}

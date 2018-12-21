@@ -3,17 +3,12 @@
   "description": "These variables need to be put in a category or removed (moved to the scripts). Click properties to see if there are more variables.",
   "required": [
     "CNMEXP",
-    "ARSTRATEGY", 
     "ECFSGROUP",
-    "JB_INTERPOL",
     "MULTITASK",
     "BDLIB",
     "NAMELIST_BASE",
     "RUNNING_MODE",
     "SIMULATION_TYPE",
-    "SINGLEOBS",
-    "USE_MSG",
-    "MSG_PATH",
     "Config",
     "hostdescriptions"
   ],
@@ -22,24 +17,7 @@
       "type": "string",
       "default": "HARM"
     },
-    "ARSTRATEGY": {
-      "type": "string",
-      "description": "Archive strategy",
-      "enum": [
-        "minimum",
-        "medium",
-        "maximum"
-      ],
-      "options": {
-        "enum_titles": [
-          "minimum | only logs and vfld file",
-          "medium | main results",
-          "maximum | everything"
-        ]
-      },
-      "default": "medium"
-    },
-    "ECFSGROUP": {
+   "ECFSGROUP": {
       "type": "string",
       "description": "Group in which to chgrp the ECMWF archive",
       "enum": [
