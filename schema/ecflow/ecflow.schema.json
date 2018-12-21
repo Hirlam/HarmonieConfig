@@ -1,0 +1,105 @@
+{
+  "type": "object",
+  "title": "ecflow",
+  "required": [
+    "Date"
+  ],
+  "properties": {
+    "Date": {
+      "type": "object",
+      "required": [
+        "Hour"
+      ],
+      "properties": {
+        "Hour": {
+          "type": "object",
+          "required": [
+            "Cycle"
+          ],
+          "properties": {
+            "Cycle": {
+              "type": "object",
+              "required": [
+                "StartData",
+                "Analysis"
+              ],
+              "properties": {
+                "StartData": {
+                  "type": "object",
+                  "properties": {
+                    "FirstGuess": {
+                      "type": "object"
+                    },
+                    "Bator": {
+                      "type": "object"
+                    },
+                    "Prep_ini_surfex": {
+                      "type": "object"
+                    }
+                  }
+                },
+                "Analysis": {
+                  "type": "object",
+                  "required": [
+                    "Addsurf",
+                    "AnSFC"
+                  ],
+                  "properties": {
+                    "Addsurf": {
+                      "type": "object"
+                    },
+                    "AnSFC": {
+                      "type": "object",
+                      "required": [
+                        "Interpol_ec_sst",
+                        "Canari"
+                      ],
+                      "properties": {
+                        "Interpol_ec_sst": {
+                          "type": "object"
+                        },
+                        "Canari": {
+                          "type": "object",
+                          "required": [
+                            "Namelist"
+                          ],
+                          "properties": {
+                            "Namelist": {
+                              "$ref": "../surfex/namelist/surfex_namelist.schema.json"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "AnUA": {
+                      "type": "object",
+                      "required": [
+                        "Fetch_assim_data",
+                        "Screening",
+                        "Pertobs_ccma"
+                      ],
+                      "properties": {
+                        "Fetch_assim_data": {
+                          "type": "object"
+                        },
+                        "Screening": {
+                          "type": "object"
+                        },
+                        "Pertobs_ccma": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "PostAnalysis": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

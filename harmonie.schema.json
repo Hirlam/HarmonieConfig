@@ -22,7 +22,8 @@
     "EDA",
     "Postprocessing",
     "Archiving",
-    "Aux"
+    "Aux",
+    "ecflow"
   ],
   "properties": {
     "Main": {
@@ -60,6 +61,9 @@
     },
     "Aux": {
       "$ref": "schema/aux/aux.schema.json"
+    },
+    "ecflow": {
+      "$ref": "schema/ecflow/ecflow.schema.json"
     }
   }
 }
