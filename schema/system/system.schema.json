@@ -6,6 +6,9 @@
     "ARSTRATEGY", 
     "ECFSGROUP",
     "JB_INTERPOL",
+    "MULTITASK",
+    "BDLIB",
+    "NAMELIST_BASE",
     "RUNNING_MODE",
     "SIMULATION_TYPE",
     "SINGLEOBS",
@@ -45,33 +48,6 @@
       ],
       "default": "hirald"
     },
-    "JB_INTERPOL": {
-      "type": "string",
-      "description": " Interpolation of structure functions from a pre-defined domain to your domain",
-      "enum": [
-        "yes",
-        "no"
-      ],
-      "default": "no"
-    },
-    "TAUS": {
-      "type": "integer",
-      "description": "cut-off frequency in second",
-      "enum": [
-        7200,
-        5400
-      ],
-      "default": 5400
-    },
-    "TSPAN": {
-      "type": "integer",
-      "description": "cut-off frequency in second",
-      "enum": [
-        7200,
-        5400
-      ],
-      "default": 5400
-    },
     "MULTITASK": {
       "type": "string",
       "description": "Submit jobs through the multi task script",
@@ -99,7 +75,7 @@
           "alaro1 | For ALARO-1 baseline with only a few configurations available nam/alaro1_namelists.pm"
         ]
       },
-      "default": "alaro"
+      "default": "harmonie"
     },
     "RUNNING_MODE": {
       "type": "string",
@@ -118,26 +94,7 @@
       ],
       "default": "nwp"
     },
-    "SINGLEOBS": {
-      "type": "string",
-      "enum": [
-        "yes",
-        "no"
-      ],
-      "default": "no"
-    },
-    "USE_MSG": {
-      "type": "string",
-      "enum": [
-        "yes",
-        "no"
-      ],
-      "default": "no"
-    },
-    "MSG_PATH": {
-      "type": "string",
-      "default": "$SCRATCH/CLOUDS"
-    },
+ 
     "Config": {
       "$ref": "config.schema.json"
     },
