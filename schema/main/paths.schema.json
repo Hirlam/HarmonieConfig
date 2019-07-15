@@ -25,7 +25,7 @@
     "OBDIR": {
       "type": "string",
       "description": "Observation file directory",
-      "default": "$HMDATA/observations"
+      "default": "$HM_DATA/observations"
     },
     "BINDIR": {
       "type": "string",
