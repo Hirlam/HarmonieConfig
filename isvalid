@@ -1,0 +1,41 @@
+#!/usr/bin/env julia
+
+"""
+   isvalid filename
+   return 
+
+"""
+
+
+
+using JSON 
+using JSONSchema
+
+
+mydir=@__DIR__
+
+schema = JSON.parsefile("$mydir/harmonie.schema.json")
+
+schema["\$id"]  = "$mydir/schema" # point to disk instead of url 
+
+myschema = Schema(schema)
+  
+config = JSON.parsefile("$mydir/config_exp.json")
+
+
+g  = diagnose(config,myschema) 
+
+if g == nothing 
+   exit(0) 
+else 
+   error(g) 
+end
+#if isvalid(config,myschema)  
+#  exit(0)
+#else 
+#  exit(1)
+# end 
+ 
+
+
+

@@ -4,7 +4,7 @@
     "disable_collapse": true,
     "disable_properties": true
   },
-  "additionalProperties": false,
+  "additionalProperties": true,
   "required" : ["DYNAMICS"],
   "properties": {
     "DYNAMICS": {
