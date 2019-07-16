@@ -2,25 +2,30 @@
 
 """
    isvalid filename
-   return 
-
 """
-
-
+mydir=@__DIR__
 
 using JSON 
 using JSONSchema
 
+schemafile="$mydir/harmonie.schema.json"
 
-mydir=@__DIR__
+if size(ARGS,1) <=1 
+   configfile = ARGS[1] 
+else
+ configfile= "$mydir/config_exp.json"
+end 
 
-schema = JSON.parsefile("$mydir/harmonie.schema.json")
+println("Checking $configfile against schema $schemafile") 
 
-schema["\$id"]  = "$mydir/schema" # point to disk instead of url 
+
+schema = JSON.parsefile(schemafile)
+
+schema["\$id"]  = "$mydir/schema" # point "$id" to disk instead of url 
 
 myschema = Schema(schema)
   
-config = JSON.parsefile("$mydir/config_exp.json")
+config = JSON.parsefile(configfile)
 
 
 g  = diagnose(config,myschema) 
