@@ -8,9 +8,7 @@
     "BDLIB",
     "NAMELIST_BASE",
     "RUNNING_MODE",
-    "SIMULATION_TYPE",
-    "Config",
-    "hostdescriptions"
+    "SIMULATION_TYPE"    
   ],
   "properties": {
     "CNMEXP": {
@@ -71,13 +69,6 @@
         "climate"
       ],
       "default": "nwp"
-    },
- 
-    "Config": {
-      "$ref": "config.schema.json"
-    },
-    "hostdescriptions": {
-      "$ref": "hostdescriptions.schema.json"
     }
   }
 }
