@@ -17,14 +17,12 @@
     "Assimilation",
     "Physics",
     "Surfex",
-    "Observations",
-    "EPS",
+    "Observations",    
     "EDA",
     "Postprocessing",
     "Archiving",
     "System",
-    "Aux",
-    "ecflow"
+    "Aux"    
   ],
   "properties": {
     "Main": {
@@ -47,10 +45,7 @@
     },
     "Observations": {
       "$ref": "schema/observations/observations.schema.json"
-    },
-    "EPS": {
-      "type": "object"
-    },
+    },    
     "EDA" : {
       "$ref": "schema/eda/eda.schema.json"
     },
@@ -65,9 +60,6 @@
     },
     "Aux" : {
       "$ref": "schema/aux/aux.schema.json"
-    },
-    "ecflow": {
-      "$ref": "schema/ecflow/ecflow.schema.json"
     }
   }
 }
