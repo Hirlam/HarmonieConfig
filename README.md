@@ -22,4 +22,6 @@ Or open the file index.html in a browser. See also https://roelstappers.github.i
 - Add schema for ecflow  tasks/families (document input output, such that the graphviz figure can be generated automatically)` 
 - Add schema for harmonie testbed (Harmonie_configurations.pm)
 
+## to do in Harmonie 
+- e.g. scr/Output_freq.pl  remove checks
 
