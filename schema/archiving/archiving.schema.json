@@ -1,6 +1,7 @@
 {
     "type": "object",
     "description": "Archiving settings",
+    "additionalProperties": false,
     "required": [
         "ARSTRATEGY",
         "ARCHIVE_FORMAT",
@@ -14,18 +15,10 @@
             "type": "string",
             "description": "Archive strategy",
             "enum": [
-                "minimum",
-                "medium",
-                "maximum"
+                "climate:fg:verif:odb_stuff:[an|fc]_fa:pp_grb"              
             ],
-            "options": {
-                "enum_titles": [
-                    "minimum | only logs and vfld file",
-                    "medium | main results",
-                    "maximum | everything"
-                ]
-            },
-            "default": "medium"
+            "default": "climate:fg:verif:odb_stuff:[an|fc]_fa:pp_grb"
+
         },
         "ARCHIVE_FORMAT": {
             "type": "string",
