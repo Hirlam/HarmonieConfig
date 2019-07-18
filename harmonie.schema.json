@@ -1,8 +1,8 @@
 {
   "$id": "https://roelstappers.github.io/harmonie.schema.json",
-  "$schema" : "http://json-schema.org/schema#",
+  "$schema": "http://json-schema.org/schema#",
   "title": "Harmonie experiment configuration",
-  "description" : "See Surfex and Observations tabs for examples. Observations.LISTE_LOC[].obstype shows how enum_titles can be used to give meaningful names to integers. Geometry.DOMAIN shows how we can insert value directly in the config_exp.json. Surfex.Namelist shows how namelist information can be included in the gui. All of this could help to reduce the dependency on perl in the scripts. ",
+  "description": "See Surfex and Observations tabs for examples. Observations.LISTE_LOC[].obstype shows how enum_titles can be used to give meaningful names to integers. Geometry.DOMAIN shows how we can insert value directly in the config_exp.json. Surfex.Namelist shows how namelist information can be included in the gui. All of this could help to reduce the dependency on perl in the scripts. ",
   "options": {
     "disable_properties": false,
     "disable_edit_json": false,
@@ -11,24 +11,24 @@
   "format": "categories",
   "type": "object",
   "additionalProperties": false,
-  "required": [   
-    "Times", 
+  "required": [
+    "Times",
     "Geometry",
     "Nesting",
     "Assimilation",
     "Physics",
-    "Surfex",    
+    "Surfex",
     "EDA",
     "Postprocessing",
     "Archiving",
     "System",
     "Paths",
-    "Aux"    
+    "Aux"
   ],
-  "properties": {  
-    "Times"  : { 
-      "$ref" : "schema/main/timelists.schema.json"
-    }, 
+  "properties": {
+    "Times": {
+      "$ref": "schema/main/timelists.schema.json"
+    },
     "Geometry": {
       "$ref": "schema/geometry/geometry.schema.json"
     },
@@ -46,12 +46,12 @@
     },
     "Observations": {
       "$ref": "schema/observations/observations.schema.json"
-    },    
-    "EDA" : {
+    },
+    "EDA": {
       "$ref": "schema/eda/eda.schema.json"
     },
     "Postprocessing": {
-      "$ref" : "schema/postprocessing/postprocessing.schema.json"
+      "$ref": "schema/postprocessing/postprocessing.schema.json"
     },
     "Archiving": {
       "$ref": "schema/archiving/archiving.schema.json"
@@ -60,9 +60,9 @@
       "$ref": "schema/system/system.schema.json"
     },
     "Paths": {
-      "$ref": "schema/main/paths.schema.json"   
+      "$ref": "schema/main/paths.schema.json"
     },
-    "Aux" : {
+    "Aux": {
       "$ref": "schema/aux/aux.schema.json"
     }
   }
