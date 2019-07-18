@@ -16,6 +16,7 @@
     "Geometry",
     "Nesting",
     "Assimilation",
+    "DFI",
     "Physics",
     "Surfex",    
     "EDA",
@@ -37,6 +38,9 @@
     },
     "Assimilation": {
       "$ref": "schema/assimilation/assimilation.schema.json"
+    },
+    "DFI" : {
+      "$ref" : "schema/dfi/dfi.schema.json"
     },
     "Physics": {
       "$ref": "schema/physics/physics.schema.json"

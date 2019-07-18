@@ -1,23 +1,19 @@
 {
   "type": "object",
-  "title" : "none",  
+  "title": "none",
   "additionalProperties": false,
   "options": {
     "disable_collapse": true,
     "disable_properties": false
   },
-  "required": [    
-    "ANAATMO",
-    "DFI"
+  "required": [
+    "ANAATMO"
   ],
   "properties": {
     "ANAATMO": {
       "type": "string",
-      "default": "none",      
+      "default": "none",
       "readOnly": true
-    },     
-    "DFI": {
-      "$ref": "dfi.schema.json"
-    }    
+    }
   }
 }

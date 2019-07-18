@@ -34,9 +34,6 @@
     },
     "INCO": {
       "$ref": "inco.schema.json"
-    },
-    "DFI": {
-      "$ref": "dfi.schema.json"
-    }    
+    }      
   }
 }

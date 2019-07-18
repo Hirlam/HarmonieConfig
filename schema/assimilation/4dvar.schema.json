@@ -40,9 +40,6 @@
     "INCO": {
       "$ref": "inco.schema.json"
     },
-    "DFI": {
-      "$ref": "dfi.schema.json"
-    },
     "NOUTERLOOP": {
       "$ref": "nouterloop.schema.json"
     },
