@@ -21,7 +21,7 @@
             "type": "string",
             "description": "Which cycles to run, replaces FCINT",
             "enum": [
-                "00:21:03"            
+                "00-21:03"            
             ],
             "default" : "00:21:03"
         },
