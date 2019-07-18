@@ -6,7 +6,9 @@
     "DYNAMICS",
     "PHYSICS",
     "MASS_FLUX_SCHEME",
-    "HARATU"
+    "HARATU",
+    "STATNW",
+    "XRIMAX"
   ],
   "properties": {
     "DYNAMICS": {
