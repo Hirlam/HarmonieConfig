@@ -23,7 +23,7 @@
             "enum": [
                 "00-21:03"            
             ],
-            "default" : "00:21:03"
+            "default" : "00-21:03"
         },
         "LL_LIST": {
             "type": "string",
