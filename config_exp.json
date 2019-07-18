@@ -1,6 +1,6 @@
 {
   "$schema": "./harmonie.schema.json",
-    "Geometry": {
+  "Geometry": {
     "DOMAIN": "DKCOEXP",
     "TOPO_SOURCE": "gmted2010",
     "GRID_TYPE": "LINEAR",
@@ -26,6 +26,11 @@
     "INCV": "1,1,1,1",
     "INCO": "1,1,0"
   },
+  "DFI": {
+    "DFI": "none",
+    "TAUS": 5400,
+    "TSPAN": 5400
+  },
   "Physics": {
     "DYNAMICS": "nh",
     "PHYSICS": "arome",
@@ -46,8 +51,8 @@
     "MODIFY_LAKES": "F",
     "ECOCLIMAP_VERSION": "2.5_plus",
     "LDB_VERSION": "3.0",
-    "SOIL_TEXTURE_VERSION": "FAO"    
-  },  
+    "SOIL_TEXTURE_VERSION": "FAO"
+  },
   "EDA": {
     "PERTATMO": "ECMAIN",
     "PERTSURF": "none",
@@ -93,6 +98,21 @@
     "USE_MSG": "no",
     "MAKEODB2": "no",
     "JB_INTERPOL": "no"
+  },
+  "Times": {
+    "HH_LIST": "00:21:03",
+    "LL_LIST": "12,3",    
+    "HWRITUPTIMES": "00-21:3,24-60:6",    
+    "FULLFAFTIMES": "$HWRITUPTIMES",
+    "PWRITUPTIMES": "00-60:3",
+    "PFFULLWFTIMES": -1,
+    "VERITIMES": "00-60:1",
+    "SFXSELTIMES": "$PWRITUPTIMES",
+    "SFXSWFTIMES": -1,    
+    "SWRITUPTIMES": "00-06:3",
+    "SFXWFTIMES": "$SWRITUPTIMES",
+    "SURFEX_LSELECT": "yes",    
+    "INT_SINI_FILE": "$WRK/SURFXINI.fa"  
   },
   "Paths": {
     "OBDIR": "$HMDATA/observations",
