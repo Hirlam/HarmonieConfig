@@ -1,5 +1,6 @@
 {
   "type": "object",
+  "additionalProperties": false,
   "options": {
     "disable_collapse": true,
     "disable_properties": true

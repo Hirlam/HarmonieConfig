@@ -1,8 +1,10 @@
 {
   "type": "object",
+  "description" : "The Properties button gives access to the Surfex Namelist (only TEB and SSOn for know)",
+  "additionalProperties": false,
   "options": {
     "disable_collapse": true,
-    "disable_properties": true
+    "disable_properties": false
   },
   "format" : "grid",
   "required": [
@@ -17,8 +19,7 @@
     "MODIFY_LAKES",
     "ECOCLIMAP_VERSION",
     "LDB_VERSION",
-    "SOIL_TEXTURE_VERSION",
-    "NAMELIST"
+    "SOIL_TEXTURE_VERSION"   
   ],
   "properties": {
     "CISBA": {

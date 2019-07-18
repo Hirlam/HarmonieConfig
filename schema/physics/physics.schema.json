@@ -1,10 +1,11 @@
 {
   "type": "object",
+  
   "options": {
     "disable_collapse": true,
     "disable_properties": true
   },
-  "additionalProperties": true,
+  "additionalProperties": false,
   "required" : ["DYNAMICS"],
   "properties": {
     "DYNAMICS": {
@@ -26,12 +27,13 @@
 
     
   },
-
   "oneOf": [
     {
+      "title" : "arome",
       "$ref": "arome.schema.json"
     },
     {
+      "title" : "alaro",
       "$ref": "alaro.schema.json"
     }
   ]

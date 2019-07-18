@@ -1,5 +1,6 @@
 {
   "type": "object",
+  "additionalProperties": false,  
   "options": {
     "disable_collapse": true,
     "disable_properties": false
@@ -82,7 +83,7 @@
       "$ref": "dfi.schema.json"
     }
   },
-  "additionalProperties": false,
+  
   "oneOf": [
     {
       "title": "3DVAR",

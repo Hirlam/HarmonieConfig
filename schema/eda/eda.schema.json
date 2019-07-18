@@ -1,6 +1,7 @@
 {
     "type": "object",
     "description": "This part is for EDA with observations perturbation",
+    "additionalProperties": false,
     "required": [
         "PERTATMO",
         "PERTSURF",

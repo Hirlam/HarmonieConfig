@@ -1,6 +1,7 @@
 {
     "type": "object",
     "description": "Click properties to add properties.",
+    "additionalProperties": false,
     "required": [
         "FIELDMONITOR",
         "FLDEXTR",

@@ -4,30 +4,31 @@
   "title": "Harmonie experiment configuration",
   "description" : "See Surfex and Observations tabs for examples. Observations.LISTE_LOC[].obstype shows how enum_titles can be used to give meaningful names to integers. Geometry.DOMAIN shows how we can insert value directly in the config_exp.json. Surfex.Namelist shows how namelist information can be included in the gui. All of this could help to reduce the dependency on perl in the scripts. ",
   "options": {
-    "disable_properties": true,
+    "disable_properties": false,
     "disable_edit_json": false,
     "disable_collapse": true
   },
   "format": "categories",
   "type": "object",
-  "required": [
-    "Main",
+  "additionalProperties": false,
+  "required": [   
+    "Times", 
     "Geometry",
     "Nesting",
     "Assimilation",
     "Physics",
-    "Surfex",
-    "Observations",    
+    "Surfex",    
     "EDA",
     "Postprocessing",
     "Archiving",
     "System",
+    "Paths",
     "Aux"    
   ],
-  "properties": {
-    "Main": {
-      "$ref": "schema/main/main.schema.json"
-    },
+  "properties": {  
+    "Times"  : { 
+      "$ref" : "schema/main/timelists.schema.json"
+    }, 
     "Geometry": {
       "$ref": "schema/geometry/geometry.schema.json"
     },
@@ -57,6 +58,9 @@
     },
     "System": {
       "$ref": "schema/system/system.schema.json"
+    },
+    "Paths": {
+      "$ref": "schema/main/paths.schema.json"   
     },
     "Aux" : {
       "$ref": "schema/aux/aux.schema.json"

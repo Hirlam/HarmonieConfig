@@ -1,10 +1,11 @@
 {
   "type": "object",
   "title": "Paths",
+  "additionalProperties": false,
   "format" : "grid",
   "description": "Location of observations, boundaries etc.",
   "options": {
-    "collapsed": "true"
+    "collapsed": false
   },
   "required": [
     "OBDIR",
