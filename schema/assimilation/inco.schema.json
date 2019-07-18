@@ -1,0 +1,5 @@
+{
+    "type": "string",
+    "description": "Active EKF observation types (Element 1=T2m, element 2=RH2m and element 3=Soil moisture)",
+    "default": "1,1,0"
+}

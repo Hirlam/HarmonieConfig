@@ -1,0 +1,8 @@
+{
+    "type": "string",
+    "description": "Large scale mixing",
+    "enum": [
+        "yes",
+        "no"
+    ]
+}

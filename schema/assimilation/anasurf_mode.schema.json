@@ -1,0 +1,16 @@
+{
+    "type": "string",
+    "description": "When ANASURF should be done",
+    "enum": [
+        "before",
+        "after",
+        "both"
+    ],
+    "options": {
+        "enum_titles": [
+            "before | Before ANAATMO",
+            "after | after ANAATMO",
+            "both | Before and after ANAATMO (Only for ANAATMO=4DVAR)"
+        ]
+    }
+}

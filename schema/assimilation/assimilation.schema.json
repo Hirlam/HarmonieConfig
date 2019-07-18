@@ -1,164 +1,25 @@
 {
   "type": "object",
-  "additionalProperties": false,  
   "options": {
     "disable_collapse": true,
     "disable_properties": false
   },
-  "required": [
-    "LSMIXBC",
-    "ANAATMO",
-    "ANASURF",
-    "ANASURF_MODE",
-    "INCV",
-    "INCO"
-  ],
-  "properties": {
-    "ANAATMO": {
-      "type": "string",
-      "enum": [
-        "3DVAR",
-        "4DVAR",
-        "blending",
-        "none"
-      ],
-      "options": {
-        "hidden": true
-      }
-    },
-    "LSMIXBC": {
-      "type": "string",
-      "description": "Large scale mixing",
-      "enum": [
-        "yes",
-        "no"
-      ]
-    },
-    "ANASURF": {
-      "type": "string",
-      "description": "Surface analysis",
-      "enum": [
-        "CANARI",
-        "CANARI_OI_MAIN",
-        "CANARI_EKF_SURFEX",
-        "none"
-      ],
-      "options": {
-        "enum_titles": [
-          "CANARI  | Old style CANARI ",
-          "CANARI_OI_MAIN | CANARI + SURFEX OI",
-          "CANARI_EKF_SURFEX | CANARI + SURFEX EKF ( experimental )",
-          "none | No surface assimilation"
-        ]
-      },
-      "default": "CANARI_OI_MAIN"
-    },
-    "ANASURF_MODE": {
-      "type": "string",
-      "description": "When ANASURF should be done",
-      "enum": [
-        "before",
-        "after",
-        "both"
-      ],
-      "options": {
-        "enum_titles": [
-          "before | Before ANAATMO",
-          "after | after ANAATMO",
-          "both | Before and after ANAATMO (Only for ANAATMO=4DVAR)"
-        ]
-      }
-    },
-    "INCV": {
-      "type": "string",
-      "description": "Active EKF control variables. 1=WG2 2=WG1 3=TG2 4=TG1",
-      "default": "1,1,1,1"
-    },
-    "INCO": {
-      "type": "string",
-      "description": "Active EKF observation types (Element 1=T2m, element 2=RH2m and element 3=Soil moisture)",
-      "default": "1,1,0"
-    },
-    "DFI": {
-      "$ref": "dfi.schema.json"
-    }
-  },
-  
   "oneOf": [
     {
       "title": "3DVAR",
-      "type": "object",
-      "properties": {
-        "ANAATMO": {
-          "enum": [
-            "3DVAR"
-          ],
-          "default": "3DVAR"
-        },
-        "LSMIXBC": {
-          "enum": [
-            "yes"
-          ],
-          "default": "yes"
-        }
-      }
+      "$ref" : "3dvar.schema.json"            
     },
     {
-      "title": "4DVAR",
-      "type": "object",
-      "required": [
-        "NOUTERLOOP",
-        "ILRES",
-        "TSTEP4D"
-      ],
-      "properties": {
-        "ANAATMO": {
-          "type": "string",
-          "enum": [
-            "4DVAR"
-          ],
-          "default": "4DVAR",
-          "options": {
-            "hidden": "true"
-          }
-        },
-        "NOUTERLOOP": {
-          "type": "integer",
-          "enum": [
-            1,
-            2,
-            3
-          ],
-          "default": 2
-        },
-        "ILRES": {
-          "type": "string",
-          "default": "2,2"
-        },
-        "TSTEP4D": {
-          "type": "string",
-          "default": "120,120"
-        },
-        "LSMIXBC": {
-          "default": "no"
-        }
-      }
+      "title" : "4DVAR",
+      "$ref" : "4dvar.schema.json"      
     },
     {
       "title": "blending",
-      "properties": {
-        "ANAATMO": {
-          "default": "blending"
-        }
-      }
+      "$ref" : "blending.schema.json"      
     },
     {
       "title": "none",
-      "properties": {
-        "ANAATMO": {
-          "default": "none"
-        }
-      }
+      "$ref" : "none.schema.json"     
     }
   ]
 }

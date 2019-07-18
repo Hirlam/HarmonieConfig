@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "title" : "blending",  
+  "additionalProperties": false,
+  "options": {
+    "disable_collapse": true,
+    "disable_properties": false
+  },
+  "required": [  
+    "ANAATMO",
+    "ANASURF",
+    "ANASURF_MODE",   
+    "DFI"
+  ],
+  "properties": {
+    "ANAATMO": {
+      "type": "string",
+      "enum": [
+        "blending"
+      ],      
+      "readOnly": true
+    },    
+    "ANASURF": {
+      "$ref": "anasurf.schema.json"
+    },
+    "ANASURF_MODE": {
+      "$ref": "anasurf_mode.schema.json"
+    },
+    
+    "DFI": {
+      "$ref": "dfi.schema.json"
+    }    
+  }
+}

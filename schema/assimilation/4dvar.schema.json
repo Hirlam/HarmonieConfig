@@ -1,0 +1,56 @@
+{
+  "type": "object",
+  "title" : "4DVAR",  
+  "additionalProperties": false,
+  "options": {
+    "disable_collapse": true,
+    "disable_properties": false
+  },
+  "required": [
+    "LSMIXBC",
+    "ANAATMO",
+    "ANASURF",
+    "ANASURF_MODE",
+    "INCV",
+    "INCO",
+    "NOUTERLOOP",
+    "ILRES",
+    "TSTEP4D"
+  ],
+  "properties": {
+    "ANAATMO": {
+      "type": "string",
+      "enum": [
+        "4DVAR"
+      ],      
+      "readOnly": true
+    },
+    "LSMIXBC": {
+      "$ref": "lsmixbc.schema.json"
+    },
+    "ANASURF": {
+      "$ref": "anasurf.schema.json"
+    },
+    "ANASURF_MODE": {
+      "$ref": "anasurf_mode.schema.json"
+    },
+    "INCV": {
+      "$ref": "incv.schema.json"
+    },
+    "INCO": {
+      "$ref": "inco.schema.json"
+    },
+    "DFI": {
+      "$ref": "dfi.schema.json"
+    },
+    "NOUTERLOOP": {
+      "$ref": "nouterloop.schema.json"
+    },
+    "ILRES": {
+     "$ref" : "ilres.schema.json"
+    },
+    "TSTEP4D": {
+      "$ref" : "tstep4d.schema.json"      
+    }
+  }
+}

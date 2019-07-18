@@ -1,0 +1,19 @@
+{
+    "type": "string",
+    "description": "Surface analysis",
+    "enum": [
+        "CANARI",
+        "CANARI_OI_MAIN",
+        "CANARI_EKF_SURFEX",
+        "none"
+    ],
+    "options": {
+        "enum_titles": [
+            "CANARI  | Old style CANARI ",
+            "CANARI_OI_MAIN | CANARI + SURFEX OI",
+            "CANARI_EKF_SURFEX | CANARI + SURFEX EKF ( experimental )",
+            "none | No surface assimilation"
+        ]
+    },
+    "default": "CANARI_OI_MAIN"
+}
