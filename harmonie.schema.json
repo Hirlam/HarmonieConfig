@@ -26,9 +26,9 @@
     "Aux"    
   ],
   "properties": {  
-    "Times"  : { 
-      "$ref" : "schema/main/timelists.schema.json"
-    }, 
+    "$schema" : {
+      "type" : "string" 
+    },
     "Geometry": {
       "$ref": "schema/geometry/geometry.schema.json"
     },
@@ -65,8 +65,8 @@
     "Aux" : {
       "$ref": "schema/aux/aux.schema.json"
     },
-    "$schema" : {
-      "type" : "string" 
-    }
+    "Times"  : { 
+      "$ref" : "schema/main/timelists.schema.json"
+    }    
   }
 }
