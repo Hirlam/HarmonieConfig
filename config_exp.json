@@ -1,21 +1,6 @@
 {
   "$schema": "./harmonie.schema.json",
-  "PATHS": {
-    "OBDIR": "$HMDATA/observations",
-    "BINDIR": "$HM_DATA/bin",
-    "WRK": "$HM_DATA/$CYCLEDIR",
-    "ARCHIVE_ROOT": "$HM_DATA/archive",
-    "ECFSLOC": "ectmp",
-    "EXTRARCH": "$ARCHIVE_ROOT/extract",
-    "BDDIR": "$HM_DATA/${BDLIB}/archive/@YYYY@/@MM@/@DD@/@HH@",
-    "INT_BDFILE": "$WRK/ELSCF${CNMEXP}ALBC@NNN@",
-    "MSG_PATH": "$SCRATCH/CLOUDS/",
-    "ECFS_EPS_EC_BD_PATH": "${ECFSLOC}:/$USER/harmonie/$EXP",
-    "CLIMDIR": "$HM_DATA/climate",
-    "BDCLIM": "$HM_DATA/${BDLIB}/climate",
-    "MAPBIN": "$HM_DATA/lib/util/mapbin"
-  },
-  "Geometry": {
+    "Geometry": {
     "DOMAIN": "DKCOEXP",
     "TOPO_SOURCE": "gmted2010",
     "GRID_TYPE": "LINEAR",
@@ -44,7 +29,9 @@
   "Physics": {
     "DYNAMICS": "nh",
     "PHYSICS": "arome",
-    "HARATU": true,
+    "HARATU": "yes",
+    "STATNW": "yes",
+    "XRIMAX": 0.0,
     "MASS_FLUX_SCHEME": "edmfm"
   },
   "Surfex": {
@@ -59,11 +46,7 @@
     "MODIFY_LAKES": "F",
     "ECOCLIMAP_VERSION": "2.5_plus",
     "LDB_VERSION": "3.0",
-    "SOIL_TEXTURE_VERSION": "FAO",
-    "NAMELIST": {
-      "NAM_TEB": {},
-      "NAM_SSOn": {}
-    }
+    "SOIL_TEXTURE_VERSION": "FAO"    
   },  
   "EDA": {
     "PERTATMO": "ECMAIN",
@@ -78,11 +61,7 @@
     "POSTP": "inline",
     "FREQ_RESET_TEMP": 0,
     "FREQ_RESET_GUST": 1,
-    "CONVERTFA": "yes",
-    "ARCHIVE_FORMAT": "GRIB2",
-    "NCNAMES": "nwp",
     "RCR_POSTP": "no",
-    "MAKEGRIB_LISTENERS": 1,
     "OBSEXTR": "yes",
     "FLDEXTR": "yes",
     "FLDEXTR_TASK": 1,
@@ -114,5 +93,20 @@
     "USE_MSG": "no",
     "MAKEODB2": "no",
     "JB_INTERPOL": "no"
+  },
+  "Paths": {
+    "OBDIR": "$HMDATA/observations",
+    "BINDIR": "$HM_DATA/bin",
+    "WRK": "$HM_DATA/$CYCLEDIR",
+    "ARCHIVE_ROOT": "$HM_DATA/archive",
+    "ECFSLOC": "ectmp",
+    "EXTRARCH": "$ARCHIVE_ROOT/extract",
+    "BDDIR": "$HM_DATA/${BDLIB}/archive/@YYYY@/@MM@/@DD@/@HH@",
+    "INT_BDFILE": "$WRK/ELSCF${CNMEXP}ALBC@NNN@",
+    "MSG_PATH": "$SCRATCH/CLOUDS/",
+    "ECFS_EPS_EC_BD_PATH": "${ECFSLOC}:/$USER/harmonie/$EXP",
+    "CLIMDIR": "$HM_DATA/climate",
+    "BDCLIM": "$HM_DATA/${BDLIB}/climate",
+    "MAPBIN": "$HM_DATA/lib/util/mapbin"
   }
 }
