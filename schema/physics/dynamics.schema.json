@@ -1,0 +1,15 @@
+{
+    "type": "string",
+    "description": "Hydrostatic or non-hydrostatic dynamics",
+    "enum": [
+        "h",
+        "nh"
+    ],
+    "options": {
+        "enum_titles": [
+            "h | hydrostatic",
+            "nh | non hydrostatic"
+        ]
+    },
+    "default": "nh"
+}

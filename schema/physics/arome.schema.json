@@ -1,23 +1,47 @@
 {
   "title": "Arome",
   "type": "object",
+  "additionalProperties": false,
   "required": [
+    "DYNAMICS",
     "PHYSICS",
     "MASS_FLUX_SCHEME",
     "HARATU"
   ],
   "properties": {
+    "DYNAMICS": {
+      "$ref": "dynamics.schema.json"
+    },
     "PHYSICS": {
       "type": "string",
       "enum": [
         "arome"
       ],
-      "readOnly" : true,
+      "readOnly": true,
       "default": "arome"
     },
+    "STATNW": {
+      "type": "string",
+      "description": "Switch for new set up cloud scheme",
+      "enum": [
+        "yes",
+        "no"
+      ],
+      "default": "yes"
+    },
+    "XRIMAX": {
+      "type": "number",
+      "description": "Maximum allowed Richardson number in the surface layer (cy40h default was 0.0)",
+      "default": 0.0
+    },
     "HARATU": {
-      "type": "boolean",
-      "default": true
+      "type": "string",
+      "description": "Switch for HARATU turbulence scheme",
+      "enum": [
+        "yes",
+        "no"
+      ],
+      "default": "yes"
     },
     "MASS_FLUX_SCHEME": {
       "type": "string",

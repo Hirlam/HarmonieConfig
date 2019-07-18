@@ -5,28 +5,8 @@
     "disable_collapse": true,
     "disable_properties": true
   },
-  "additionalProperties": false,
-  "required" : ["DYNAMICS"],
-  "properties": {
-    "DYNAMICS": {
-      "type": "string",
-      "description": "Hydrostatic or non-hydrostatic dynamics",
-      "enum": [
-        "h",
-        "nh"
-      ],
-      "options": {
-        "enum_titles": [
-          "h | hydrostatic",
-          "nh | non hydrostatic"
-        ]
-      },
-      "default" : "nh"
-    }
-   
-
-    
-  },
+  "additionalProperties": false,   
+  
   "oneOf": [
     {
       "title" : "arome",

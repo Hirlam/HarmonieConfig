@@ -1,11 +1,14 @@
 {
   "title": "Alaro",
   "type": "object",
+  "additionalProperties": false,   
   "required": [
+    "DYNAMICS",
     "ALARO_VERSION",
     "PHYSICS"
   ],
   "properties": {
+    "DYNAMICS" : { "$ref" : "dynamics.schema.json" },
     "PHYSICS": {
       "type": "string",
       "enum": [
