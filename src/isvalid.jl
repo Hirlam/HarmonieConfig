@@ -20,7 +20,7 @@ myschema = Schema(schema)
 config = YAML.load(open(configfile))
 # config = JSON.parsefile(configfile)
 
- g = diagnose(config,myschema) 
+g = diagnose(config,myschema) 
 
 if g == nothing 
    exit(0) 
