@@ -19,7 +19,7 @@
     "LUNBC": "yes"
   },
   "Assimilation": {
-    "ANAATMO": "3DVAR",
+    "ANAATMO": "n",
     "LSMIXBC": "yes",
     "ANASURF": "CANARI_OI_MAIN",
     "ANASURF_MODE": "before",

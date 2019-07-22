@@ -4,8 +4,8 @@
   "options": {
     "disable_collapse": true,
     "disable_properties": true,
-    "required_by_default" : true
-  },  
+    "required_by_default": true
+  },
   "format": "grid",
   "properties": {
     "SYNOP_OBS": {
@@ -126,7 +126,6 @@
       ],
       "default": 0
     },
-
     "SEV_OBS": {
       "type": "integer",
       "title": "SEVIRI",
@@ -157,7 +156,7 @@
       ],
       "default": 0
     },
-     "ATMS_OBS": {
+    "ATMS_OBS": {
       "type": "integer",
       "title": "ATMS",
       "description": "",
@@ -167,7 +166,7 @@
       ],
       "default": 0
     },
-     "CRIS_OBS": {
+    "CRIS_OBS": {
       "type": "integer",
       "title": "CRIS",
       "description": "",
@@ -177,7 +176,7 @@
       ],
       "default": 0
     },
-      "HIRS_OBS": {
+    "HIRS_OBS": {
       "type": "integer",
       "title": "HIRS",
       "description": "",
@@ -187,7 +186,7 @@
       ],
       "default": 0
     },
-      "PAOB_OBS": {
+    "PAOB_OBS": {
       "type": "integer",
       "title": "PAOB",
       "description": "",
@@ -197,7 +196,7 @@
       ],
       "default": 0
     },
-      "LIMB_OBS": {
+    "LIMB_OBS": {
       "type": "integer",
       "title": "LIMB",
       "description": "Limb observations, GPS Radio Occultations",
@@ -207,7 +206,7 @@
       ],
       "default": 0
     },
-     "RADAR_OBS": {
+    "RADAR_OBS": {
       "type": "integer",
       "title": "Radar",
       "description": "",

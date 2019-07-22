@@ -17,6 +17,7 @@
       "enum": [
         "blending"
       ],
+      "default" : "blending",
       "readOnly": true
     },
     "ANASURF": {

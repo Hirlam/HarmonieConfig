@@ -2,27 +2,21 @@ module Harmonie
 
 import YAML, JSON, JSONSchema
 
-export config, schema
+export schema, isvalid
 
 moduledir=@__DIR__ 
-rootdir="$moduledir/../"
+rootdir="$moduledir/"
 schemafile="$rootdir/harmonie.schema.json"
-configfile="$rootdir/config_exp.yml"
 schema = JSONSchema.Schema(read(schemafile,String),parentFileDirectory=rootdir) 
-config = YAML.load(open(configfile))
 
-function __init__()    
-    g = JSONSchema.diagnose(config,schema) 
+function isvalid(config)
+    g = JSONSchema.diagnose(config,Harmonie.schema) 
+
     if g == nothing 
-       println("Config is valid against Schema")       
+       exit(0) 
     else 
        error(g) 
-    end
+    end  
 end 
-
-
-
-
-
 
 end 

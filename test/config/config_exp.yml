@@ -1,6 +1,6 @@
 ---
 Geometry:
-  DOMAIN: LITHUANIA
+  DOMAIN: AROME_2.5
   TOPO_SOURCE: gmted2010
   GRID_TYPE: LINEAR
   VLEV: '65'
@@ -16,15 +16,12 @@ Nesting:
   LSPBDC: 'no'
   LUNBC: 'yes'
 Assimilation:
-  ANAATMO: 4DVAR
+  ANAATMO: 3DVAR
   LSMIXBC: 'yes'
   ANASURF: CANARI_OI_MAIN
   ANASURF_MODE: before
   INCV: '1,1,1,1'
-  INCO: '1,1,0'
-  ILRES: 2,2
-  NOUTERLOOP: 2
-  TSTEP4D: 120,120    
+  INCO: '1,1,0'  
 DFI:
   DFI: none
   TAUS: 5400
@@ -94,7 +91,7 @@ Times:
   HH_LIST: '00-21:03'
   LL_LIST: '12,3'
   HWRITUPTIMES: 00-21:3,24-60:6
-  FULLFAFTIMES: "$HWRITUPTIMES"
+  FULLFAFTIMES: '$HWRITUPTIMES'
   PWRITUPTIMES: 00-60:3
   PFFULLWFTIMES: -1
   VERITIMES: 00-60:1
@@ -107,7 +104,7 @@ Times:
 Paths:
   OBDIR: "$HMDATA/observations"
   BINDIR: "$HM_DATA/bin"
-  WRK: "$HM_DATA/$CYCLEDIR"
+  WRK:  "$HM_DATA/$CYCLEDIR"
   ARCHIVE_ROOT: "$HM_DATA/archive"
   ECFSLOC: ectmp
   EXTRARCH: "$ARCHIVE_ROOT/extract"
@@ -116,33 +113,18 @@ Paths:
   MSG_PATH: "$SCRATCH/CLOUDS/"
   ECFS_EPS_EC_BD_PATH: "${ECFSLOC}:/$USER/harmonie/$EXP"
   CLIMDIR: "$HM_DATA/climate"
-  BDCLIM: "$HM_DATA/${BDLIB}/climate"
+  BDCLIM: $HM_DATA/${BDLIB}/climate"
   MAPBIN: "$HM_DATA/lib/util/mapbin"
-Observations:
-  SYNOP_OBS: 
-  MODESEHS_OBS: 
-  AIRCRAFT_OBS: 
-  BOUY_OBS: 
-  TEMP_OBS: 
-  PILOT_OBS: 
-  GNSS_OBS: 
-  SGNSS_OBS: 
-  AMV_OBS: 
-  AMSUA_OBS: 
-  AMSUB_OBS: 
-  IASI_OBS: 
-  SEV_OBS: 
-  SEVIRI_OBS: 
-  SCATT_OBS: 
-  ATMS_OBS: 
-  CRIS_OBS: 
-  HIRS_OBS: 0
-  PAOB_OBS: 
-  LIMB_OBS: 
-  RADAR_OBS: 
-  LISTE_LOC:
-    - action: 
-      obstype: 
-      codetype: 
-      varno: 
-      code: TOVSn
+Build: 
+  BUILD: 'yes'
+  BINDIR: "$HM_DATA/bin"
+  COMPILE_ENKF: 'no'
+  COMPILE_DABYFA: 'no'
+  SURFEX_OFFLINE_BINARIES: 'no'
+
+
+
+
+
+
+

@@ -20,13 +20,7 @@ myschema = Schema(schema)
 config = YAML.load(open(configfile))
 # config = JSON.parsefile(configfile)
 
-g = diagnose(config,myschema) 
 
-if g == nothing 
-   exit(0) 
-else 
-   error(g) 
-end
 #if isvalid(config,myschema)  
 #  exit(0)
 #else 
