@@ -1,22 +1,19 @@
 module Harmonie
 
-import YAML, JSON, JSONSchema
+import JSONSchema
+import Base.isvalid
 
-export schema, isvalid
+export schema, isvalid, diagnose
 
 moduledir=@__DIR__ 
-rootdir="$moduledir/"
-schemafile="$rootdir/harmonie.schema.json"
-schema = JSONSchema.Schema(read(schemafile,String),parentFileDirectory=rootdir) 
+schemafile="$moduledir/harmonie.schema.json"
+schema = JSONSchema.Schema(read(schemafile,String),parentFileDirectory=moduledir) 
 
-function isvalid(config)
-    g = JSONSchema.diagnose(config,Harmonie.schema) 
 
-    if g == nothing 
-       exit(0) 
-    else 
-       error(g) 
-    end  
-end 
+isvalid(config::Dict)  = JSONSchema.isvalid(config,schema) 
+diagnose(config::Dict) = JSONSchema.diagnose(config,schema)
+
+
+
 
 end 
