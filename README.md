@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.com/roelstappers/Harmonie.jl.svg?branch=master)](https://travis-ci.com/roelstappers/Harmonie.jl)
-
+[![Coverage Status](https://coveralls.io/repos/github/roelstappers/Harmonie.jl/badge.svg?branch=master)](https://coveralls.io/github/roelstappers/Harmonie.jl?branch=master)
 # Harmonie json-schema definitions 
 
 This repository contains the json-schema files that will be used in Harmonie to validate experiment configuration files 
