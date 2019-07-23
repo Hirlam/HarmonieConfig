@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/roelstappers/Harmonie.jl.svg?branch=master)](https://travis-ci.com/roelstappers/Harmonie.jl)
+
 # Harmonie json-schema definitions 
 
 This repository contains the json-schema files that will be used in Harmonie to validate experiment configuration files 
