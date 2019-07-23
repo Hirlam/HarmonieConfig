@@ -6,3 +6,7 @@ julia:
 codecov: true
 coveralls: true
 
+script:
+  - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
+  - julia --project -e 'using Pkg; Pkg.build(); Pkg.test(; coverage=true)'; 
+
