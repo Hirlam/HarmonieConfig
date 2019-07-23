@@ -6,3 +6,6 @@ julia:
 codecov: true
 coveralls: true
 
+script:
+  - julia -e 'import Pkg; Pkg.build("Harmonie"); Pkg.test("Harmonie"; coverage=true)'
+
