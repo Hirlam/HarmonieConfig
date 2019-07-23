@@ -7,5 +7,6 @@ codecov: true
 coveralls: true
 
 script:
-  - julia -e 'import Pkg; Pkg.build("Harmonie"); Pkg.test("Harmonie"; coverage=true)'
+  - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
+  - julia --project -e 'using Pkg; Pkg.build(); Pkg.test(; coverage=true)'; 
 
