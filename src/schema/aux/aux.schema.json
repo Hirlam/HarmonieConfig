@@ -1,6 +1,6 @@
 {
   "type": "object",
-  "additionalProperties": false,
+  "additionalProperties": true,
   "required": [
     "SINGLEOBS",
     "USE_MSG",
