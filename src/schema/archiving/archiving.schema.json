@@ -4,6 +4,8 @@
     "additionalProperties": false,
     "required": [
         "ARSTRATEGY",
+        "ARCHIVE_ECMWF",
+        "TFLAG", 
         "ARCHIVE_FORMAT",
         "CONVERTFA",
         "MAKEGRIB_LISTENERS",
@@ -14,6 +16,24 @@
         "ARSTRATEGY": {
             "type": "string",
             "description": "Archive strategy"
+        },
+        "ARCHIVE_ECMWF" :{
+            "type" : "string",
+            "description" : "Archive to $ECFSLOC at ECMWF (yes|no)",
+            "enum" :  [
+                "yes",
+                "no"
+            ],
+            "default" : "yes"
+        },
+        "TFLAG" : {
+            "type" : "string",
+            "description": "Time flag for model output. (h|min)",
+            "enum" : [
+                "h",
+                "min"
+            ],
+            "default" : "h"
         },
         "ARCHIVE_FORMAT": {
             "type": "string",
