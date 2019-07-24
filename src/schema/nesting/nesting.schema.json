@@ -14,6 +14,7 @@
     "BDSTRATEGY",
     "BDINT",
     "LSPBDC",
+    "NBDMAX",
     "LUNBC"
   ],
   "properties": {
@@ -36,6 +37,10 @@
         "no"
       ],
       "default": "no"
+    },
+    "NBDMAX" : {
+      "description" : "Number of parallel interpolation tasks",
+      "type" : "integer"    
     },
     "SURFEX_INPUT_FORMAT": {
       "type": "string",
