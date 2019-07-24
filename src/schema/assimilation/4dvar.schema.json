@@ -1,7 +1,7 @@
 {
   "type": "object",
   "title" : "4DVAR",  
-  "additionalProperties": false,
+  "additionalProperties": true,
   "options": {
     "disable_collapse": true,
     "disable_properties": false
