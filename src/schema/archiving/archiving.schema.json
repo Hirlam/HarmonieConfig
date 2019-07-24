@@ -13,12 +13,7 @@
     "properties": {
         "ARSTRATEGY": {
             "type": "string",
-            "description": "Archive strategy",
-            "enum": [
-                "climate:fg:verif:odb_stuff:[an|fc]_fa:pp_grb"              
-            ],
-            "default": "climate:fg:verif:odb_stuff:[an|fc]_fa:pp_grb"
-
+            "description": "Archive strategy"
         },
         "ARCHIVE_FORMAT": {
             "type": "string",
