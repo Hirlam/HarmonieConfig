@@ -1,5 +1,5 @@
 {
-  "$id": "https://roelstappers.github.io/src/harmonie.schema.json",
+  "$id": "./schema/harmonie.schema.json",
   "$schema" : "http://json-schema.org/schema#",
   "title": "Harmonie experiment configuration",
   "description" : "See Surfex and Observations tabs for examples. Observations.LISTE_LOC[].obstype shows how enum_titles can be used to give meaningful names to integers. Geometry.DOMAIN shows how we can insert value directly in the config_exp.json. Surfex.Namelist shows how namelist information can be included in the gui. All of this could help to reduce the dependency on perl in the scripts. ",

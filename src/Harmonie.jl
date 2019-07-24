@@ -6,7 +6,7 @@ import Base.isvalid
 export schema, isvalid, diagnose
 
 moduledir=@__DIR__ 
-schemafile="$moduledir/harmonie.schema.json"
+schemafile="$moduledir/schema/harmonie.schema.json"
 schema = JSONSchema.Schema(read(schemafile,String),parentFileDirectory=moduledir) 
 
 
