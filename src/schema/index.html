@@ -37,8 +37,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.5.1/flatpickr.min.css" />
 
   <!-- JSON-Editor -->
-  <script src="https://cdn.jsdelivr.net/npm/@json-editor/json-editor/dist/jsoneditor.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/@json-editor/json-editor/dist/jsoneditor.min.js"></script>  
   <style type="text/css">
   body {
     margin: 1em;
@@ -55,9 +54,10 @@
     return ts ? new Date(ts * 1000) : 'empty';
   });
 
-  $.getJSON("config_exp.json",config_exp_ready)
+  //$.getJSON("../../test/config/config_exp.json",config_exp_ready)
 
-  function config_exp_ready(config_exp_data) {
+  //function config_exp_ready(config_exp_data) {
+  //function config_exp_ready() {
 
     //$.getJSON("eps.schema.json",schemacallback)  
     $.getJSON("harmonie.schema.json",schemacallback)  
@@ -77,7 +77,7 @@
 
     var element = document.getElementById('form');
     var editor = new JSONEditor(element, options);
-   }
+   //}
  } 
   </script>
 <!-- json output could go here  
