@@ -4,7 +4,7 @@
     "disable_collapse": true,
     "disable_properties": false
   },
-  "oneOf": [
+  "anyOf": [
     {
       "title": "3DVAR",
       "$ref" : "3dvar.schema.json"            
