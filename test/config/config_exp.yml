@@ -1,6 +1,6 @@
 ---
 Geometry:
-  DOMAIN: AROME_2.5
+  DOMAIN: DKCOEXP
   TOPO_SOURCE: gmted2010
   GRID_TYPE: LINEAR
   VLEV: '65'
@@ -11,15 +11,20 @@ Nesting:
   HOST_SURFEX: 'no'
   SURFEX_INPUT_FORMAT: lfi
   NATIVE_INPUT_LFI: 'no'
+  NBDMAX : 12
   BDSTRATEGY: RCR_operational
   BDINT: 1
   LSPBDC: 'no'
   LUNBC: 'yes'
 Assimilation:
+  HYBRID: 'no'
+  LETKF_3DSCREEN : 'yes'
+  ILRES : '2,2'
   ANAATMO: 3DVAR
   LSMIXBC: 'yes'
   ANASURF: CANARI_OI_MAIN
   ANASURF_MODE: before
+  NOUTERLOOP : 2
   INCV: '1,1,1,1'
   INCO: '1,1,0'  
 DFI:
@@ -47,6 +52,8 @@ Surfex:
   LDB_VERSION: '3.0'
   SOIL_TEXTURE_VERSION: FAO
 EDA:
+  ENSMSEL : ""
+  ENSINIPERT: bnd
   PERTATMO: ECMAIN
   PERTSURF: none
   FESTAT: 'no'
@@ -64,12 +71,14 @@ Postprocessing:
   FLDEXTR_TASK: 1
   VFLDEXP: "$EXP"
   FLDVER: 'no'
-  FLDVER_HOURS: 06 12 18 24 30 36 42 48
+  FLDVER_HOURS: '06 12 18 24 30 36 42 48'
   OBSMONITOR: obstat
   FIELDMONITOR: 'no'
 Archiving:
+  ARCHIVE_ECMWF : "yes" 
   ARCHIVE_FORMAT: GRIB1
-  ARSTRATEGY: climate:fg:verif:odb_stuff:[an|fc]_fa:pp_grb
+  ARSTRATEGY: "climate:fg:verif:odb_stuff:an_fa:fc_fa:pp_grb"
+  TFLAG : "h"            
   CONVERTFA: 'yes'
   MAKEGRIB_LISTENERS: 1
   NCNAMES: nwp
@@ -83,11 +92,13 @@ System:
   RUNNING_MODE: research
   SIMULATION_TYPE: nwp
 Aux:
+  TESTBED_LIST : "AROME_3DVAR AROME_1D AROME AROME_MUSC AROME_3DVAR_MARSOBS AROME_BD_ARO HarmonEPS AROME_EPS_COMP AROME_JB"
   SINGLEOBS: 'no'
   USE_MSG: 'no'
   MAKEODB2: 'no'
   JB_INTERPOL: 'no'
 Times:
+  FCINT : 3
   HH_LIST: '00-21:03'
   LL_LIST: '12,3'
   HWRITUPTIMES: 00-21:3,24-60:6
@@ -113,7 +124,7 @@ Paths:
   MSG_PATH: "$SCRATCH/CLOUDS/"
   ECFS_EPS_EC_BD_PATH: "${ECFSLOC}:/$USER/harmonie/$EXP"
   CLIMDIR: "$HM_DATA/climate"
-  BDCLIM: $HM_DATA/${BDLIB}/climate"
+  BDCLIM: "$HM_DATA/${BDLIB}/climate"
   MAPBIN: "$HM_DATA/lib/util/mapbin"
 Build: 
   BUILD: 'yes'
@@ -121,10 +132,3 @@ Build:
   COMPILE_ENKF: 'no'
   COMPILE_DABYFA: 'no'
   SURFEX_OFFLINE_BINARIES: 'no'
-
-
-
-
-
-
-
