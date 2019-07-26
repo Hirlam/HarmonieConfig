@@ -6,14 +6,7 @@
   "description": "Location of observations, boundaries etc.",
   "options": {
     "collapsed": false
-  },
-  "required": [
-    "OBDIR",
-    "BINDIR",
-    "WRK",
-    "ARCHIVE_ROOT",
-    "ECFSLOC"
-  ],
+  },  
   "properties": {
     "OBDIR": {
       "type": "string",
