@@ -1,4 +1,6 @@
 
+
+
 [Build]
 BUILD='${BUILD-yes}'                            # Turn on or off the compilation and binary build ( yes|no)
 BINDIR='${BINDIR-$HM_DATA/bin}'                 # Binary directory
@@ -7,14 +9,14 @@ COMPILE_DABYFA='${COMPILE_DABYFA-"no"}'         # Compile FA/VC code (yes|no)
 SURFEX_OFFLINE_BINARIES='no'                    # Switch to compile and use offline SURFEX binaries
 
 # **** Misc, defined first because it's used later ****
-
+[Misc]
 CNMEXP='HARM'                             # Four character experiment identifier
 WRK='$HM_DATA/$CYCLEDIR'                  # Work directory
 
 # **** Paths to archive ****
 # We need to define ARCHIVE early since it might be used further down
 
-
+[Paths]
 ARCHIVE_ROOT='$HM_DATA/archive'           # Archive root directory
 ECFSLOC='ectmp'                           # Archiving site at ECMWF-ECFS: "ec" or ECFS-TMP "ectmp"
 ECFSGROUP='hirald'                       # Group in which to chgrp the ECMWF archive, "default" or "hirald"
@@ -31,6 +33,7 @@ SIMULATION_TYPE='nwp'                     # Type of simulation (nwp|climate)
 
 
 # **** Model geometry ****
+[Geometry]
 DOMAIN='DKCOEXP'                          # See definitions in scr/Harmonie_domains.pm
 TOPO_SOURCE='gmted2010'                   # Input source for orography. Available are (gtopo30|gmted2010)
                                         # For usage of gmted2010 check the documentation first
@@ -40,7 +43,9 @@ VLEV=65                                 # Vertical level definition.
                                         # BOUNDARIES = same number of levs as on boundary file.
                                         # See the other choices from scr/Vertical_levels.pl
 
+
 # **** High level forecast options ****
+[Etc_etc_etc]
 DYNAMICS="nh"                           # Hydrostatic or non-hydrostatic dynamics (h|nh)
 VERT_DISC='vfd'                           # Discretization in the vertical (vfd,vfe)
                                         # Note that vfe does not yet work in non-hydrostatic mode

@@ -1,5 +1,5 @@
 {
-  "$schema": "../../src/schema/harmonie.schema.json",
+  "$schema": "../../../src/schema/harmonie.schema.json",
   "Geometry": {
     "DOMAIN": "DKCOEXP",
     "TOPO_SOURCE": "gmted2010",
@@ -9,6 +9,7 @@
     "LGRADSP": "yes"
   },
   "Nesting": {
+    "NBDMAX": 1,
     "HOST_MODEL": "ifs",
     "HOST_SURFEX": "no",
     "SURFEX_INPUT_FORMAT": "lfi",
@@ -77,6 +78,8 @@
     "FIELDMONITOR": "no"
   },
   "Archiving": {
+    "ARCHIVE_ECMWF": "yes",
+    "TFLAG": "h",
     "ARCHIVE_FORMAT": "GRIB1",
     "ARSTRATEGY": "climate:fg:verif:odb_stuff:[an|fc]_fa:pp_grb",
     "CONVERTFA": "yes",
@@ -105,10 +108,10 @@
     "HWRITUPTIMES": "00-21:3,24-60:6",    
     "FULLFAFTIMES": "$HWRITUPTIMES",
     "PWRITUPTIMES": "00-60:3",
-    "PFFULLWFTIMES": -1,
+    "PFFULLWFTIMES": "-1",
     "VERITIMES": "00-60:1",
     "SFXSELTIMES": "$PWRITUPTIMES",
-    "SFXSWFTIMES": -1,    
+    "SFXSWFTIMES": "-1",    
     "SWRITUPTIMES": "00-06:3",
     "SFXWFTIMES": "$SWRITUPTIMES",
     "SURFEX_LSELECT": "yes",    
@@ -128,5 +131,8 @@
     "CLIMDIR": "$HM_DATA/climate",
     "BDCLIM": "$HM_DATA/${BDLIB}/climate",
     "MAPBIN": "$HM_DATA/lib/util/mapbin"
+  },
+  "Build" : {
+
   }
 }
