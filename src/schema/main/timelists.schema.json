@@ -19,78 +19,56 @@
     "properties": {        
         "HH_LIST": {
             "type": "string",
-            "description": "Which cycles to run, replaces FCINT",
-            "enum": [
-                "00-21:03"            
-            ],
+            "description": "Which cycles to run, replaces FCINT",            
             "default" : "00-21:03"
         },
         "LL_LIST": {
             "type": "string",
-            "description": "Forecast lengths for the cycles [h], replaces LL, LLMAIN. The LL_LIST list is wrapped around if necessary, to fit HH_LIST",
-            "enum": [
-                "12,3"
-            ],
+            "description": "Forecast lengths for the cycles [h], replaces LL, LLMAIN. The LL_LIST list is wrapped around if necessary, to fit HH_LIST",            
             "default": "12,3"
         },
         "HWRITUPTIMES": {
             "type": "string",
-            "description": "History file output times",
-            "enum": [
-                "00-21:3,24-60:6"
-            ],
+            "description": "History file output times",            
             "default": "00-21:3,24-60:6"
         },
         "FULLFAFTIMES": {
             "type": "string",
-            "description": "History FA file IO server gather times",
-            "enum": [
-                "$HWRITUPTIMES"
-            ],
-            "default": "$HWRITUPTIMES"
+            "description": "History FA file IO server gather times"            
         },
         "PWRITUPTIMES" : {
-            "type" : "string",
-            "enum":  ["00-60:3"],                  
+            "type" : "string",            
             "description" : "Postprocessing times",
             "default" :  "00-60:3"
         },
 
         "PFFULLWFTIMES" :        {
-            "type" : "integer",
-            "description" : "Postprocessing FA file IO server gathering times",
-            "enum" : [-1],
-            "default" : -1   
+            "type" : "string",
+            "description" : "Postprocessing FA file IO server gathering times",            
+            "default" : "-1"   
         },
         "VERITIMES" : {
             "type" : "string", 
-            "description" : "Verification output times, changes PWRITUPTIMES/SFXSELTIMES",
-            "enum" :  ["00-60:1"],
+            "description" : "Verification output times, changes PWRITUPTIMES/SFXSELTIMES",            
             "default" : "00-60:1" 
         },
         "SFXSELTIMES" : {
             "type" : "string" ,            
-            "description" : "Surfex select file output times. Only meaningful if SURFEX_LSELECT=yes",
-            "enum" : ["$PWRITUPTIMES"],
-            "default" : "$PWRITUPTIMES"
+            "description" : "Surfex select file output times. Only meaningful if SURFEX_LSELECT=yes"            
         },    
         "SFXSWFTIMES" : {
-            "type" : "integer",
-            "description" :   "SURFEX select FA file IO server gathering times",
-            "enum" : [-1],
-            "default" : -1
+            "type" : "string",
+            "description" :   "SURFEX select FA file IO server gathering times",            
+            "default" : "-1"
          },
         "SWRITUPTIMES" : { 
             "type" : "string",
-            "description" :  "Surfex model state output times",
-            "enum" : ["00-06:3"],
+            "description" :  "Surfex model state output times",            
             "default" : "00-06:3"
         },
         "SFXWFTIMES" : { 
             "type" : "string",
-            "description" : "SURFEX history FA file IO server gathering times",
-            "enum" : ["$SWRITUPTIMES"],
-            "default" : "$SWRITUPTIMES"
+            "description" : "SURFEX history FA file IO server gathering times"            
         },
         "SURFEX_LSELECT" : {
             "type" : "string",
