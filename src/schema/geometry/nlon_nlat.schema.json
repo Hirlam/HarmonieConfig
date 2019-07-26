@@ -1,5 +1,6 @@
 {
   "type": "integer",
+  "$comment": "The enum is generate automatically by the enum_for_nlon_nlat.jl script",
   "enum": [
     1,
     2,
