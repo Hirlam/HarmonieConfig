@@ -1,11 +1,11 @@
 {
     "type": "object",
     "description": "Click properties to add properties.",
-    "additionalProperties": false,
+    "additionalProperties": true,
     "required": [
         "FIELDMONITOR",
         "FLDEXTR",
-        "FLDEXTR_TASK",
+        "FLDEXTR_TASKS",
         "FLDVER",
         "FLDVER_HOURS",
         "FREQ_RESET_GUST",
@@ -92,7 +92,7 @@
             ],
             "default": "yes"
         },
-        "FLDEXTR_TASK": {
+        "FLDEXTR_TASKS": {
             "type": "integer",
             "description": "Number of parallel tasks for field extraction",
             "default": 1
