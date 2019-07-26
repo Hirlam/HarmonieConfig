@@ -1,3 +1,5 @@
+
+[Build]
 BUILD='${BUILD-yes}'                            # Turn on or off the compilation and binary build ( yes|no)
 BINDIR='${BINDIR-$HM_DATA/bin}'                 # Binary directory
 COMPILE_ENKF='${COMPILE_ENKF-"no"}'             # Compile LETKF code (yes|no)
