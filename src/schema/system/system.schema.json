@@ -1,16 +1,7 @@
 {
   "type": "object",
   "description": "These variables need to be put in a category or removed (moved to the scripts). Click properties to see if there are more variables.",
-  "additionalProperties": false,
-  "required": [
-    "CNMEXP",
-    "ECFSGROUP",
-    "MULTITASK",
-    "BDLIB",
-    "NAMELIST_BASE",
-    "RUNNING_MODE",
-    "SIMULATION_TYPE"    
-  ],
+  "additionalProperties": true,
   "properties": {
     "CNMEXP": {
       "type": "string",
