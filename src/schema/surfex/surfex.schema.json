@@ -1,7 +1,7 @@
 {
   "type": "object",
   "description" : "The Properties button gives access to the Surfex Namelist (only TEB and SSOn for know)",
-  "additionalProperties": false,
+  "additionalProperties": true,
   "options": {
     "disable_collapse": true,
     "disable_properties": false
