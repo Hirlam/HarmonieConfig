@@ -7,7 +7,7 @@
   },
   
   
-  "oneOf": [
+  "anyOf": [
     {
       "title" : "arome",
       "$ref": "arome.schema.json"
