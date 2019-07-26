@@ -1,7 +1,7 @@
 {
   "type": "object",
   "title": "Paths",
-  "additionalProperties": false,
+  "additionalProperties": true,
   "format" : "grid",
   "description": "Location of observations, boundaries etc.",
   "options": {
