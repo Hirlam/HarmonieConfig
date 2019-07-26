@@ -14,8 +14,7 @@
         "IO_SERVER_BD",
         "OBSEXTR",
         "OBSMONITOR",
-        "POSTP",
-        "RCR_POSTP",
+        "POSTP",        
         "VFLDEXP"
     ],
     "properties": {
@@ -62,18 +61,7 @@
             "type": "integer",
             "description": "Reset frequency of max/min gust values in hours, controls NXGSTPERIOD Set to -1 to get the same frequency _AND_ reset behaviour as for min/max temperature See yomxfu.F90 for further information.",
             "default": 1
-        },
-       
-        
-        "RCR_POSTP": {
-            "type": "string",
-            "description": "Produce a subset of fields from the history file for RCR monitoring. Only applicable if ARCHIVE_FORMAT=GRIB.",
-            "enum": [
-                "yes",
-                "no"
-            ],
-            "default": "no"
-        },
+        },                 
         "OBSEXTR": {
             "type": "string",
             "description": "Extract observations from BUFR",
