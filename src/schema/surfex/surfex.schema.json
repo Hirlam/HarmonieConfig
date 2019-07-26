@@ -11,8 +11,7 @@
     "CISBA",
     "CSNOW",
     "CROUGH",
-    "SURFEX_SEA_ICE",
-    "SURFEX_OUTPUT_FORMAT",
+    "SURFEX_SEA_ICE",    
     "NPATCH",
     "LISBA_CANOPY",
     "SURFEX_LAKES",
@@ -78,15 +77,7 @@
         "sice"
       ],
       "default": "none"
-    },
-    "SURFEX_OUTPUT_FORMAT": {
-      "type": "string",
-      "enum": [
-        "fa",
-        "lfi"
-      ],
-      "default": "fa"
-    },
+    },    
     "NPATCH": {
       "type": "integer",
       "description": "Number of patches over land, see also LISBA_CANOPY",
