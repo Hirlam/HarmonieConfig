@@ -8,8 +8,7 @@
   "format": "grid",
   "required": [
     "HOST_MODEL",
-    "HOST_SURFEX",
-    "SURFEX_INPUT_FORMAT",
+    "HOST_SURFEX",    
     "NATIVE_INPUT_LFI",
     "BDSTRATEGY",
     "BDINT",
@@ -41,16 +40,7 @@
     "NBDMAX" : {
       "description" : "Number of parallel interpolation tasks",
       "type" : "integer"    
-    },
-    "SURFEX_INPUT_FORMAT": {
-      "type": "string",
-      "description": "Input format for host model run with surfex",
-      "default": "lfi",
-      "enum": [
-        "fa",
-        "lfi"
-      ]
-    },
+    },    
     "NATIVE_INPUT_LFI": {
       "type": "string",
       "description": "yes if host PGD/PREP are lfi files converted to fa. Only relevant if SURFEX_INPUT_FORMAT=fa",
