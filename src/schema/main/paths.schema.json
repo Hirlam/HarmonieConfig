@@ -12,15 +12,7 @@
     "BINDIR",
     "WRK",
     "ARCHIVE_ROOT",
-    "ECFSLOC",
-    "EXTRARCH",
-    "BDDIR",
-    "INT_BDFILE",
-    "MSG_PATH",
-    "ECFS_EPS_EC_BD_PATH",
-    "CLIMDIR",
-    "BDCLIM",
-    "MAPBIN"
+    "ECFSLOC"
   ],
   "properties": {
     "OBDIR": {
