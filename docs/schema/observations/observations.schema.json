@@ -3,10 +3,14 @@
   "description": "Example of using the grid layout style. Current on/off style based on include.ass. Better to use booleans in which can we can use select box. Alternative is to use a single array with multi-select. We need url's for each obstype here",
   "options": {
     "disable_collapse": true,
-    "disable_properties": true,
+    "disable_properties": false,
     "required_by_default": true
   },
   "format": "grid",
+  "required" : [
+    "SYNOP_OBS" ,
+    "MODESEHS_OBS"
+  ],
   "properties": {
     "SYNOP_OBS": {
       "type": "integer",
