@@ -4,6 +4,31 @@ import YAML, TOML
 
 using Test
 
+# AROME 3DVAR using OULAN
+@testset "AROME_3DVAR" begin    
+    config_exp  = TOML.parsefile("config/good/config_exp.toml")
+    arome_3dvar = TOML.parsefile("config/good/arome_3dvar.toml")
+    config_exp_with_arome_3dvar = merge(merge, config_exp, arome_3dvar)
+    @test Harmonie.isvalid(config_exp_with_arome_3dvar)
+    @testset "OULAN" begin  
+       arome_3dvar_oulan = TOML.parsefile("config/good/arome_3dvar_oulan.toml")
+       newconfig = merge(merge, config_exp_with_arome_3dvar, arome_3dvar_oulan)        
+       @test_broken Harmonie.isvalid(newconfig)
+    end
+end 
+
+@testset "AROME_4DVAR" begin
+    config_exp  = TOML.parsefile("config/good/config_exp.toml")
+    arome_4dvar = TOML.parsefile("config/good/arome_4dvar.toml")
+    newconfig = merge(merge,config_exp,arome_4dvar)
+    @test Harmonie.isvalid(newconfig) 
+    testbed_arome_4dvar = TOML.parsefile("config/good/testbed/arome_4dvar.toml")
+    newconfig = merge(merge,newconfig,testbed_arome_4dvar)
+    @test Harmonie.isvalid(newconfig) 
+end 
+
+
+
 # Check valid config_exp.yml
 @testset "Config_exp tests" begin  
     

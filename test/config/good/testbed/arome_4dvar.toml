@@ -1,0 +1,14 @@
+[Assimilation]
+ANAATMO      = '4DVAR' 
+
+[Geometry]
+DOMAIN       = 'SCANDINAVIA' 
+VLEV         = 'HIRLAM_60' 
+
+# Commented for now  
+#OBSMONITOR   = 'plotlog' 
+#DTG          = '2017093021'
+#DTGEND       = '2017100100'
+#LL_LIST      = '3' 
+#HWRITUPTIMES = "00-06:1" 
+#SWRITUPTIMES = "00-06:1"
