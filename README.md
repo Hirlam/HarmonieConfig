@@ -8,6 +8,15 @@ Open the file config_exp.json in an editor that supports json-schema (e.g. VS co
 
 Or open the file index.html in a browser. See also https://roelstappers.github.io/Harmonie.jl
 
+## Install
+
+Inside the julia package manager
+
+```julia
+   (v1.1) pkg> add https://github.com/roelstappers/Harmonie.jl
+```
+
+
 ## Open issues 
 - handling of  EPS configuration 
 
