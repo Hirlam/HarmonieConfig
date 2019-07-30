@@ -237,7 +237,7 @@ LSPSDT='.FALSE.'
 
 # *** This part is for EDA with observations perturbation
 # Only active in ensemble mode
-PERTATMO='CCMA'                           # ECMAIN  : In-line observation perturbation using the default IFS way.
+PERTATMO='CCMA'                         # ECMAIN  : In-line observation perturbation using the default IFS way.
                                         # CCMA    : Perturbation of the active observations only (CCMA content)
                                         #           before the Minimization, using the PERTCMA executable.
                                         # none    : no perturbation of upper-air observations
