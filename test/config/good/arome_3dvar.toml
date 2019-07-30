@@ -1,14 +1,20 @@
 description = "Standard AROME settings with DA"
-PHYSICS  = "arome"
-DYNAMICS = "nh"
-ANAATMO = "3DVAR"
-ANASURF = "CANARI_OI_MAIN"
-DFI = "none"
-HOST_MODEL = "ifs"
-DOMAIN = "DKCOEXP"
-VLEV = 65
-BDINT = 3
-HH_LIST = "0-21:3"
-BDSTRATEGY = "simulate_operational"
-ENSMSEL = ""
-ENSINIPERT = "none"
+[Physics]
+    PHYSICS  = "arome"
+    DYNAMICS = "nh"
+[Assimilation]
+    ANAATMO = "3DVAR"
+    ANASURF = "CANARI_OI_MAIN"
+[DFI]
+    DFI = "none"
+[Nesting]
+    
+    HOST_MODEL = "ifs"
+    DOMAIN = "DKCOEXP"
+    VLEV = 65
+    BDINT = 3
+    HH_LIST = "0-21:3"
+    BDSTRATEGY = "simulate_operational"
+[EDA]
+    ENSMSEL = ""
+    ENSINIPERT = "none"
