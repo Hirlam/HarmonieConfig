@@ -30,6 +30,9 @@
     "$schema" : {
       "type" : "string" 
     },
+    "description" : {
+      "type" : "string"
+    },
     "Geometry": {
       "$ref": "schema/geometry/geometry.schema.json"
     },
