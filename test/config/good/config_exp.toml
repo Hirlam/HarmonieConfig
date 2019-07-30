@@ -7,6 +7,11 @@ SURFEX_OFFLINE_BINARIES='no'                    # Switch to compile and use offl
 # **** Misc, defined first because it's used later ****
 [System]
 CNMEXP='HARM'                             # Four character experiment identifier
+MULTITASK='no'                            # Submit jobs through the multi task script
+BDLIB='ECMWF'                             # Boundary experiment, set:
+                                        # ECMWF to use MARS data
+                                        # RCRa  to use RCRa data from ECFS
+                                        # Other HARMONIE/HIRLAM experiment
 
 # **** Paths to archive ****
 # We need to define ARCHIVE early since it might be used further down
@@ -170,11 +175,7 @@ HOST_SURFEX="no"                        # yes if the host model is run with SURF
 LSPBDC='no'                               # Spectral upper boundary contions option (no|yes)
 LUNBC='yes'                               # Apply upper nested boundary condition (yes|no)
 NBDMAX=12                               # Number of parallel interpolation tasks
-MULTITASK='no'                            # Submit jobs through the multi task script
-BDLIB='ECMWF'                             # Boundary experiment, set:
-                                        # ECMWF to use MARS data
-                                        # RCRa  to use RCRa data from ECFS
-                                        # Other HARMONIE/HIRLAM experiment
+
 
 BDSTRATEGY='simulate_operational' # Which boundary strategy to follow
                                 # as defined in scr/Boundary_strategy.pl

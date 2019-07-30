@@ -1,6 +1,6 @@
 {
   "type": "object",
-  "additionalProperties": true,
+  "additionalProperties": false,
   "options": {
     "disable_collapse": true,
     "disable_properties": true
@@ -11,6 +11,7 @@
     "HOST_SURFEX",        
     "BDSTRATEGY",
     "BDINT",
+    "PERTDIA_BDINT",
     "LSPBDC",
     "NBDMAX",
     "LUNBC"
@@ -79,6 +80,10 @@
         24
       ],
       "default": 1
+    },
+    "PERTDIA_BDINT" : {
+      "type" : "integer",
+      "description": "Perturbation diagnostics interval"
     },
     "LSPBDC": {
       "type": "string",
