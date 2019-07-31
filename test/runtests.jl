@@ -100,8 +100,8 @@ end
     @test 1 == 1
 end
 
-# Check valid config_exp.yml
-@testset "Config_exp tests" begin  
+# Check valid config_exp.yml config.toml
+@testset "Config_exp" begin  
     
     config = TOML.parsefile("config/good/config_exp.toml")
     @test Harmonie.isvalid(config) 
