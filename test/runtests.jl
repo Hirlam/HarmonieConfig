@@ -4,16 +4,29 @@ import YAML, TOML
 
 using Test
 
+# AROME 4DVAR
+@testset "AROME_4DVAR" begin
+    config_exp  = TOML.parsefile("config/config_exp.toml")
+    arome_4dvar = TOML.parsefile("harmonie_configurations/arome_4dvar.toml")
+    config_exp_with_arome_4dvar = merge(merge, config_exp, arome_4dvar)
+    @test Harmonie.isvalid(config_exp_with_arome_4dvar) 
+    merged_arome_4dvar = TOML.parsefile("testbed_configurations/arome_4dvar.toml")
+    testbedconfig = merge(merge, config_exp_with_arome_4dvar, merged_arome_4dvar)
+    @test Harmonie.isvalid(testbedconfig) 
+end 
+
+
+
 # Testset using config_exp_with_arome_3dvar as base configuration
 @testset "AROME_3DVAR" begin    
-    config_exp  = TOML.parsefile("config/good/config_exp.toml")
-    arome_3dvar = TOML.parsefile("config/good/harmonie_configurations/arome_3dvar.toml")
+    config_exp  = TOML.parsefile("config/config_exp.toml")
+    arome_3dvar = TOML.parsefile("harmonie_configurations/arome_3dvar.toml")
     config_exp_with_arome_3dvar = merge(merge, config_exp, arome_3dvar)
     @test Harmonie.isvalid(config_exp_with_arome_3dvar)
 
     # AROME 3DVAR using OULAN
     @testset "OULAN" begin  
-        arome_3dvar_oulan = TOML.parsefile("config/good/harmonie_configurations/testbed/arome_3dvar_oulan.toml")
+        arome_3dvar_oulan = TOML.parsefile("testbed_configurations/arome_3dvar_oulan.toml")
         testbedconfig = merge(merge, config_exp_with_arome_3dvar, arome_3dvar_oulan)  
         # This test is broken because USEOBSOUL is not in the Harmonie.schema 
         @test_broken Harmonie.isvalid(testbedconfig)       
@@ -49,8 +62,8 @@ end
 
 # "AROME" base configurations  
 @testset "AROME" begin
-   #config_exp  = TOML.parsefile("config/good/config_exp.toml")
-   #arome   = TOML.parsefile("config/good/harmonie_configurations/arome.toml")
+   #config_exp  = TOML.parsefile("config/config_exp.toml")
+   #arome   = TOML.parsefile("harmonie_configurations/arome.toml")
    #config_exp_with_arome = merge(merge, config_exp, arome)
    @testset "AROME_BD_ALA"  begin
       @test 1==1
@@ -74,15 +87,6 @@ end
 
 
 
-@testset "AROME_4DVAR" begin
-    config_exp  = TOML.parsefile("config/good/config_exp.toml")
-    arome_4dvar = TOML.parsefile("config/good/harmonie_configurations/arome_4dvar.toml")
-    newconfig = merge(merge, config_exp, arome_4dvar)
-    @test Harmonie.isvalid(newconfig) 
-    testbed_arome_4dvar = TOML.parsefile("config/good/harmonie_configurations/testbed/arome_4dvar.toml")
-    newconfig = merge(merge, newconfig, testbed_arome_4dvar)
-    @test Harmonie.isvalid(newconfig) 
-end 
 
 @testset "AROME_LETKF" begin
     @test 1 == 1
@@ -103,7 +107,7 @@ end
 # Check valid config_exp.yml config.toml
 @testset "Config_exp" begin  
     
-    config = TOML.parsefile("config/good/config_exp.toml")
+    config = TOML.parsefile("config/config_exp.toml")
     @test Harmonie.isvalid(config) 
 
     config = TOML.parsefile("config/bad/unknown_TOPO_SOURCE.toml")
@@ -118,7 +122,7 @@ end
     config = YAML.load(open("config/bad/config_exp_Geometry_addProperties.yml"))
     @test !Harmonie.isvalid(config)
 
-    config = YAML.load(open("config/good/config_exp.yml"))
+    config = YAML.load(open("config/config_exp.yml"))
     @test_broken Harmonie.isvalid(config)
     @test_broken Harmonie.diagnose(config) === nothing
   

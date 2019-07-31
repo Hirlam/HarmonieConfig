@@ -15,6 +15,7 @@ Initialize Harmonie.schema from Harmonie.schemafile.
 
 """
 function __init__()
+# Should we remove __init__ and read schema at compile time instead of runtime to make it const? 
    global schema = JSONSchema.Schema(read(schemafile,String),parentFileDirectory="$moduledir/../docs") 
    return nothing
 end 
@@ -22,14 +23,14 @@ end
 """
     isvalid(config)
 
-Check that `config` is valid against the Harmonie schema
+Check that `config` is valid against Harmonie.schema
 """
 isvalid(config::Dict)  = JSONSchema.isvalid(config,schema) 
 
 """
     diagnose(config)
 
-Check that `config` is valid against the Harmonie schema. If
+Check that `config` is valid against Harmonie.schema. If
 valid return `nothing`, and if not, return a diagnostic String containing a
 selection of one or more likely causes of failure.
 """
