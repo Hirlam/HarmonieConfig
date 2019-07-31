@@ -1,0 +1,63 @@
+{
+  "$id": "./harmonie.schema.json",
+  "$schema" : "http://json-schema.org/schema#",
+  "title": "Harmonie experiment configuration",
+  "description" : "See Surfex and Observations tabs for examples. Observations.LISTE_LOC[].obstype shows how enum_titles can be used to give meaningful names to integers. Geometry.DOMAIN shows how we can insert value directly in the config_exp.json. Surfex.Namelist shows how namelist information can be included in the gui. All of this could help to reduce the dependency on perl in the scripts. ",
+  "options": {
+    "disable_properties": false,
+    "disable_edit_json": false,
+    "disable_collapse": true
+  },
+  "format": "categories",
+  "type": "object",
+  "additionalProperties": false,
+  "allof" : [
+
+      "$schema" : {   "type" : "string"     },
+    {
+      "$ref": "schema/geometry/geometry.schema.json"
+    },
+    {
+      "$ref": "schema/nesting/nesting.schema.json"
+    },
+    "Assimilation": {
+      "$ref": "schema/assimilation/assimilation.schema.json"
+    },
+    "DFI" : {
+      "$ref" : "schema/dfi/dfi.schema.json"
+    },
+    "Physics": {
+      "$ref": "schema/physics/physics.schema.json"
+    },
+    "Surfex": {
+      "$ref": "schema/surfex/surfex.schema.json"
+    },
+    "Observations": {
+      "$ref": "schema/observations/observations.schema.json"
+    },    
+    "EDA" : {
+      "$ref": "schema/eda/eda.schema.json"
+    },
+    "Postprocessing": {
+      "$ref" : "schema/postprocessing/postprocessing.schema.json"
+    },
+    "Archiving": {
+      "$ref": "schema/archiving/archiving.schema.json"
+    },
+    "System": {
+      "$ref": "schema/system/system.schema.json"
+    },
+    "Paths": {
+      "$ref": "schema/main/paths.schema.json"   
+    },
+    "Aux" : {
+      "$ref": "schema/aux/aux.schema.json"
+    },
+    "Times"  : { 
+      "$ref" : "schema/main/timelists.schema.json"
+    },
+    "Build" : {
+      "$ref" : "schema/build/build.schema.json"
+    }    
+  }
+}
