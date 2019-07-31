@@ -7,14 +7,14 @@ description = "Standard AROME settings with DA"
     ANASURF = "CANARI_OI_MAIN"
 [DFI]
     DFI = "none"
-[Nesting]    
+[Nesting]
     HOST_MODEL = "ifs"
     BDSTRATEGY = "simulate_operational"
     BDINT = 3
 [Geometry]
     DOMAIN = "DKCOEXP"
     VLEV = "65"
-[Times]    
+[Times]
     HH_LIST = "0-21:3"    
 [EDA]
     ENSMSEL = ""
