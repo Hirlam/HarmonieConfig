@@ -2,11 +2,20 @@
 [![Coverage Status](https://coveralls.io/repos/github/roelstappers/Harmonie.jl/badge.svg?branch=master)](https://coveralls.io/github/roelstappers/Harmonie.jl?branch=master)
 # Harmonie json-schema definitions 
 
-This repository contains the json-schema files that will be used in Harmonie to validate experiment configuration files 
+This repository contains json-schema files that could be used in Harmonie to validate experiment configuration files 
 
 Open the file config_exp.json in an editor that supports json-schema (e.g. VS code)
 
-Or open the file index.html in a browser. See also https://roelstappers.github.io
+Or open the file index.html in a browser. See also https://roelstappers.github.io/Harmonie.jl
+
+## Install
+
+Inside the julia package manager
+
+```julia
+   (v1.1) pkg> add https://github.com/roelstappers/Harmonie.jl
+```
+
 
 ## Open issues 
 - handling of  EPS configuration 
