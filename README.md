@@ -1,19 +1,16 @@
+# Harmonie.jl
+
 [![Build Status](https://travis-ci.com/roelstappers/Harmonie.jl.svg?branch=master)](https://travis-ci.com/roelstappers/Harmonie.jl)
 [![Coverage Status](https://coveralls.io/repos/github/roelstappers/Harmonie.jl/badge.svg?branch=master)](https://coveralls.io/github/roelstappers/Harmonie.jl?branch=master)
-# Harmonie json-schema definitions 
 
-This repository contains json-schema files that could be used in Harmonie to validate experiment configuration files 
-
-Open the file config_exp.json in an editor that supports json-schema (e.g. VS code)
-
-Or open the file index.html in a browser. See also https://roelstappers.github.io/Harmonie.jl
+json-schema validation of Harmonie configuration files 
 
 ## Install
 
 Inside the julia package manager
 
 ```julia   
-   (v1.1) pkg> add https://github.com/roelstappers/Harmonie.jl
+(v1.1) pkg> add https://github.com/roelstappers/Harmonie.jl
 ```
 
 See https://docs.julialang.org/en/v1/stdlib/Pkg/index.html
