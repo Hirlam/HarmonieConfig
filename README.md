@@ -12,13 +12,16 @@ Or open the file index.html in a browser. See also https://roelstappers.github.i
 
 Inside the julia package manager
 
-```julia
+```julia   
    (v1.1) pkg> add https://github.com/roelstappers/Harmonie.jl
 ```
 
+See https://docs.julialang.org/en/v1/stdlib/Pkg/index.html
 
 ## Open issues 
 - handling of  EPS configuration 
+- Handling of domains. Perhaps by merging, i.e. each domain has it's own toml file and we merge this file in config_exp.toml This will allow verifation of e.g. NLAT NLON. 
+
 
 ## to do
 - Add schema for all namelists
@@ -32,6 +35,8 @@ Inside the julia package manager
 - Add schema for ECMWF cycles. This should allow e.g. to validate BDINT etc. better. Also it should warn if ECMWF cycles changes during the time range (DTGBEG DTGEND). 
 - Add schema for ecflow  tasks/families (document input output, such that the graphviz figure can be generated automatically)` 
 - Add schema for harmonie testbed (Harmonie_configurations.pm)
+
+
 
 ## to do in Harmonie 
 - e.g. scr/Output_freq.pl  remove checks
