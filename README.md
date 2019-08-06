@@ -37,4 +37,7 @@ See https://docs.julialang.org/en/v1/stdlib/Pkg/index.html
 
 ## to do in Harmonie 
 - e.g. scr/Output_freq.pl  remove checks
+- CheckOptions.pl should only check Options not create config_updated.h
+- config_update should be removed and be part of config_update.
+- Replace CheckOptions.pl by CheckOptions.jl
 
