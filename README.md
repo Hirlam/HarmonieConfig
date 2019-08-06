@@ -3,17 +3,15 @@
 [![Build Status](https://travis-ci.com/roelstappers/Harmonie.jl.svg?branch=master)](https://travis-ci.com/roelstappers/Harmonie.jl)
 [![Coverage Status](https://coveralls.io/repos/github/roelstappers/Harmonie.jl/badge.svg?branch=master)](https://coveralls.io/github/roelstappers/Harmonie.jl?branch=master)
 
-json-schema validation of Harmonie configuration files 
+[json-schema](https://json-schema.org/) validation of [Harmonie](http://hirlam.org/) configuration files 
 
 ## Install
 
-Inside the julia package manager
+Inside the [julia package manager](https://docs.julialang.org/en/v1/stdlib/Pkg/index.html)
 
 ```julia   
 (v1.1) pkg> add https://github.com/roelstappers/Harmonie.jl
 ```
-
-See https://docs.julialang.org/en/v1/stdlib/Pkg/index.html
 
 ## Open issues 
 - handling of  EPS configuration 
