@@ -1,0 +1,11 @@
+DOMAIN='DKCOEXP'                          # See definitions in scr/Harmonie_domains.pm
+TOPO_SOURCE='gmted2010'                   # Input source for orography. Available are (gtopo30|gmted2010)
+                                        # For usage of gmted2010 check the documentation first
+GRID_TYPE='LINEAR'                        # Type of grid (LINEAR|QUADRATIC|CUBIC)
+VLEV='65'                                 # Vertical level definition.
+                                        # HIRLAM_60, MF_60,HIRLAM_40, or
+                                        # BOUNDARIES = same number of levs as on boundary file.
+                                        # See the other choices from scr/Vertical_levels.pl
+
+VERT_DISC='vfd'                           # Discretization in the vertical (vfd,vfe)
+LGRADSP='yes'                             # Apply Wedi/Hortal vorticity dealiasing (yes|no)

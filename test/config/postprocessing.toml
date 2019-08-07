@@ -1,0 +1,57 @@
+# **** Postprocessing/output ****
+IO_SERVER='yes'                           # Use IO server (yes|no). Set the number of cores to be used
+                                        # in your Env_submit
+IO_SERVER_BD='yes'                        # Use IO server for reading of boundary data
+POSTP="inline"                          # Postprocessing by Fullpos (inline|offline|none).
+                                        # See Setup_postp.pl for selection of fields.
+                                        # inline: this is run inside of the forecast
+                                        # offline: this is run in parallel to the forecast in a separate task
+
+FREQ_RESET_TEMP=3                       # Reset frequency of max/min temperature values in hours, controls NRAZTS
+FREQ_RESET_GUST=1                       # Reset frequency of max/min gust values in hours, controls NXGSTPERIOD
+                                        # Set to -1 to get the same frequency _AND_ reset behaviour as for min/max temperature
+                                        # See yomxfu.F90 for further information.
+
+# **** Check SP tendency evolution ****
+CHKEVO="no"                             # (yes|no). If "yes" a CHKEVO_SPTEND file is created in $ARCHIVE
+
+
+# **** Verification extraction ****
+OBSEXTR='yes'                             # Extract observations from BUFR (yes|no)
+FLDEXTR='yes'                             # Extract model data for verification from model files (yes|no)
+FLDEXTR_TASKS=1                         # Number of parallel tasks for field extraction
+VFLDEXP='$EXP'                            # Experiment name on vfld files
+
+
+# *** Field verification ***
+FLDVER='no'                               # Main switch for field verification (yes|no)
+FLDVER_HOURS="06 12 18 24 30 36 42 48"  # Hours for field verification
+
+# *** Observation monitoring ***
+OBSMONITOR='obstat'                       # Create Observation statistics plots
+                                        # Format: OBSMONITOR=Option1:Option2:...:OptionN
+                                        # obstat: Daily usage maps and departures
+                                        # plotlog: IFS log statistics
+                                        #  - Grid point and spectral norms evolution
+                                        #  - Cost function evolution, if applicable
+                                        #  - Observation usage from the minimization, if applicable
+                                        # no: Nothing at all
+                                        #
+                                        # The assimilation related monitoring is
+                                        # only active if ANAATMO != none
+OBSMON_SYNC='no'                          # Sync obsmn sqlite tables to ecgate (yes|no)
+
+#  *** Monitoring maps for hirlam.org. ***
+#      Note that at ECMWF this is run on ecgb (grads is only there)
+#      In  this version You must check out manually contrib/mapbin to the
+#      directory referred as MAPBIN
+FIELDMONITOR='no'
+MAPBIN='$HM_DATA/lib/util/mapbin'
+
+# Recipient(s) to send mail to when a task aborts
+MAIL_ON_ABORT=''                          # you@work,you@home
+
+TESTBED_LIST="AROME_3DVAR AROME_1D AROME AROME_MUSC AROME_3DVAR_MARSOBS AROME_BD_ARO HarmonEPS AROME_EPS_COMP AROME_JB"
+
+# Let the testbed continue when a child fails
+CONT_ON_FAILURE=0

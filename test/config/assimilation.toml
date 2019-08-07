@@ -1,0 +1,35 @@
+ANAATMO='3DVAR'                           # Atmospheric analysis (3DVAR|4DVAR|blending|none)
+ANASURF='CANARI_OI_MAIN'                  # Surface analysis (CANARI_OI_MAIN|OI|CANARI_EKF_SURFEX|EKF|fgcopy|none)
+                                        # CANARI_OI_MAIN    : CANARI + SURFEX OI
+                                        # CANARI_EKF_SURFEX : CANARI + SURFEX EKF ( experimental )
+                                        # OI                : TITAN + gridPP + SODA
+                                        # EKF               : TITAN + gridPP + SODA
+                                        # fgcopy            : Copy initial from previous cycle
+                                        # none              : No surface assimilation, cold start each cycle
+ANASURF_OI_COEFF="POLYNOMES_ISBA"       # Specify use of OI coefficients file (POLYNOMES_ISBA|POLYNOMES_ISBA_MF6)
+                                        # POLYNOMES_ISBA_MF6 means 6 times smaller coefficients for WG2 increments
+ANASURF_MODE="before"                   # When ANASURF should be done
+                                        # before            : Before ANAATMO
+                                        # after             : After ANAATMO
+                                        # both              : Before and after ANAATMO (Only for ANAATMO=4DVAR)
+NNCV="1,1,1,1"                          # Active EKF control variables. 1=WG2 2=WG1 3=TG2 4=TG1
+NNCO="1,1,0,0,1"                        # Active observation types (Element 1=T2m, element 2=RH2m and element 3=Soil moisture, element 5=SWE)
+CFORCING_FILETYPE="NETCDF"              # Offline surfex forcing format (NETCDF/ASCII)
+
+
+SST_SOURCES="IFS"                       # List of external SST sources like IFS|HIROMB|NEMO|ROMS
+                                        # See util/gl_grib_api/ala/merge_ocean.F90 for more details
+
+LSMIXBC='yes'                             # Spectral mixing of LBC0 file before assimilation
+JB_REF_DOMAIN='DKCOEXP'                   # Reference domain used for interpolation of structure functions.
+                                        # Note that the vertical level definition has to be the same
+# **** 4DVAR settings ****
+NOUTERLOOP=2                            # 4DVAR outer loops, need to be 1 at present
+ILRES="2,2"                               # Resolution (in parts of full) of outer loops
+TSTEP4D="120,120"                         # Timestep length (seconds) of outer loops TL+AD
+TSTEPTRAJ=600                           # How often the model state is saved for linearization
+TL_TEST='yes'                             # Only active for playfile tlad_tests
+AD_TEST='yes'                             # Only active for playfile tlad_tests
+CH_RES_SPEC='yes'                         # yes => change of resolution of the increment spectrally; no => by FULLPOS
+FORCE1='no'                               # yes => tendency increment; no => analysis increment in loop 1
+FORCE2='no'                               # yes => tendency increment; no => analysis increment i

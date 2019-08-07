@@ -1,0 +1,20 @@
+WRK='$HM_DATA/$CYCLEDIR'                  # Work directory
+ARCHIVE_ROOT='$HM_DATA/archive'           # Archive root directory
+ECFSLOC='ectmp'                           # Archiving site at ECMWF-ECFS: "ec" or ECFS-TMP "ectmp"
+ECFSGROUP='hirald'                       # Group in which to chgrp the ECMWF archive, "default" or "hirald"
+EXTRARCH='$ARCHIVE_ROOT/extract'          # Archive for fld/obs-extractions
+OBDIR='$HM_DATA/observations'             # Observation file directory
+BINDIR='${BINDIR-$HM_DATA/bin}'                 # Binary directory
+BDDIR='$HM_DATA/${BDLIB}/archive/@YYYY@/@MM@/@DD@/@HH@'   # Boundary file directory,
+                                                        # For more information, read in scr/Boundary_strategy.pl
+INT_BDFILE='$WRK/ELSCF${CNMEXP}ALBC@NNN@'                 # Interpolated boundary file name and location
+
+MSG_PATH='$SCRATCH/CLOUDS/'               # Location of input MSG FA file, expected name is MSGcloudYYYYMMDDHH
+
+# **** Running mode ****
+RUNNING_MODE='research'                   # Research or operational mode (research|operational)
+                                        # operational implies that
+                                        # - Not STAGE is done for MARS requests
+                                        # - No assimilation is done if no obserations are found by Bator
+
+SIMULATION_TYPE='nwp'                     # Type of simulation (nwp|climate)

@@ -1,0 +1,32 @@
+
+# **** Cycles to run, and their forecast length ****
+
+# The unit of HWRITUPTIMES, FULLFATIMES, ..., SFXFWFTIMES should be:
+#   - hours   if TFLAG="h"
+#   - minutes if TFLAG="min"
+
+# Writeup times of # history,surfex and fullpos files
+# Comma separated list, and/or range(s) like:
+# t1,t2,t3-t4,t5-t6:step    tb-te == tb-te:1 == tb,tb+1,tb+2,...,te
+
+# Standard deterministic run
+HH_LIST="00-21:3"                       # Which cycles to run, replaces FCINT
+LL_LIST="12,3"                          # Forecast lengths for the cycles [h], replaces LL, LLMAIN
+                                        # The LL_LIST list is wrapped around if necessary, to fit HH_LIST
+HWRITUPTIMES="00-21:3,24-60:6"          # History file output times
+FULLFAFTIMES='$HWRITUPTIMES'            # History FA file IO server gather times
+PWRITUPTIMES="00-60:3"                  # Postprocessing times
+PFFULLWFTIMES='-1'                      # Postprocessing FA file IO server gathering times
+VERITIMES="00-60:1"                     # Verification output times, changes PWRITUPTIMES/SFXSELTIMES
+SFXSELTIMES='$PWRITUPTIMES'             # Surfex select file output times
+                                        # Only meaningful if SURFEX_LSELECT=yes
+SFXSWFTIMES='-1'                        # SURFEX select FA file IO server gathering times
+SWRITUPTIMES="00-06:3"                  # Surfex model state output times
+SFXWFTIMES='$SWRITUPTIMES'              # SURFEX history FA file IO server gathering times
+
+
+
+SURFEX_LSELECT="yes"                    # Only write selected fields in surfex outpute files. (yes|no)
+                                        # Check nam/surfex_selected_output.pm for details.
+                                        # Not tested with lfi files.
+INT_SINI_FILE='$WRK/SURFXINI.fa'        # Surfex initial file name and location

@@ -1,0 +1,29 @@
+# **** Archiving settings ****
+# Archiving selection syntax, settings done below
+#
+# [fc|an|pp]_[fa|gr|nc] : Output from
+#  an : All steps from upper air and surface analysis
+#  fc : Forecast model state files from upper air and surfex
+#  pp : Output from FULLPOS and SURFEX_LSELECT=yes (ICMSHSELE+NNNN.sfx)
+# in any of the formats if applicable
+#  fa : FA files
+#  gr : GRIB[1|2] files
+#  nc : NetCDF files
+# sqlite|odb|VARBC|bdstrategy : odb and sqlite files stored in odb_stuff.tar
+# fldver|ddh|vobs|vfld : fldver/ddh/vobs/vfld files
+# climate : Climate files from PGD and E923
+# Some macros
+# odb_stuff=odb:VARBC:bdstrategy:sqlite
+# verif=vobs:vfld
+# fg : Required files to run the next cycle
+
+ARCHIVE_ECMWF='yes'                       # Archive to $ECFSLOC at ECMWF (yes|no)
+TFLAG="h"                               # Time flag for model output. (h|min)
+ARSTRATEGY="climate:fg:verif:odb_stuff:[an|fc]_fa:pp_grb"          # Files to archive on ECFS, see above for syntax
+CONVERTFA='yes'                           # Conversion of FA file to GRIB/nc (yes|no)
+ARCHIVE_FORMAT='GRIB1'                    # Format of archive files (GRIB1|GRIB2|nc). nc format yet only available in climate mode
+NCNAMES='nwp'                             # Nameing of NetCDF files follows (climate|nwp) convention.
+RCR_POSTP='no'                            # Produce a subset of fields from the history file for RCR monitoring
+                                          # Only applicable if ARCHIVE_FORMAT=GRIB
+MAKEGRIB_LISTENERS=1                    # Number of parallel listeners for Makegrib
+                                        # Only applicable if ARCHIVE_FORMAT=GRIB

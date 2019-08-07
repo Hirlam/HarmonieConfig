@@ -1,0 +1,6 @@
+CNMEXP='HARM'                             # Four character experiment identifier
+MULTITASK='no'                            # Submit jobs through the multi task script
+BDLIB='ECMWF'                             # Boundary experiment, set:
+                                        # ECMWF to use MARS data
+                                        # RCRa  to use RCRa data from ECFS
+                                        # Other HARMONIE/HIRLAM experiment

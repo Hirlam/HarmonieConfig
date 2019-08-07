@@ -1,0 +1,31 @@
+CISBA="3-L"                             # Type of ISBA scheme in SURFEX. Options: "3-L"|"2-L"|"DIF"
+CSNOW="D95"                             # Type of snow scheme in SURFEX. Options: "D95" and "3-L"
+CROUGH="NONE"                           # SSO scheme used in SURFEX "NONE"|"'Z01D'"|"'BE04'"|"'OROT'"
+SURFEX_SEA_ICE="none"                   # Treatment of sea ice in surfex (none|sice)
+MODIFY_LAKES='F'                          # Use Vanern/VAttern as Sea, requires new climate files
+SURFEX_LAKES="FLAKE"                    # Treatment of lakes in surfex (WATFLX|FLAKE)
+NPATCH=2                                # Number of patches over land in SURFEX (see also LISBA_CANOPY)
+LISBA_CANOPY=".FALSE."                  # Activates surface boundary multi layer scheme over land in SURFEX (must be .FALSE. for NPATCH>1)
+
+# Rsmin settings
+RSMIN_DECIDUOUS_FACTOR=1.0              # Multiply forest and trees default RSMIN values with this factor
+RSMIN_CONIFEROUS_FACTOR=1.0             # Multiply coniferous trees default RSMIN values with this factor
+RSMIN_C3_FACTOR=1.0                     # Multiply C3 crops and grass default RSMIN values with this factor
+RSMIN_C4_FACTOR=1.0                     # Multiply C4 crops default RSMIN values with this factor
+
+# **** Climate files ****
+CREATE_CLIMATE='${CREATE_CLIMATE-yes}'    # Run climate generation (yes|no)
+CLIMDIR='$HM_DATA/climate/$DOMAIN'        # Climate files directory
+BDCLIM='$HM_DATA/${BDLIB}/climate'        # Boundary climate files (ald2ald,ald2aro)
+                                        # This should point to intermediate aladin
+                                        # climate file in case of hir2aro,ifs2aro processes.
+CAERO='tegen'                           # Climatological aerosol (AOD) tegen | camsaod | camsmmr
+
+# Physiography input for SURFEX
+ECOCLIMAP_VERSION='2.5_plus'              # Version of ECOCLIMAP for surfex (1,2,SG)
+                                        # Available versions are 1.1-1.5,2.0-2.2.1,SG and 2.5_plus if you use FLake
+                                        # SG represents SecondGeneration and is now availbale for tests on ECMWF. However,
+                                        # please note that SG is not yet compatible with any availbale lake data base.
+XSCALE_H_TREE=1.0                       # Scale the tree height with this factor
+LDB_VERSION='3.0'                         # Lake database version. Highly recommended 3.0 if you use FLake (and not important if you don't use it)
+SOIL_TEXTURE_VERSION='FAO'                # Soil texture input data FAO|HWSD_v2|SOIL
