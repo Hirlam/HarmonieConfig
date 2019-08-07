@@ -11,7 +11,7 @@ returns 0 if config_exp.toml is valid against harmonie.schema.json
 
 import Harmonie, TOML
 
-config = TOML.parsefile(ARGS[1]))
+config = TOML.parsefile(ARGS[1])
 
 Harmonie.isvalid(config) || error(Harmonie.diagnose(config)) 
 
