@@ -3,15 +3,15 @@
 """
 Usage 
 
-      ./CheckOptions.jl config_exp.yml      
+      ./CheckOptions.jl config_exp.toml      
 
-returns 0 if config_exp.yml is valid against harmonie.schema.json 
-   or a diagonstic error message if not
+returns 0 if config_exp.toml is valid against harmonie.schema.json 
+   or a diagnostic error message if not
 """
 
-import Harmonie, YAML
+import Harmonie, TOML
 
-config = YAML.load(open(ARGS[1]))
+config = TOML.parsefile(ARGS[1]))
 
-Harmonie.isvalid(config) || exit(1) 
+Harmonie.isvalid(config) || error(Harmonie.diagnose(config)) 
 
