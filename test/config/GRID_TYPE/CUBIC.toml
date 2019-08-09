@@ -1,0 +1,6 @@
+NFOST = 6 
+LBOUND_D3 = true 
+
+# From Clime 
+LSPSMORO = false
+TRUNC = 4 

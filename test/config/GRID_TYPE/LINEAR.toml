@@ -1,0 +1,7 @@
+
+[NAMOPH]
+LLINC = false
+
+# From Climate
+LSPSMORO = true
+TRUNC= 2
