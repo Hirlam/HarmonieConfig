@@ -2,5 +2,6 @@ NFOST = 6
 LBOUND_D3 = true 
 
 # From Clime 
+[NAMCLA]
 LSPSMORO = false
 TRUNC = 4 

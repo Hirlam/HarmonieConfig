@@ -1,2 +1,9 @@
 NFOST = 6 
 LBOUND_D3 = true 
+
+# From Climate
+[NAMCLA]
+LSPSMORO = false
+
+
+TRUNC=2.4

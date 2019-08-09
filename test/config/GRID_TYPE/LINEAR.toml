@@ -3,5 +3,6 @@
 LLINC = false
 
 # From Climate
+[NAMCLA]
 LSPSMORO = true
 TRUNC= 2
