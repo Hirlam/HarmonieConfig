@@ -1,0 +1,14 @@
+##
+
+Note in include.ass grid_type is used nested with DOMAIN. 
+
+We should make grid_type a property from domain, i.e. 
+we have e.g. domain DKA_CUBIC and DKA_QUADRATIC 
+Then the f_JBCV and f_JBBAL can be properties of the domain too. 
+
+# TRUNC specified in Harmonie_domains.pm and CLimate
+# and used in both to compute NSMAX  NMSMAX? 
+# probably better to make NSMAX and NMSMAX a property of DOMAIN 
+# Like already done explicitly for some domains
+
+# Also Makdo determines NSMAX based on grid_type.  
