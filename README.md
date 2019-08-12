@@ -9,7 +9,8 @@
 
 Inside the [julia package manager](https://docs.julialang.org/en/v1/stdlib/Pkg/index.html)
 
-```julia   
+```julia  
+(v1.1) pkg> add https://github.com/wildart/TOML.jl
 (v1.1) pkg> add https://github.com/roelstappers/Harmonie.jl
 ```
 
