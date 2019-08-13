@@ -1,3 +1,4 @@
+TRUNC= 2
 
 [NAMOPH]
 LLINC = false
@@ -5,4 +6,3 @@ LLINC = false
 # From Climate
 [NAMCLA]
 LSPSMORO = true
-TRUNC= 2
