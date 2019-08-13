@@ -1,4 +1,7 @@
-NFOST = 6 
+[NAMRIP]
+NFOST = 6
+
+[NAMDYN]
 LBOUND_D3 = true 
 
 # From Climate
