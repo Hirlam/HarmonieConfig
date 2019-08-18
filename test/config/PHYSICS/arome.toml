@@ -1,0 +1,10 @@
+DYNAMICS="nh"                           # Hydrostatic or non-hydrostatic dynamics (h|nh)
+PHYSICS="arome"                         # Main model physics flag (arome|alaro)
+MASS_FLUX_SCHEME='edmfm'                  # Version of EDMF scheme (edkf|edmfm)
+                                        # Only applicable if PHYSICS=arome
+                                        # edkf is the AROME-MF version
+                                        # edmfm is the KNMI implementation of Eddy Diffusivity Mass Flux scheme for Meso-scale
+STATNW="yes"                            # Switch for new set up cloud sscheme (yes|no)
+HARATU="yes"                            # Switch for HARATU turbulence scheme (yes|no)
+ALARO_VERSION=0                         # Alaro version (1|0)
+XRIMAX=0.0                              # Maximum allowed Richardson number in the surface layer (cy40h default was 0.0)
