@@ -14,6 +14,9 @@ Inside the [julia package manager](https://docs.julialang.org/en/v1/stdlib/Pkg/i
 (v1.1) pkg> add https://github.com/roelstappers/Harmonie.jl
 ```
 
+## Roadmap 
+Aim is that in the future this repository will handle everythinh related to "configuration" in the Harmonie scripting system. Unit tests will validate that for each (ecflow) task the "input files" are created  correctely (namelist, symbolic links to initial conditions, etc.  (roughly everything in WDIR). This would allow that changes to the scripting can be validate without having to run the current Harmonie testbed. (The testbed will still be needed for changes to the Fortran code). For this creation of namelist and setting up of symbolic links that is currently done in the scripts would have to be moved to this repository. The scripts in Harmonie repositoy will only call Fortran binaries. The perl code in the current Harmonie scripting should be translate and moved to this repository. 
+
 ## Open issues 
 - handling of  EPS configuration 
 - Handling of domains. Perhaps by merging, i.e. each domain has it's own toml file and we merge this file in config_exp.toml This will allow verifation of e.g. NLAT NLON. 
