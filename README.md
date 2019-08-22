@@ -43,3 +43,5 @@ Aim is that in the future this repository will handle everything related to "con
 - config_update should be removed and be part of config_update.
 - Replace CheckOptions.pl by CheckOptions.jl
 
+- Check https://www.commonwl.org/
+
