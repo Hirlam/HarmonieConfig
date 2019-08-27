@@ -19,8 +19,6 @@ Aim is that in the future this repository will handle everything related to "con
 
 ## Open issues 
 - handling of  EPS configuration 
-- Handling of domains. Perhaps by merging, i.e. each domain has it's own toml file and we merge this file in config_exp.toml This will allow verifation of e.g. NLAT NLON. 
-
 
 ## to do
 - Add schema for all namelists
@@ -28,13 +26,12 @@ Aim is that in the future this repository will handle everything related to "con
 - Add schema for codetype obstype from the ECMWF odb json files.
 - Add schema for submit.ecgb-cca submit.LinuxPC etc.
 - Add schema for submission.db information
-- Add schema fro build configation including compiler options
+- Add schema fro build configuration including compiler options
 - Add schema for selection mechanism for VarBC predictors
 - Add schema for MARS request files
 - Add schema for ECMWF cycles. This should allow e.g. to validate BDINT etc. better. Also it should warn if ECMWF cycles changes during the time range (DTGBEG DTGEND). 
 - Add schema for ecflow  tasks/families (document input output, such that the graphviz figure can be generated automatically)` 
 - Add schema for harmonie testbed (Harmonie_configurations.pm)
-
 
 
 ## to do in Harmonie 
@@ -43,5 +40,5 @@ Aim is that in the future this repository will handle everything related to "con
 - config_update should be removed and be part of config_update.
 - Replace CheckOptions.pl by CheckOptions.jl
 
-- Check https://www.commonwl.org/
+Check https://www.commonwl.org/
 
