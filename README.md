@@ -31,14 +31,9 @@ Aim is that in the future this repository will handle everything related to "con
 - Add schema for MARS request files
 - Add schema for ECMWF cycles. This should allow e.g. to validate BDINT etc. better. Also it should warn if ECMWF cycles changes during the time range (DTGBEG DTGEND). 
 - Add schema for ecflow  tasks/families (document input output, such that the graphviz figure can be generated automatically)` 
-- Add schema for harmonie testbed (Harmonie_configurations.pm)
+- Add schema for harmonie testbed (Harmonie_configurations.pm Harmonie_testbed.pl)
 
 
-## to do in Harmonie 
-- e.g. scr/Output_freq.pl  remove checks
-- CheckOptions.pl should only check Options not create config_updated.h
-- config_update should be removed and be part of config_update.
-- Replace CheckOptions.pl by CheckOptions.jl
 
 Check https://www.commonwl.org/
 
