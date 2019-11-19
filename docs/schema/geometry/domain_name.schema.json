@@ -11,37 +11,35 @@
     "GSIZE"
   ],
   "properties": {
-    "TSTEP" : {
-      "type" : "integer"
+    "TSTEP": {
+      "$ref": "tstep.schema.json"
     },
     "NLON": {
-      "$ref" : "nlon_nlat.schema.json"
+      "$ref": "nlon_nlat.schema.json"
     },
     "NLAT": {
-      "$ref" : "nlon_nlat.schema.json"
+      "$ref": "nlon_nlat.schema.json"
     },
     "LONC": {
-      "type": "number"
+      "$ref": "lon.schema.json"
     },
     "LATC": {
-      "type": "number"
+      "$ref": "lat.schema.json"
     },
     "LON0": {
-      "type": "number"
+      "$ref": "lon.schema.json"
     },
     "LAT0": {
-      "type": "number"
+      "$ref": "lat.schema.json"
     },
     "GSIZE": {
-      "type": "number",
-      "title" : "Grid size in meters",
-      "default" : 2500.0
+      "$ref": "gsize.schema.json"    
     }
   },
   "enum": [
     {
       "NAME": "TRAINING_10",
-      "TSTEP":  240,
+      "TSTEP": 240,
       "NLON": 150,
       "NLAT": 150,
       "LONC": 14.8,
@@ -89,7 +87,7 @@
       "NLON": 1000,
       "NLAT": 512,
       "LONC": 35.0,
-      "LATC": 39.0 ,
+      "LATC": 39.0,
       "LON0": 35.0,
       "LAT0": 39.0,
       "GSIZE": 2500.0

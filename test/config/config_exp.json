@@ -1,10 +1,10 @@
 {
-  "$schema": "../../../src/schema/harmonie.schema.json",
+  "$schema": "../../docs/harmonie.schema.json",
   "Geometry": {
     "DOMAIN": "DKCOEXP",
     "TOPO_SOURCE": "gmted2010",
-    "GRID_TYPE": "LINEAR",
-    "VLEV": "65",
+    "GRID_TYPE": ,
+    "VLEV": "65" ,
     "VERT_DISC": "vfd",
     "LGRADSP": "yes"
   },
@@ -20,7 +20,7 @@
     "LUNBC": "yes"
   },
   "Assimilation": {
-    "ANAATMO": "n",
+    "ANAATMO": "3DVAR",
     "LSMIXBC": "yes",
     "ANASURF": "CANARI_OI_MAIN",
     "ANASURF_MODE": "before",
