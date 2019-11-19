@@ -1,35 +1,32 @@
 {
   "type": "object",
   "title": "NAM_TEB",
-  "description" : "Namelist for town energy balance",
-  "options": {
-        "collapsed": true
-  },
-  "additionalProperties" : false,
-  "properties" : { 
+  "description": "Namelist for town energy balance",
+  "additionalProperties": false,
+  "properties": {
     "NROAD_LAYER": {
       "type": "integer",
-      "description" : "number of layers in roads", 
+      "description": "number of layers in roads",
       "default": 5
     },
     "NROOF_LAYER": {
       "type": "integer",
-      "description" : "number of layers in roofs",
+      "description": "number of layers in roofs",
       "default": 5
     },
     "NWALL_LAYER": {
       "type": "integer",
-      "description" : "number of layers in walls",
+      "description": "number of layers in walls",
       "default": 5
     },
     "NFLOOR_LAYER": {
       "type": "integer",
-      "description" : "number of layers in floors",
+      "description": "number of layers in floors",
       "default": 5
     },
     "NTEB_PATCH": {
       "type": "integer",
-      "description" : "number of TEB patches (corresponding to the roads orientations)",
+      "description": "number of TEB patches (corresponding to the roads orientations)",
       "default": 1
     },
     "CBEM": {
@@ -39,34 +36,34 @@
         "DEF",
         "BEM"
       ],
-      "enum_titles" : [
+      "enum_titles": [
         "DEF, default version force-restore model from Masson et al. 2002",
         "BEM, Building Energy Model Bueno et al. 2011"
       ],
-      "minLength" : 3,
-      "maxLength" : 3,
+      "minLength": 3,
+      "maxLength": 3,
       "default": "DEF"
     },
     "CCOOL_COIL": {
       "type": "string",
-      "description" : "type of cooling coil",
+      "description": "type of cooling coil",
       "enum": [
         "IDEAL ",
         "DXCOIL"
       ],
-      "minLength" : 6,
-      "maxLength" : 6,
+      "minLength": 6,
+      "maxLength": 6,
       "default": "IDEAL "
     },
     "CHEAT_COIL": {
       "type": "string",
-      "description" : "type of heating coil",
+      "description": "type of heating coil",
       "enum": [
         "IDEAL ",
         "FINCAP"
       ],
-      "minLength" : 6,
-      "maxLength" : 6,
+      "minLength": 6,
+      "maxLength": 6,
       "default": "IDEAL "
     },
     "LAUTOSIZE": {
@@ -90,10 +87,10 @@
       "default": false
     }
   },
-  "links" : [
+  "links": [
     {
-      "rel" : "4.1.6. Namelist NAM_TEB",
-      "href" : "http://www.umr-cnrm.fr/surfex/spip.php?article236"
+      "rel": "4.1.6. Namelist NAM_TEB",
+      "href": "http://www.umr-cnrm.fr/surfex/spip.php?article236"
     }
   ]
 }

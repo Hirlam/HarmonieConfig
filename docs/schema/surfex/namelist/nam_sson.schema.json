@@ -2,10 +2,10 @@
   "type": "object",
   "title": "NAM_SSOn",
   "description": "Namelist for roughness parameterization for orography",
-  "options": {
-    "collapsed": true
-  },
   "additionalProperties": false,
+  "required": [
+    "CROUGH"
+  ],
   "properties": {
     "CROUGH": {
       "type": "string",
@@ -39,10 +39,10 @@
       "default": 2.0
     }
   },
-  "links" : [
+  "links": [
     {
-      "rel" : "6.1.4. Namelist NAM_SSOn",
-      "href" : "http://www.umr-cnrm.fr/surfex/spip.php?article126"
+      "rel": "6.1.4. Namelist NAM_SSOn",
+      "href": "http://www.umr-cnrm.fr/surfex/spip.php?article126"
     }
   ]
 }
