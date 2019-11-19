@@ -1,8 +1,11 @@
+TRUNC= 2
 
-[NAMOPH]
-LLINC = false
+[NAMRIP]
+NFOST = 0
+
+[NAMDYN]
+LBOUND_D3 = true 
 
 # From Climate
 [NAMCLA]
 LSPSMORO = true
-TRUNC= 2

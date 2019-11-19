@@ -1,9 +1,11 @@
-NFOST = 6 
+TRUNC=2.4
+
+[NAMRIP]
+NFOST = 6
+
+[NAMDYN]
 LBOUND_D3 = true 
 
 # From Climate
 [NAMCLA]
 LSPSMORO = false
-
-
-TRUNC=2.4
