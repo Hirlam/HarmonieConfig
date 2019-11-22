@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "title": "NAM_SURF_ATM",
+  "description" : "Namelist for ....(Not finished)",  
+  "additionalProperties" : false,
+  "required" : ["XRIMAX"],
+  "properties" : { 
+    "XRIMAX" : {
+        "type" : "number",
+        "description" : "limitation of Richardson number in drag computation",
+        "default" : 0.0
+    }
+  },
+  "links" : [
+    {
+      "rel" : "6.1.2 Namelist NAM_SURF_ATNM",
+      "href" : "https://www.umr-cnrm.fr/surfex/spip.php?article77"
+    }
+  ]
+}

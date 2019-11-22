@@ -6,11 +6,14 @@
   "options": {
     "disable_properties": true
   },
-  "required" : ["NAM_TEB", "NAM_SSOn"], 
+  "required" : ["NAM_TEB", "NAM_SSOn","NAM_SURF_ATM"], 
   "properties" : {
      "NAM_TEB" : {
        "$ref" : "nam_teb.schema.json" 
      },
+     "NAM_SURF_ATM" : {
+      "$ref" : "nam_surf_atm.schema.json" 
+    },
      "NAM_SSOn" : {
        "$ref" : "nam_sson.schema.json" 
      }
