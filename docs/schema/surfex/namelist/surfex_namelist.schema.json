@@ -1,23 +1,21 @@
 {
-
-  "type" : "object",
-  "title" : "Namelist",
-  "description" : "Namelists are empty by default. Click properties to customize properties. >  to unfold the namelist. JSON to see the current values. Only NAM_TEB and NAM_SSOn for now as an example.", 
-  "options": {
-    "disable_properties": true
-  },
-  "required" : ["NAM_TEB", "NAM_SSOn","NAM_SURF_ATM"], 
-  "properties" : {
-     "NAM_TEB" : {
-       "$ref" : "nam_teb.schema.json" 
-     },
-     "NAM_SURF_ATM" : {
-      "$ref" : "nam_surf_atm.schema.json" 
+  "type": "object",
+  "title": "Namelist",
+  "description": "Namelists are empty by default. Click properties to customize properties. >  to unfold the namelist. JSON to see the current values. Only NAM_TEB and NAM_SSOn for now as an example.",
+  "required": [
+    "NAM_TEB",
+    "NAM_SSOn",
+    "NAM_SURF_ATM"
+  ],
+  "properties": {
+    "NAM_TEB": {
+      "$ref": "nam_teb.schema.json"
     },
-     "NAM_SSOn" : {
-       "$ref" : "nam_sson.schema.json" 
-     }
+    "NAM_SURF_ATM": {
+      "$ref": "nam_surf_atm.schema.json"
+    },
+    "NAM_SSOn": {
+      "$ref": "nam_sson.schema.json"
+    }
   }
-
-
 }
