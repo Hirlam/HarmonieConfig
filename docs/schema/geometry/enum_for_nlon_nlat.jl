@@ -2,7 +2,7 @@
 
 max=3000 
 
-# i2 start from 1 because we even numbers
+# i2 start from 1 because we need even numbers
 vals=Int64[];
 for i2 in 1:1:log(2,max )
   for i3 in 0:1:log(3,max)
