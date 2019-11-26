@@ -1,6 +1,6 @@
 {
     "type": "integer",
-    "$comment": "enum generate using enum_for_tstep.jl",
+    "$comment": "enum generated using enum_for_tstep.jl",
     "enum": [
         1,
         2,
