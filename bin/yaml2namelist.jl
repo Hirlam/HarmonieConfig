@@ -15,7 +15,7 @@ tofortran(val::Number) = val
 
 for (name,namelist) in namelists
     println(io,"&$name")
-    for (key,value) in namelists
+    for (key,value) in namelist
         println(io,"  $key = $(tofortran(value)),")
     end
     println(io,"/")
