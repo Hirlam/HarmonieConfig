@@ -17,9 +17,3 @@ end
 
 sort!(vals)
 println(vals)
-
-
-# Or perhaps easier to read
-
-# using Primes
-# print([v for v in 1:max if all(factor(Vector, v) .<= 5)])
