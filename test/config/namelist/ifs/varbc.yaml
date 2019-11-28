@@ -1,0 +1,55 @@
+ NAMVARBC:
+ 
+ NAMVARBC_RAD:
+  "LBC_RAD" : true
+  "yconfig35nparam" : "10"
+  "yconfig35npredcs1:10" : "012891015161718"
+  "yconfig36nparam" : "5"
+  "yconfig36npredcs1:5" : "018910"
+  "yconfig37nparam" : "5"
+  "yconfig37npredcs1:5" : "018910"
+  "yconfig38nparam" : "5"
+  "yconfig38npredcs1:5" : "018910"
+  "yconfig39nparam" : "5"
+  "yconfig39npredcs1:5" : "018910"
+  "yconfig310nparam" : "5"
+  "yconfig310npredcs1:5" : "018910"
+  "yconfig42nparam" : "4"
+  "yconfig42npredcs1:4" : "08910"
+  "yconfig43nparam" : "5"
+  "yconfig43npredcs1:5" : "018910"
+  "yconfig44nparam" : "5"
+  "yconfig44npredcs1:5" : "018910"
+  "yconfig45nparam" : "5"
+  "yconfig45npredcs1:5" : "018910"
+  "yconfig152nparam" : "4"
+  "yconfig152npredcs1:4" : "08910"
+  "yconfig153nparam" : "5"
+  "yconfig153npredcs1:5" : "018910"
+  "yconfig154nparam" : "5"
+  "yconfig154npredcs1:5" : "018910"
+  "yconfig155nparam" : "5"
+  "yconfig155npredcs1:5" : "018910"
+  "yconfig165nparam" : "5"
+  "yconfig165npredcs1:5" : "018910"
+  "nbg_AMSUA" : "2000"
+  "nbg_AMSUB" : "2000"
+  "nbg_MHS" : "2000"
+  "nbg_IASI" : "2000"
+  
+ NAMVARBC_AIREP:
+  "LBC_AIREP" : false
+  "LBC_AMDAR" : false
+  "LBC_ACARS" : false
+  "LBC_COLBA" : false
+  "LBC_CODAR" : false
+
+ NAMVARBC_SFCOBS:
+  "LBC_SFCOBS_PS" : false
+  "LBC_SFCOBS_APD" : true
+  "nbg_sfcobs_min_apd": "15"
+  "nbg_sfcobs_ndays_apd"  : "15"
+  "nbg_sfcobs_min_ps": "15"
+  "nbg_sfcobs_ndays_ps"  : "15"
+    
+

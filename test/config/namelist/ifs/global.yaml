@@ -1,0 +1,8 @@
+  NAMARG:
+    LELAM : true
+    LECMWF: false
+  NAMGRIB:
+    NENSFNB : $ENVENSMBR
+  NAMPAR0:
+    NPRINTLEV   : 1
+ 
