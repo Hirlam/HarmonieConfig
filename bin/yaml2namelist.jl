@@ -2,6 +2,8 @@
 
 using YAML
 
+
+
 namelists =  YAML.load(open(ARGS[1]))
 
 io = stdout

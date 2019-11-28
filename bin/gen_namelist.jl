@@ -19,7 +19,7 @@ for  name in ARGS
     merge!(merge, totdict, dict)
 end
 
-@time for (name, namelist) in totdict
+for (name, namelist) in totdict
     println(io, "&$name")
     for (key, value) in namelist
         println(io, "  $key = $(tofortran(value)),")

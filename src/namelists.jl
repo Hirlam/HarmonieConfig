@@ -10,9 +10,9 @@ Base.iterate(nml::Namelist) = iterate(nml.d)
 Base.get(nml::Namelist,key::String, default) = get(nml.d,key,default)
 
 #
-tofortran(p::Pair{String, String}) = " $(p.first) = '$(p.second)'"
-tofortran(key::val::Bool) =  val ? ".TRUE."  :  ".FALSE."
-tofortran(val::Number) = val
+tofortran(key::String, val::String) = "$key = '$val'"
+tofortran(key::String, val::Bool)   =  val ? "$key = .TRUE."  :  "$key = .FALSE."
+tofortran(key::String, val::Number) = "$key = $val"
 
 function Base.show(io::IO,mime::MIME"text/plain",nmls::Namelist) 
     for (name, namelist) in nmls
@@ -20,9 +20,8 @@ function Base.show(io::IO,mime::MIME"text/plain",nmls::Namelist)
      #   for (key, value) in namelist
      #       println(io, "  $key = $(tofortran(value)),")
      #   end
-        for keyvalue in namelist
-            @show keyvalue
-            println(io, "$(tofortran(keyvalue)),")
+        for (key,val) in namelist
+            println(io, "  $(tofortran(key,val)),")
         end
         println(io, "/")
     end
