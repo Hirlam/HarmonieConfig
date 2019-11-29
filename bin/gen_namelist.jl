@@ -5,9 +5,26 @@ using YAML
 CDIR = @__DIR__
 NAMELIST_DIR = "$CDIR/../test/config/namelist/ifs"
 
-tofortran(val::String) = "'$val'"
 tofortran(val::Bool) =  val ? ".TRUE."  :  ".FALSE."
 tofortran(val::Number) = val
+
+# tofortran(val::String) = "'$val'"
+function tofortran(val::String)  
+    if startswith(val, '$')
+       str = lstrip(val, '$')
+       if occursin("?",str)
+           temp = split(str,'?')
+           key = temp[1]
+           default = temp[2]
+           haskey(ENV,key) ? ENV[key]  : default  
+       else
+           haskey(ENV,str) ? ENV[str]  : error("No ENV[$str]")
+       end
+         
+    else
+        return "'$val'"
+    end
+end
 
 io = stdout
 
