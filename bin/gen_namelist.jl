@@ -1,6 +1,6 @@
 #!/usr/bin/env julia
 
-using YAML
+using YAML, OrderedCollections
 
 CDIR = @__DIR__
 NAMELIST_DIR = "$CDIR/../test/config/namelist/ifs"
@@ -30,7 +30,7 @@ io = stdout
 
 println(io, "# this file has been generated automatically")
 
-totdict = Dict()
+totdict = OrderedDict{String,Any}()
 for  name in ARGS
     dict = YAML.load(open("$NAMELIST_DIR/$name.yaml"))
     merge!(merge, totdict, dict)
