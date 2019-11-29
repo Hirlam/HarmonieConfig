@@ -3,7 +3,7 @@
   "Geometry": {
     "DOMAIN": "DKCOEXP",
     "TOPO_SOURCE": "gmted2010",
-    "GRID_TYPE": ,
+    "GRID_TYPE": "linear",
     "VLEV": "65" ,
     "VERT_DISC": "vfd",
     "LGRADSP": "yes"

@@ -1,8 +1,9 @@
   NAMARG:
     LELAM : true
     LECMWF: false
-  NAMGRIB:
-    NENSFNB : $ENVENSMBR
+  #CRS TO DO
+  #NAMGRIB:
+  #  NENSFNB : $ENVENSMBR
   NAMPAR0:
     NPRINTLEV   : 1
  

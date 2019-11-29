@@ -1,3 +1,2 @@
- NAMPHY:
-  "LMPHYS" : false
- 
+NAMPHY:
+  LMPHYS: false

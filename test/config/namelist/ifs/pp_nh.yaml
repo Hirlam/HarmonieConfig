@@ -1,8 +1,6 @@
- NAMCT0:
-  "LNHDYN" : true
-  "LSPRT" : false
- 
- NAMDYNA:
-  "NDLNPR" : "1"
- 
+NAMCT0:
+  LNHDYN: true
+  LSPRT: false
 
+NAMDYNA:
+  NDLNPR: 1

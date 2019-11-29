@@ -3,11 +3,9 @@
 using YAML
 NAMELIST_DIR = "/home/roels/git/Harmonie.jl/test/config/namelist/ifs"
 
-
 tofortran(val::String) = "'$val'"
 tofortran(val::Bool) =  val ? ".TRUE."  :  ".FALSE."
 tofortran(val::Number) = val
-
 
 io = stdout
 
@@ -19,11 +17,10 @@ for  name in ARGS
     merge!(merge, totdict, dict)
 end
 
-for (name, namelist) in totdict
-    println(io, "&$name")
-    for (key, value) in namelist
+for (groupname, group) in totdict
+    println(io, "&$groupname")
+    for (key, value) in group
         println(io, "  $key = $(tofortran(value)),")
     end
     println(io, "/")
 end
-

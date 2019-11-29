@@ -1,4 +1,2 @@
- NAMARPHY:
-  "LMSE" : false
- 
-
+NAMARPHY:
+  LMSE: false

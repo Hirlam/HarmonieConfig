@@ -1,5 +1,3 @@
- NAMDYNA:
-  "LGWADV" : true
-  "LRDBBC" : false
- 
-
+NAMDYNA:
+  LGWADV: true
+  LRDBBC: false
