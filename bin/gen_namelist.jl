@@ -1,7 +1,9 @@
 #!/usr/bin/env julia
 
-using Harmonie
-NAMELIST_DIR = "/home/roels/git/Harmonie.jl/test/config/namelist/ifs"
+using YAML
+
+CDIR = @__DIR__
+NAMELIST_DIR = "$CDIR/../test/config/namelist/ifs"
 
 tofortran(val::String) = "'$val'"
 tofortran(val::Bool) =  val ? ".TRUE."  :  ".FALSE."
