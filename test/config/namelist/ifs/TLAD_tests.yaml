@@ -53,7 +53,7 @@
   NECRIPL   : 1
  
  NEMELBC0B:
-  TEFRCL    : "BDINT"
+  TEFRCL    : $TEFRCL
  
  NAMXFU:
   LXFU      : false

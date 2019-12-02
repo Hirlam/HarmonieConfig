@@ -1,2 +1,2 @@
 NAMBLA: 
-G1 : !from_env G1
+  NOTVAR
