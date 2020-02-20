@@ -1,1 +1,0 @@
-[{code : .data[][0], description : .data[][1] }]

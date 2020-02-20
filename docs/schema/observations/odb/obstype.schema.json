@@ -1,49 +1,51 @@
 {
-  "type": "integer",
-
-  "description": "specifies the observation subtype (BUFR code) or the satellite channel for images.",
-  "enum": [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
-    12,
-    13,
-    14,
-    15,
-    16,
-    17
-  ],
-  "options": {
-    "enum_titles": [
-      "1 Land SYNOP and SHIP reports",
-      "2 AIREP Aircraft based measurements",
-      "3 SATOB Atmospheric motion winds",
-      "4 DRIBU Drifted buoys (not used at HMS)",
-      "5 TEMP reports",
-      "6 PILOT reports and windprofiler observations",
-      "7 SATEM Satellite radiances",
-      "8 PAOB",
-      "9 Scatterometer",
-      "10 LIMB GPS limb sounders",
-      "12 WAVE",
-      "13 Radar observations",
-      "14 Ground-based weather radar",
-      "15 LIDAR",
-      "16 ALLSKY",
-      "17 Rain Gauge"
+    "$comment": "File created by create_odbschemas.jl",
+    "type": "integer",
+    "title": "obstype",
+    "enum": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        15,
+        16,
+        17,
+        19,
+        20
+    ],
+    "options": {
+        "enum_title": [
+            "  1, SYNOP",
+            "  2, AIREP",
+            "  3, SATOB",
+            "  4, BUOY",
+            "  5, TEMP",
+            "  6, PILOT",
+            "  7, SATEM",
+            "  8, PAOB",
+            "  9, Scatterometer",
+            " 10, Limb",
+            " 12, WAVE",
+            " 14, Ground-based weather radar",
+            " 15, LIDAR",
+            " 16, ALLSKY",
+            " 17, Rain Gauge",
+            " 19, Satellite cloud-aerosol lidar-radar",
+            " 20, Lightning"
+        ]
+    },
+    "links": [
+        {
+            "rel": "ECMWF documentation",
+            "href": "https://apps.ecmwf.int/odbgov/obstype.json"
+        }
     ]
-  },
-  "links": [
-    {
-      "rel" : "ECMWF documentation", 
-      "href": "https://apps.ecmwf.int/odbgov/obstype/"
-    }
-  ]
 }
