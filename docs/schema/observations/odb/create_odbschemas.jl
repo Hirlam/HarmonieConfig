@@ -4,10 +4,6 @@ import HTTP, JSON, OrderedCollections
 
 vars = ["varno","codetype", "obstype", "sensor", "reporttype", "subtype", "obstype"]
 
-# vars = ["varno"]
-
-
-
 for var in vars
   println("Creating $var.schema.json")  
   href = "https://apps.ecmwf.int/odbgov/$var.json"
@@ -18,13 +14,8 @@ for var in vars
   
   data = sort(dict["data"], lt= (r1, r2) -> r1[findind("code")] < r2[findind("code")])
 
-
-
-
   code        = get.(data, findind("code"),nothing)
   description = get.(data, findind("description"),nothing)
-  # names        = get.(data, findind("name"),nothing) 
-  
   
   enum_titles = ["$(lpad(c,3)), $d" for (c,d) in zip(code, description)]
   
