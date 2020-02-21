@@ -24,7 +24,7 @@ for var in vars
   r["type"] = "integer"
   r["title"] = var
   r["enum"]  = code
-  r["options"] = Dict("enum_title"=>enum_titles)
+  r["options"] = Dict("enum_titles"=>enum_titles)
   r["links"]   = [Dict("rel"=>"ECMWF documentation","href"=>href)]
 
   io = open("$var.schema.json","w")
