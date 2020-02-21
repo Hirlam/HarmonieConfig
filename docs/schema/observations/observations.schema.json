@@ -9,7 +9,25 @@
   "format": "grid",
   "required" : [
     "SYNOP_OBS" ,
-    "MODESEHS_OBS"
+    "MODESEHS_OBS",
+    "AIRCRAFT_OBS",
+    "BOUY_OBS",
+    "TEMP_OBS",
+    "PILOT_OBS",
+    "GNSS_OBS",
+    "AMV_OBS",
+    "AMSUA_OBS",
+    "AMSUB_OBS",
+    "IASI_OBS",
+    "SEV_OBS",
+    "SEVIRI_OBS",
+    "SCATT_OBS",   
+    "ATMS_OBS",
+    "CRIS_OBS",
+    "HIRS_OBS",
+    "PAOB_OBS",
+    "LIMB_OBS",
+    "RADAR_OBS"
   ],
   "properties": {
     "SYNOP_OBS": {
