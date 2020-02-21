@@ -1,5 +1,8 @@
 {
   "type": "array",
+  "options" : {
+    "collapsed" : true
+  },
   "format": "tabs",
   "description" : "This needs more work. Included here as an example of how arrays work, e.g. to be used in EPS? Click add item a few times.",
   "uniqueItems": true,

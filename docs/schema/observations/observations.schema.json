@@ -15,6 +15,7 @@
     "TEMP_OBS",
     "PILOT_OBS",
     "GNSS_OBS",
+    "SGNSS_OBS",
     "AMV_OBS",
     "AMSUA_OBS",
     "AMSUB_OBS",
@@ -27,7 +28,8 @@
     "HIRS_OBS",
     "PAOB_OBS",
     "LIMB_OBS",
-    "RADAR_OBS"
+    "RADAR_OBS",
+    "LISTE_LOC"
   ],
   "properties": {
     "SYNOP_OBS": {
