@@ -45,7 +45,7 @@
     "links": [
         {
             "rel": "ECMWF documentation",
-            "href": "https://apps.ecmwf.int/odbgov/obstype.json"
+            "href": "https://apps.ecmwf.int/odbgov/obstype"
         }
     ]
 }

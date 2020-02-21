@@ -323,7 +323,7 @@
     "links": [
         {
             "rel": "ECMWF documentation",
-            "href": "https://apps.ecmwf.int/odbgov/varno.json"
+            "href": "https://apps.ecmwf.int/odbgov/varno"
         }
     ]
 }

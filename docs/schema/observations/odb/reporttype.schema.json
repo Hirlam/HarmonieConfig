@@ -1109,7 +1109,7 @@
     "links": [
         {
             "rel": "ECMWF documentation",
-            "href": "https://apps.ecmwf.int/odbgov/reporttype.json"
+            "href": "https://apps.ecmwf.int/odbgov/reporttype"
         }
     ]
 }

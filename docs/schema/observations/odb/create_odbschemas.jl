@@ -5,9 +5,9 @@ import HTTP, JSON, OrderedCollections
 vars = ["varno","codetype", "obstype", "sensor", "reporttype", "subtype", "obstype"]
 
 for var in vars
-  println("Creating $var.schema.json")  
-  href = "https://apps.ecmwf.int/odbgov/$var.json"
-  resp = HTTP.get(href)
+  println("Creating $var.schema.json") 
+  href = "https://apps.ecmwf.int/odbgov/$var"
+  resp = HTTP.get("$href.json")
   dict = JSON.parse(String(resp.body))
 
   findind(field) = findfirst(isequal(field), dict["fields"]) 

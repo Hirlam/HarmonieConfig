@@ -239,7 +239,7 @@
     "links": [
         {
             "rel": "ECMWF documentation",
-            "href": "https://apps.ecmwf.int/odbgov/subtype.json"
+            "href": "https://apps.ecmwf.int/odbgov/subtype"
         }
     ]
 }
