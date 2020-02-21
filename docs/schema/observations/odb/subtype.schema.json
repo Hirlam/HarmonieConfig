@@ -119,7 +119,7 @@
         251
     ],
     "options": {
-        "enum_title": [
+        "enum_titles": [
             "  1, Manual Land SYNOP",
             "  3, Automatic Land SYNOP",
             "  8, ERS-1",

@@ -161,7 +161,7 @@
         281
     ],
     "options": {
-        "enum_title": [
+        "enum_titles": [
             "  1, geopotential",
             "  2, upper air temperature (K)",
             "  3, upper air u component",

@@ -80,7 +80,7 @@
         959
     ],
     "options": {
-        "enum_title": [
+        "enum_titles": [
             " -1, MISSING",
             "  0, HIRS",
             "  1, MSU",

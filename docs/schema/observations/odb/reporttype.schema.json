@@ -554,7 +554,7 @@
         98010
     ],
     "options": {
-        "enum_title": [
+        "enum_titles": [
             "  1, TIROS-N HIRS Radiances",
             "  2, NOAA 6 HIRS Radiances",
             "  3, NOAA 7 HIRS Radiances",

@@ -73,7 +73,7 @@
         401
     ],
     "options": {
-        "enum_title": [
+        "enum_titles": [
             "  3, Radar Rain Rates",
             "  8, Old ERS 1",
             " 11, Manual Land SYNOP",
