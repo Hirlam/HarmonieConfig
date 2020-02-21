@@ -15,6 +15,7 @@
     "Times", 
     "Geometry",
     "Nesting",
+    "Observations",
     "Assimilation",
     "DFI",
     "Physics",
@@ -39,6 +40,9 @@
     "Nesting": {
       "$ref": "schema/nesting/nesting.schema.json"
     },
+    "Observations": {
+      "$ref": "schema/observations/observations.schema.json"
+    }, 
     "Assimilation": {
       "$ref": "schema/assimilation/assimilation.schema.json"
     },
@@ -50,10 +54,7 @@
     },
     "Surfex": {
       "$ref": "schema/surfex/surfex.schema.json"
-    },
-    "Observations": {
-      "$ref": "schema/observations/observations.schema.json"
-    },    
+    },       
     "EDA" : {
       "$ref": "schema/eda/eda.schema.json"
     },
