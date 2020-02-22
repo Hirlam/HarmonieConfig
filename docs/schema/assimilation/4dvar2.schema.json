@@ -1,0 +1,46 @@
+{
+    "type": "object",
+    "title": "4DVAR",
+    "additionalProperties": true,
+    "options": {
+        "disable_collapse": true,
+        "disable_properties": false
+    },
+    "required": [
+        "LSMIXBC",
+        "ANAATMO",
+        "ANASURF",
+        "ANASURF_MODE",
+        "INCV",
+        "INCO",
+        "innerloops"
+    ],
+    "properties": {
+        "ANAATMO": {
+            "type": "string",
+            "enum": [
+                "4DVAR"
+            ],
+            "readOnly": true
+        },
+        "innerloops": {
+            "$ref": "4dvar_innerloops.schema.json"
+        },
+        "LSMIXBC": {
+            "$ref": "lsmixbc.schema.json"
+        },
+        "ANASURF": {
+            "$ref": "anasurf.schema.json"
+        },
+        "ANASURF_MODE": {
+            "$ref": "anasurf_mode.schema.json"
+        },
+        "INCV": {
+            "$ref": "incv.schema.json"
+        },
+        "INCO": {
+            "$ref": "inco.schema.json"
+        }
+        
+    }
+}

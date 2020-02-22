@@ -4,14 +4,14 @@
     "disable_collapse": true,
     "disable_properties": false
   },
-  "anyOf": [
+  "oneOf": [
     {
       "title": "3DVAR",
       "$ref" : "3dvar.schema.json"            
     },
     {
       "title" : "4DVAR",
-      "$ref" : "4dvar.schema.json"      
+      "$ref" : "4dvar2.schema.json"      
     },
     {
       "title": "blending",
