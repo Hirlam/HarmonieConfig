@@ -4,12 +4,12 @@
         "collapsed": false
     },
     "format": "tabs",
-    "description": "4DVAR using Array of objects",
+    "description": "4DVAR using Array of objects (Introduce elements for Surface DA and remove ANASURF_MODE",
     "additionalProperties": false,
     "items": {
         "type": "object",
         "title": "item",
-        "headerTemplate": "IL {{i1 }} res {{ self.ilres }} LSMIX {{ self.LSMIXBC }}",
+        "headerTemplate": "UA res {{ self.ilres }} LSMIX {{ self.LSMIXBC }}",
         "required": [
             "ilres",
             "tstep4d",
