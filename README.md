@@ -1,7 +1,7 @@
 # Harmonie.jl
 
-[![Build Status](https://travis-ci.com/roelstappers/Harmonie.jl.svg?branch=master)](https://travis-ci.com/roelstappers/Harmonie.jl)
-[![Coverage Status](https://coveralls.io/repos/github/roelstappers/Harmonie.jl/badge.svg?branch=master)](https://coveralls.io/github/roelstappers/Harmonie.jl?branch=master)
+[![Build Status](https://travis-ci.com/hirlam/Harmonie.jl.svg?branch=master)](https://travis-ci.com/hirlam/Harmonie.jl)
+[![Coverage Status](https://coveralls.io/repos/github/hirlam/Harmonie.jl/badge.svg?branch=master)](https://coveralls.io/github/hirlam/Harmonie.jl?branch=master)
 
 [json-schema](https://json-schema.org/) validation of [Harmonie](http://hirlam.org/) configuration files 
 
