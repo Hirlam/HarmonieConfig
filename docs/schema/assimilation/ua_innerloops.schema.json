@@ -1,0 +1,52 @@
+{
+    "type": "array",
+    "options": {
+        "collapsed": false
+    },
+    "format": "tabs",
+    "description": "4DVAR using Array of objects (Introduce elements for Surface DA and remove ANASURF_MODE",
+    "additionalProperties": false,
+    "items": {
+        "type": "object",
+        "title": "item",
+        "headerTemplate": "UA res {{ self.ilres }} LSMIX {{ self.LSMIXBC }}",
+        "required": [
+            "ilres",
+            "tstep4d",
+            "LSMIXBC"
+        ],
+        "properties": {
+            "ilres": {
+                "type": "integer",
+                "enum": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "default": 2
+            },
+            "tstep4d": {
+                "$ref": "../geometry/tstep.schema.json"
+            },
+            "LSMIXBC" : {
+                "$ref": "lsmixbc.schema.json"
+            },
+            "Observations" : {
+                "$ref": "../observations/observations.schema.json"
+            }
+        }
+    },
+    "default": [
+        {
+            "ilres": 3,
+            "tstep4d": 120,
+            "LSMIXBC" : "yes"
+        },
+        {
+            "ilres": 2,
+            "tstep4d": 120,
+            "LSMIXBC" : "no"
+        }
+    ]
+}

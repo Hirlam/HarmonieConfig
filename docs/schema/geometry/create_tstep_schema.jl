@@ -11,6 +11,7 @@ r = OrderedCollections.OrderedDict()
 r[raw"$comment"] = "File created by $filename"
 r["type"] = "integer"
 r["enum"]  = tsteps
+r["default"] = 60
 
 io = open("tstep.schema.json","w")
 JSON.print(io, r, 4)
