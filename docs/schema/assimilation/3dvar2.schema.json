@@ -1,22 +1,24 @@
 {
   "type": "object",
-  "title": "none",
-  "additionalProperties": true,
+  "title" : "3DVAR",  
+  "additionalProperties": false,
   "options": {
     "disable_collapse": true,
     "disable_properties": false
   },
   "required": [
-    "ANAATMO"
+    "LSMIXBC",
+    "ANAATMO"    
   ],
   "properties": {
     "ANAATMO": {
       "type": "string",
-      "enum": [
-        "none"
-      ],
-      "default": "none",
+      "default": "3DVAR",    
       "readOnly": true
+    },
+    "LSMIXBC": {
+      "$ref": "lsmixbc.schema.json"
     }
+    
   }
 }

@@ -1,17 +1,17 @@
 {
   "type": "object",
-  "options": {
-    "disable_collapse": true,
-    "disable_properties": false
-  },
   "oneOf": [
     {
       "title": "3DVAR",
       "$ref" : "3dvar.schema.json"            
     },
     {
-      "title" : "4DVAR",
-      "$ref" : "4dvar2.schema.json"      
+      "title" : "4DVAR AoS",
+      "$ref" : "4dvar_aos.schema.json"      
+    },
+    {
+      "title" : "4DVAR SoA",
+      "$ref" : "4dvar_soa.schema.json"      
     },
     {
       "title": "blending",

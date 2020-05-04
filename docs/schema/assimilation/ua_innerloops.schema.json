@@ -8,7 +8,7 @@
     "additionalProperties": false,
     "items": {
         "type": "object",
-        "title": "item",
+        "title": "UA",
         "headerTemplate": "UA res {{ self.ilres }} LSMIX {{ self.LSMIXBC }}",
         "required": [
             "ilres",

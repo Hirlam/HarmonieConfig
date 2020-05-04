@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "title": "Surface",
+    "required": [
+        "INCV",
+        "INCO"
+    ],
+    "additionalProperties": false,
+    "properties": {
+        "INCV": {
+            "$ref": "incv.schema.json"
+        },
+        "INCO": {
+            "$ref": "inco.schema.json"
+        }
+    }
+}

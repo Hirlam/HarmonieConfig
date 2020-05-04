@@ -1,11 +1,7 @@
 {
     "type": "object",
     "title": "4DVAR",
-    "additionalProperties": true,
-    "options": {
-        "disable_collapse": true,
-        "disable_properties": false
-    },
+    "additionalProperties": false,
     "required": [
         "LSMIXBC",
         "ANAATMO",
@@ -24,7 +20,7 @@
             "readOnly": true
         },
         "innerloops": {
-            "$ref": "4dvar_innerloops.schema.json"
+            "$ref": "innerloops.schema.json"
         },
         "LSMIXBC": {
             "$ref": "lsmixbc.schema.json"

@@ -1,0 +1,46 @@
+{
+    "type": "array",
+    "options": {
+        "collapsed": false
+    },
+    "format": "tabs",
+    "description": "Upper Air and surface DA",
+    "additionalProperties": false,
+    "items": {
+        "headerTemplate": "{{ self.ANAATMO }} LSMIX {{ self.title }}",
+        "oneOf": [
+            {                
+                "$ref": "ua2_innerloops.schema.json"
+            },
+            {
+                "$ref": "surface_innerloops.schema.json"
+            },
+            {
+                "$ref": "blending.schema.json"
+            },
+            {
+                "$ref": "none.schema.json"
+            },
+            {
+                "$ref": "3dvar2.schema.json"
+            }
+        ]
+    },
+    "default": [
+        {
+            "ANAATMO": "3DVAR",
+            "LSMIXBC" : "yes"
+        },
+        {
+            "ANAATMO" : "IO_MAIN",
+            "ilres": 3,
+            "tstep4d": 120,
+            "LSMIXBC": "yes"
+        },
+        {
+            "ilres": 2,
+            "tstep4d": 120,
+            "LSMIXBC": "no"
+        }
+    ]
+}
