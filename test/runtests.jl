@@ -1,12 +1,20 @@
 
 import Harmonie
 import YAML, TOML, JSON, JSONSchema
-
+import Glob
 using Test
+
+config_exp  = TOML.parsefile("config/config_exp.toml")
+    
+for testbed_config in Glob.glob("*.toml",Harmonie.testbeddir)
+   @testset "$(basename(testbed_config))" begin 
+       @test 1==1
+   end 
+end 
+
 
 # AROME 4DVAR
 @testset "AROME_4DVAR" begin
-    config_exp  = TOML.parsefile("config/config_exp.toml")
     arome_4dvar = TOML.parsefile("harmonie_configurations/arome_4dvar.toml")
     config_exp_with_arome_4dvar = merge(merge, config_exp, arome_4dvar)
    

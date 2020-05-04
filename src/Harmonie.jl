@@ -7,6 +7,7 @@ export schema, isvalid, diagnose
 
 const moduledir=@__DIR__ 
 const schemafile="$moduledir/../docs/harmonie.schema.json"
+const testbeddir=joinpath(moduledir,"../test/testbed_configurations/")
 
 """
     __init__()
