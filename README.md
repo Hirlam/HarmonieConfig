@@ -1,7 +1,7 @@
 # Harmonie.jl
 
-[![Build Status](https://travis-ci.com/roelstappers/Harmonie.jl.svg?branch=master)](https://travis-ci.com/roelstappers/Harmonie.jl)
-[![Coverage Status](https://coveralls.io/repos/github/roelstappers/Harmonie.jl/badge.svg?branch=master)](https://coveralls.io/github/roelstappers/Harmonie.jl?branch=master)
+[![Build Status](https://travis-ci.com/hirlam/Harmonie.jl.svg?branch=master)](https://travis-ci.com/hirlam/Harmonie.jl)
+[![Coverage Status](https://coveralls.io/repos/github/Hirlam/Harmonie.jl/badge.svg?branch=master)](https://coveralls.io/github/Hirlam/Harmonie.jl?branch=master)
 
 [json-schema](https://json-schema.org/) validation of [Harmonie](http://hirlam.org/) configuration files 
 
@@ -11,7 +11,7 @@ Inside the [julia package manager](https://docs.julialang.org/en/v1/stdlib/Pkg/i
 
 ```julia  
 (v1.1) pkg> add https://github.com/wildart/TOML.jl
-(v1.1) pkg> add https://github.com/roelstappers/Harmonie.jl
+(v1.1) pkg> add https://github.com/Hirlam/Harmonie.jl
 ```
 
 ## Roadmap 
