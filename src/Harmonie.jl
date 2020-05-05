@@ -1,13 +1,15 @@
 module Harmonie
 
-import JSONSchema
+import JSONSchema, JSON, Glob
 import Base.isvalid
 
-export schema, isvalid, diagnose
+export isvalid, diagnose
 
 const moduledir=@__DIR__ 
 const schemafile="$moduledir/../docs/harmonie.schema.json"
 const testbeddir=joinpath(moduledir,"../test/testbed_configurations/")
+const configdir=joinpath(moduledir, "../test/harmonie_configurations")
+const configurations = getindex.(splitext.(readdir(configdir)),1)  
 
 """
     __init__()
