@@ -1,0 +1,7 @@
+[NESTING]
+BDDIR =  "my_dir"
+JBDIR =  "hvor skal jeg plassere denne"
+
+[OBSERVATIONS]
+OBDIR_PATTERN = "ukjent"
+

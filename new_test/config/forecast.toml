@@ -1,0 +1,74 @@
+
+[FORECAST]
+#####################################################################################################
+#  Forecast model (physics + dynamics and output)
+#####################################################################################################
+
+ENSMSEL = []                            # Ensemble members to run (list with member numbers)
+
+DYNAMICS = "nh"                         # Hydrostatic or non-hydrostatic dynamics (h|nh)
+VERT_DISC = "vfd"                       # Discretization in the vertical (vfd,vfe)
+                                        # Note that vfe does not yet work in non-hydrostatic mode
+PHYSICS = "arome"                       # Main model physics flag (arome|alaro)
+
+ALARO_VERSION = 0                       # Alaro version (1|0)
+
+LSPBDC = false                          # Spectral upper boundary contions option (no|yes)
+LGRADSP = true                          # Apply Wedi/Hortal vorticity dealiasing (yes|no)
+LUNBC = true                            # Apply upper nested boundary condition (yes|no)
+MASS_FLUX_SCHEME = "edmfm"              # Version of EDMF scheme (edkf|edmfm)
+                                        # Only applicable if PHYSICS=arome
+                                        # edkf is the AROME-MF version
+                                        # edmfm is the KNMI implementation of Eddy Diffusivity Mass Flux scheme for Meso-scale
+LSTATNW = true                          # Switch for new set up cloud scheme (yes|no)
+LHARATU = true                          # Switch for HARATU turbulence scheme (yes|no)
+LHGT_QS = true                          # Switch for for height dependent VQSIGSAT (yes|no)
+
+FREQ_RESET_TEMP = 3                     # Reset frequency of max/min temperature values in hours, controls NRAZTS
+FREQ_RESET_GUST = 1                     # Reset frequency of max/min gust values in hours, controls NXGSTPERIOD
+                                        # Set to -1 to get the same frequency _AND_ reset behaviour as for min/max temperature
+                                        # See yomxfu.F90 for further information.
+
+# **** Postprocessing/output ****
+TFLAG = "min"                           # Time flag for model output. (h|min)
+                                        # h   = hour based output
+                                        # min = minute based output
+
+# The unit of HWRITUPTIMES, FULLFATIMES, ..., SFXFWFTIMES should be:
+#   - hours   if TFLAG="h"
+#   - minutes if TFLAG="min"
+
+# Writeup times of # history,surfex and fullpos files
+# Comma separated list, and/or range(s) like:
+# t1,t2,t3-t4,t5-t6:step    tb-te == tb-te:1 == tb,tb+1,tb+2,...,te
+HWRITUPTIMES = "0-540:15"               # History file output times
+FULLFAFTIMES = "0-540:15"               # History FA file IO server gather times
+PWRITUPTIMES = "0-540:15"               # Postprocessing times
+PFFULLWFTIMES = -1                      # Postprocessing FA file IO server gathering times
+SFXSELTIMES = "0-540:15"                # Surfex select file output times
+                                        # Only meaningful if SURFEX_LSELECT=yes
+SWRITUPTIMES = "0-540:60"               # Surfex model state output times
+SFXWFTIMES = "0-540:60"                 # SURFEX history FA file IO server gathering times
+
+
+SURFEX_LSELECT = "yes"                  # Only write selected fields in surfex outpute files. (yes|no)
+                                        # Check nam/surfex_selected_output.pm for details.
+                                        # Not tested with lfi files.
+
+IO_SERVER = "no"                        # Use IO server (yes|no). Set the number of cores to be used
+                                        # in your Env_submit
+POSTP = "inline"                        # Postprocessing by Fullpos (inline|offline|none).
+                                        # See Select_postp.pl for selection of fields.
+                                        # inline: this is run inside of the forecast
+                                        # offline: this is run in parallel to the forecast in a separate task
+
+MAKEGRIB_LISTENERS = 1                  # Number of parallel listeners for Makegrib
+                                        # Only applicable if ARCHIVE_FORMAT=grib
+
+                                        # **** OUTPUT FORMAT ****
+CONVERTFA = "yes"                       # Conversion of FA file to GRIB/nc (yes|no)
+ARCHIVE_FORMAT = "GRIB2"                # Format of archive files (GRIB1|GRIB2|nc). nc format yet only available in climate mode
+NCNAMES = "nwp"                         # Nameing of NetCDF files follows (climate|nwp) convention.
+RCR_POSTP = "no"                        # Produce a subset of fields from the history file for RCR monitoring
+                                        # Only applicable if ARCHIVE_FORMAT~=GRIB
+

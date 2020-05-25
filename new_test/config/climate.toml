@@ -1,0 +1,14 @@
+
+[CLIMATE]
+#####################################################################################################
+# Climate
+#####################################################################################################
+
+CREATE_CLIMATE = "yes"                  # Run climate generation (yes|no)
+MODIFY_LAKES = ".TRUE."                 # Use Vanern/VAttern as Sea, requires new climate files
+BDCLIM = "$HM_DATA/ECMWF/climate"       # Boundary climate files (ald2ald,ald2aro)
+                                        # This should point to intermediate aladin
+                                        # climate file in case of hir2aro,ifs2aro processes.
+CAERO = "tegen"                         # Climatological aerosol (AOD) tegen | camsaod | camsmmr
+
+

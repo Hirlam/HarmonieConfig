@@ -1,0 +1,13 @@
+
+[GEOMETRY]
+#####################################################################################################
+# Geometry
+#####################################################################################################
+
+DOMAIN = "TRYGVE_TEST"                  # See definitions in config/Harmonie_domains.json
+GRID_TYPE = "LINEAR"                    # Type of grid (LINEAR|QUADRATIC|CUBIC)
+VLEV = "HIRLAM_60"                      # Vertical level definition name
+                                        # HIRLAM_60, MF_60,HIRLAM_40, or
+                                        # BOUNDARIES = same number of levs as on boundary file.
+                                        # See the other choices from scr/Vertical_levels.pl
+

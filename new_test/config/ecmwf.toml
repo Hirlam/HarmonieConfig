@@ -1,0 +1,50 @@
+
+[VERIFICATION]
+#####################################################################################################
+# Verification and preparation for verification
+#####################################################################################################
+
+OBSEXTR = "yes"                         # Extract observations from BUFR (yes|no)
+FLDEXTR = "yes"                         # Extract model data for verification from model files (yes|no)
+FLDEXTR_TASKS = 16                      # Number of parallel tasks for field extraction
+
+
+# *** Field verification ***
+FLDVER = "no"                           # Main switch for field verification (yes|no)
+FLDVER_HOURS = ["06","12","18","24","30","36","42","48","54","60","66"]  # Hours for field verification
+                                        # interval must be in the list
+AI_ACCUMULATION_CYCLES = "ALL"          #"00 03 06 09 12 15 18 21" # Accumlate ana-increments for these cycles
+AI_ACCUMULATION_HOURS = 720             # Accumulate ana-increments over 30 days
+VERITIMES = "00-540:60"                 # Verification output times, changes PWRITUPTIMES/SFXSELTIMES
+
+[ECMWF]
+#####################################################################################################
+# Special ECMWF settings (Move to another file?)
+#####################################################################################################
+
+ECFSLOC = "ec"                            # Archiving site at ECMWF-ECFS: "ec" or ECFS-TMP "ectmp"
+ECFSGROUP= " hirald"                      # Group in which to chgrp the ECMWF archive, "default" or "hirald"
+
+
+# **** Archiving settings ****
+ARCHIVE_ECMWF = "yes"                       # Archive to $ECFSLOC at ECMWF (yes|no)
+# Archiving selection syntax, settings done below
+#
+# [fc|an|pp]_[fa|gr|nc] : Output from
+#  an : All steps from upper air and surface analysis
+#  fc : Forecast model state files from upper air and surfex
+#  pp : Output from FULLPOS and SURFEX_LSELECT=yes (ICMSHSELE+NNNN.sfx)
+# in any of the formats if applicable
+#  fa : FA files
+#  gr : GRIB[1|2] files
+#  nc : NetCDF files
+# sqlite|odb|VARBC|bdstrategy : odb and sqlite files stored in odb_stuff.tar
+# fldver|ddh|vobs|vfld : fldver/ddh/vobs/vfld files
+# climate : Climate files from PGD and E923
+# Some macros
+# odb_stuff=odb:VARBC:bdstrategy:sqlite
+# verif=vobs:vfld
+# fg : Required files to run the next cycle
+
+ARSTRATEGY = 'climate:fg:verif:odb_stuff:[an\|fc]_fa:pp_gr:fldver'      # Files to archive on ECFS, see above for syntax
+

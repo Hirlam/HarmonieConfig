@@ -1,0 +1,23 @@
+[GENERAL]
+CONFIGURATION = "Standard AROME settings without upper air DA"
+HH_LIST = "0-21:3"
+
+[GEOMETRY]
+DOMAIN = "DKCOEXP"
+VLEV = "65"
+
+[FORECAST]
+ENSMSEL = []
+PHYSICS = "arome"
+DYNAMICS = "nh"
+
+[NESTING]
+HOST_MODEL = "ifs"
+BDSTRATEGY = "simulate_operational"
+BDINT = 3
+
+[INITIAL_CONDITIONS]
+ANASURF = "CANARI"
+ANAATMO = "blending"
+LSMIXBC = false
+DFI = "none"

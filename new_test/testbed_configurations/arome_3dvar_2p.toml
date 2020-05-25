@@ -1,0 +1,5 @@
+OBSMONITOR = "no"
+config = "AROME_3DVAR"
+LISBA_CANOPY = ".FALSE."
+CLIMDIR = "$HM_DATA/../EXP/climate/$DOMAIN/2P"
+NPATCH = "2"

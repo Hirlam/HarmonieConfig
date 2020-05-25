@@ -1,0 +1,26 @@
+[GENERAL]
+######################################################################################################
+# General (not grouped settings)
+######################################################################################################
+
+HH_LIST = "00-21:3"                     # Which cycles to run, replaces FCINT
+LL_LIST = "03"                          # Forecast lengths for the cycles [h], replaces LL, LLMAIN
+                                        # The LL_LIST list is wrapped around if necessary, to fit HH_LIST
+
+SUPERVISOR = true                       # Supervisor
+
+                                        # **** Running mode ****
+RUNNING_MODE = "research"               # Research or operational mode (research|operational)
+                                        # operational implies that the suite will continue even if e.g.
+                                        # observations are missing or assimilation fails
+
+SIMULATION_TYPE = "nwp"                 # Type of simulation (nwp|climate)
+FP_PRECISION = "double"                 # double|single  (if makeup config file updated)
+MULTITASK = "yes"                       # Submit jobs through the multi task script
+FESTAT = "no"                           # Extract differences and do Jb calculations (no|yes)
+WARMUP_PERIOD = 0                       # Warmup period with short forecasts to spin up an experiment
+
+                                        # Recipient(s) to send mail to when a task aborts
+MAIL_ON_ABORT = ""                      # you@work,you@home
+STREAM = ""
+

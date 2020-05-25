@@ -1,0 +1,88 @@
+# HARMONIE experiment configuration file
+#
+# Please read the documentation on https://hirlam.org/trac/wiki/HarmonieSystemDocumentation first
+#
+# *** Ensemble mode general settings. ***
+
+[EPS]
+ENSINIPERT = "bnd"                        # Ensemble perturbation method (bnd). Not yet implemented: etkf, hmsv.
+EPERT_MODE = "after"                      # add IC perturbations before/after analysis in EPS mode
+SCALE_PERT = "yes"                        # Scale perturbations based on energy norm and
+EREF = 35000.0                            # energy reference
+SLAFK = 1.0                               # best set in harmonie.pm
+
+ENS_BD_CLUSTER = "no"                       # Switch on clustering for ENS data. Only has a meaning if BDSTRATEGY=eps_ec_oper
+REARCHIVE_EPS_EC_OPER = "no"                # Rearchive ENS data on ECFS
+USE_REARCHIVE_EPS_EC_OPER = "no"            # Use rearchived ENS data on ECFS
+ECFS_EPS_EC_BD_PATH = "${ECFSLOC}:/$USER/harmonie/$EXP"    # Location for rearchiving
+
+# **** SPPT Stochastic Perturbed Parameterisation Tendencies ****
+SPPT = "no"                               # Activate SPPT (no/yes)
+SDEV_SDT = 0.20                           # 0.50   0.20
+TAU_SDT = 28800                           # 28800            (8 hours)
+XLCOR_SDT = 2000000                       # 500000 2000000   (500 km)
+XCLIP_RATIO_SDT = 5.0                     # 2.0    5.0
+LSPG_SDT = '.FALSE.'                      # .TRUE. to activate SPG
+SPGQ_SDT = 0.5                            # only used for LSPG_SDT=T
+SPGADTMIN_SDT = 0.15                      # -"-
+SPGADTMAX_SDT = 3.0                       # -"-
+
+# **** SPP Stochastically Perturbed Parameterizations ***
+SPP = "no"                                # Activate LSPP (no|yes)
+SDEV_SPP = 0.2                            # Standard deviation
+TAU_SPP = 21600.0                         # Time scale (seconds)
+XLCOR_SPP = 1000000.0                     # Length scale (m)
+SPGADTMIN_SPP = 0.15                      # -"-
+SPGADTMAX_SPP = 3.0                       # -"-
+
+# Physics diagnostics
+TEND_DIAG = "no"                          # Output of tendencies from physics (no|yes)
+
+# *** This part is for EDA with observations perturbation
+PERTATMO = "none"                         # ECMAIN  : In-line observation perturbation using the default IFS way.
+                                          # CCMA    : Perturbation of the active observations only (CCMA content)
+                                          #           before the Minimization, using the PERTCMA executable.
+                                          # none    : no perturbation of upper-air observations
+
+PERTSURF = "none"                         # ECMA    : perturb also the surface observation before Canari (recommended
+                                          #         : for EDA to have full perturbation of the initial state).
+                                          # model   : perturb surface fields in grid-point space (recursive filter)
+                                          # none    : no perturbation for surface observations.
+
+
+# **** Check SP tendency evolution ****
+CHKEVO = "no"                             # (yes|no). If "yes" a CHKEVO_SPTEND file is created in $ARCHIVE
+
+ENSBDMBR  = -1
+SLAFLAG   =  0
+SLAFDIFF  =  0
+
+[EPS.MEMBER_SETTINGS.GENERAL]
+HH_LIST      = { 0 = '0-21:3', 1 = '0-21:3', 2 = '0-21:3' }
+LL_LIST      = { 0 = '3',  1 = '3',   2 = '3' }
+[EPS.MEMBER_SETTINGS.INITIAL_CONDITIONS]
+ANAATMO      = { 0 = "3DVAR",  1 = "3DVAR",  2 = "3DVAR" }
+ANASURF      = { 0 = "gridpp", 1 = "gridpp", 2 = "gridpp" }
+LSMIXBC      = { 0 = true, 1 = true, 2 = true } 
+[EPS.MEMBER_SETTINGS.SURFEX.ASSIM.SCHEMES]
+ISBA = {  0 = "OI", 1 = "OI", 2 = "OI" }
+[EPS.MEMBER_SETTINGS.SURFEX.SEA]
+PERTFLUX  = { 0 = "none" }
+[EPS.MEMBER_SETTINGS.SURFEX.ISBA]
+PERTSURF = { 0 = "none" }
+[EPS.MEMBER_SETTINGS.EPS]
+PERTATMO     = { 0 = "none" }
+[EPS.MEMBER_SETTINGS.FORECAST]
+HWRITUPTIMES = { 0 = "0-66:1", 1 = "0-66:1", 2 = "0-66:1"}
+FULLFAFTIMES = { 0 = "0-66:1", 1 = "0-66:1", 2 = "0-66:1"}
+PWRITUPTIMES = { 0 = "0-66:1", 1 = "0-66:1", 2 = "0-66:1"}
+SWRITUPTIMES = { 0 = "0-24:1", 1 = "0-24:1", 2 = "0-24:1"}
+SFXSELTIMES  = { 0 = "0-66:1", 1 = "0-66:1", 2 = "0-66:1"}
+SFXSWFTIMES  = { 0 = "0-66:1", 1 = "0-66:1", 2 = "0-66:1"}
+ENSCTL       = { 0 = "000", 1 = "001", 2 = "002", 3 = "000", 4 = "000", 5 = "000", 6 = "001", 7 = "001", 8 = "001", 9 = "001"  }
+
+#ENSBDMBR     = { 0 = 0, 1 = 1, 2 = 2, 3 = 3,  4 = 4,  5 = 5,  6 = 6,  7 = 7,  8 = 8,  9 = 9 }
+#SLAFLAG      = { 0 = 0, 1 = 6, 2 = 6, 3 = 12, 4 = 12, 5 = 18, 6 = 18, 7 = 24, 8 = 24, 9 = 30 }
+#SLAFDIFF     = { 0 = 0, 1 = 6, 2 = 6, 3 = 6,  4 = 6,  5 = 6,  6 = 6,  7 = 6,  8 = 6,  9 = 6 }
+
+

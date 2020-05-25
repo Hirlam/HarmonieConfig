@@ -1,0 +1,4 @@
+config = "ALARO"
+ANAATMO = "blending"
+ASSIM_SCHEMES_ISBA = "EKF"
+ANASURF = "CANARI"

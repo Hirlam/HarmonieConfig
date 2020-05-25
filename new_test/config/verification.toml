@@ -1,0 +1,19 @@
+
+[VERIFICATION]
+#####################################################################################################
+# Verification and preparation for verification
+#####################################################################################################
+
+OBSEXTR = "yes"                         # Extract observations from BUFR (yes|no)
+FLDEXTR = "yes"                         # Extract model data for verification from model files (yes|no)
+FLDEXTR_TASKS = 16                      # Number of parallel tasks for field extraction
+
+
+# *** Field verification ***
+FLDVER = "no"                           # Main switch for field verification (yes|no)
+FLDVER_HOURS = ["06","12","18","24","30","36","42","48","54","60","66"]  # Hours for field verification
+                                        # interval must be in the list
+AI_ACCUMULATION_CYCLES = "ALL"          #"00 03 06 09 12 15 18 21" # Accumlate ana-increments for these cycles
+AI_ACCUMULATION_HOURS = 720             # Accumulate ana-increments over 30 days
+VERITIMES = "00-540:60"                 # Verification output times, changes PWRITUPTIMES/SFXSELTIMES
+

@@ -1,0 +1,19 @@
+[TESTBED]
+CONFIGURATION = "AROME_3DVAR"
+DESCRIPTION = "AROME EPS control comparison""
+[GENERAL]
+LL_LIST = "6"
+
+[NESTING]
+BDSTRATEGY = "simulate_operational"
+BDDIR = "/mbr000"
+HOST_MODEL = "ifs"
+
+[OBSERVATIONS]
+OBDIR = "/mbr000"
+OBDIR_PATTERN = "/mbr000"
+
+
+[INITIAL_CONDITIONS]
+DFI = "none"
+

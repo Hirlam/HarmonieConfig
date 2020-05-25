@@ -1,0 +1,13 @@
+[4DVAR.INITIAL_CONDITIONS]
+
+# **** 4DVAR settings ****
+NOUTERLOOP = 2                            # 4DVAR outer loops, need to be 1 at present
+ILRES = ["2","2"]                         # Resolution (in parts of full) of outer loops
+TSTEP4D = ["120","120"]                   # Timestep length (seconds) of outer loops TL+AD
+TSTEPTRAJ = 600                           # How often the model state is saved for linearization
+TL_TEST = "yes"                           # Only active for playfile tlad_tests
+AD_TEST = "yes"                           # Only active for playfile tlad_tests
+CH_RES_SPEC = "yes"                       # yes => change of resolution of the increment spectrally; no => by FULLPOS
+FORCE1 = "no"                             # yes => tendency increment; no => analysis increment in loop 1
+FORCE2 = "no"                             # yes => tendency increment; no => analysis increment in loop 2
+

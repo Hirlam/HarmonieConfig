@@ -1,0 +1,8 @@
+BDSTRATEGY = "simulate_operational"
+HOST_MODEL = "ifs"
+OBDIR = "/mbr001"
+description = "ALARO EPS control comparison"
+LL_LIST = "6"
+DFI = "none"
+config = "ALARO_3DVAR"
+BDDIR = "/mbr001"

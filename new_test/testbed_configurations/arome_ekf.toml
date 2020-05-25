@@ -1,0 +1,6 @@
+HWRITUPTIMES = "0-12:1"
+ANAATMO = "blending"
+config = "AROME"
+CONVERTFA = "yes"
+ANASURF = "CANARI"
+ASSIM_SCHEMES_ISBA = "EKF"

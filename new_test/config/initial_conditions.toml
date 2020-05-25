@@ -1,0 +1,46 @@
+
+[INITIAL_CONDITIONS]
+#####################################################################################################
+# Inital conditions (analysis, dfi etc)
+#####################################################################################################
+
+# DFI
+DFI = "none"                            # Digital filter initialization (idfi|fdfi|none)
+                                        # idfi : Incremental dfi
+                                        # fdfi : Full dfi
+                                        # none : No initialization (AROME default case)
+TAUS = 5400                             # cut-off frequency in second
+TSPAN = 5400                            # 7200s or 5400s
+
+
+                                        # **** Assimilation ****
+ANAATMO = "3DVAR"                       # Atmospheric analysis (3DVAR|4DVAR|blending|none)
+AUGMENT_CV = "NO"                       # Augment control vector (NO|ENS)
+Q_IN_SP = "no"                          # Transform humidity to spectral space for minimization using AROME(no|yes)    
+ANASURF = "gridpp"                      # Tool to use for observations to surface assimilation (gridpp|CANARI|fgcopy|none)
+                                        # gridpp            : QC from titanlib and gridPPOI from pysurf + SODA
+                                        # CANARI            : QC in bator + CANARI OI + soil update in CANARI
+                                        # fgcopy            : Copy initial from previous cycle
+                                        # none              : No surface assimilation, cold start each cycle
+ANASURF_MODE = "before"                 # When ANASURF should be done
+                                        # before            : Before ANAATMO
+                                        # after             : After ANAATMO
+                                        # both              : Before and after ANAATMO (Only for ANAATMO=4DVAR)
+
+MAKEODB2 = "no"                         # Conversion of ODB-1 to ODB-2 using odb_migrator
+
+SST_SOURCES = ["IFS", "NEMO"]           # List of external SST sources like IFS|HIROMB|NEMO|ROMS
+                                        # See util/gl_grib_api/ala/merge_ocean.F90 for more details
+
+LSMIXBC = true                          # Spectral mixing of LBC0 file before assimilation
+JB_INTERPOL = "yes"                     # Interpolation of structure functions from a pre-defined domain to your domain
+JB_REF_DOMAIN = "METCOOP25B"            # Reference domain used for interpolation of structure functions. 
+                                        # Note that the vertical level definition has to be the same
+
+INT_SINI_FILE = "$WRK/SURFXINI.sfx"     # Surfex initial file name and location
+
+USE_MSG = "no"                          # Use MSG data for adjustment of inital profiles, EXPERIMENTAL! (no|yes)
+MSG_PATH = "$SCRATCH/CLOUDS/"           # Location of input MSG FA file, expected name is MSGcloudYYYYMMDDHH
+
+SINGLEOBS = "no"                        # Run single obs experiment with observation created by scr/Create_single_obs (no|yes)
+

@@ -1,0 +1,4 @@
+ANAATMO = "none"
+config = "AROME"
+DECOMPOSITION = "2D"
+ANASURF = "none"

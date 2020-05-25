@@ -1,0 +1,26 @@
+GENERAL]
+HH_LIST = "0-21:3"
+
+[GEOMETRY]
+DOMAIN = "DKCOEXP"
+VLEV = "65"
+
+[NESTING]
+BDSTRATEGY = "eps_ec_oper"
+BDINT = 3
+
+[INITIAL_CONDITIONS]
+ANAATMO = "3DVAR"
+AUGMENT_CV = "ENS"
+Q_IN_SP = "yes"
+
+[FORECAST]
+ENSMSEL = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,, 10]
+
+[EPS]
+ENSINIPERT = "bnd"
+SLAFLAG = 0
+
+[EPS.MEMBER_SETTINGS.INITIAL_CONDITIONS]
+ENSBDMBR = { 0 = "0", 1 = "1", 2 = "2", 3 = "3", 4 = "4", 5 = "5", 6 = "6", 7 = "7", 8 = "8", 9 = "9", 10 = "10" }
+

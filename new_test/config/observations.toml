@@ -1,0 +1,110 @@
+[OBSERVATIONS]
+
+OBDIR_PATTERN="$HM_DATA/archive/observations/@YYYY@/@MM@/@DD@/@HH@/"
+
+# *** Observation monitoring ***
+OBSMONITOR="obstat"                     # Create Observation statistics plots
+                                        # Format: OBSMONITOR=Option1:Option2:...:OptionN
+                                        # obstat: Daily usage maps and departures
+                                        # no: Nothing at all
+                                        #
+                                        # obstat is # only active if ANAATMO != none
+OBSMON_SYNC="no"                        # Sync obsmn sqlite tables to ecgate (yes|no)
+
+#---------------------------------------------------
+# Observations file
+#---------------------------------------------------
+# FORMAT, it might be "BUFR" or "OPLACE"
+# OBSOUL is not handled in oulan
+OFORMAT="BUFR"    
+
+#---------------------------------------------------
+# USEOBSOUL: HOW TO PROCESS CONVENTIONAL BUFR
+#        1=> BATOR READS OBSOUL FILE
+#        0=> BATOR READS CONVENTIONAL BUFR DIRECTLY 
+#---------------------------------------------------
+USEOBSOUL=0
+
+#---------------------------------------------------
+#  TITAN observation settings
+#---------------------------------------------------
+SYNOP_OBS_T2M=1             # SYNOP 2m air temperature from bufr files
+SYNOP_OBS_RH2M=1            # SYNOP 2m relative humidity from bufr files 
+SYNOP_OBS_SD=1              # SYNOP snow depth from bufr files
+NETATMO_OBS_T2M=1           # 2m air temperature observations from Netatmo stations
+NETATMO_OBS_RH2M=1          # 2m relative humidity observations from Netatmo stations
+QC_TESTS="domain blacklist nometa redundancy plausibility firstguess sct"
+
+#---------------------------------------------------
+# LIST OBSERVATIONS TO USE (0: NO; 1: YES)
+# ODB base list updated accordingly
+#---------------------------------------------------
+SYNOP_OBS=1             # All SYNOP including SHIP
+AIRCRAFT_OBS=1          # AMDAR, AIREP, ACARS
+MODESEHS_OBS=0          # Mode-S EHS 
+BUOY_OBS=1              # BUOY
+TEMP_OBS=1              # TEMP, TEMPSHIP
+PILOT_OBS=1             # Pilot, Europrofiler
+EPROF_OBS=0             # E-PROFILE
+GNSS_OBS=1              # GNSS
+GNSS_SOURCE="obsoul"    # obsoul:cost ascii|bufr:?
+SGNSS_OBS=0             # slant-GNSS
+CONV_SOURCE="mcp"       # mars:MARS | local: everywhere else
+
+AMV_OBS=0               # Satob geowind
+AMV_SOURCE="mars"       # mars:MARS | else: file in $OBDIR
+
+AMSUA_OBS=1             # AMSU-A
+AMSUA_SOURCE="local"    # mars:MARS | else: file in $OBDIR
+
+AMSUB_OBS=1             # AMSU-B/MHS
+AMSUB_SOURCE="local"    # mars:MARS | else: file in $OBDIR
+
+MWHS2_OBS=0             # MWHS2
+MWHS_SOURCE="local"     # mars:MARS | else: file in $OBDIR
+
+IASI_OBS=1              # IASI  
+IASI_SOURCE="local"     # mars:MARS | else: file in $OBDIR
+IASI_RT_COEF="lblrtm"   # genln2|kcarta|lblrtm
+
+SEV_OBS=0               # (BUFR) SEVIRI clear-sky radiances
+SEV_SOURCE="mars"       # mars:MARS | else: file in $OBDIR
+
+SEVIRI_OBS=0            # Seviri radiances
+
+SCATT_OBS=0             # Scatterometer data not defined everywhere
+SCATT_SOURCE="ears"     # mars:MARS | else: file in $OBDIR
+
+ATMS_OBS=0              # ATMS
+ATMS_SOURCE="mars"      # mars:MARS | else: file in $OBDIR
+
+CRIS_OBS=0              # CRIS
+CRIS_SOURCE="mars"      # mars:MARS | else: file in $OBDIR
+
+HIRS_OBS=0              # HIRS
+HIRS_SOURCE="mars"      # mars:MARS | else: file in $OBDIR
+
+PAOB_OBS=0              # PAOB not defined everywhere
+
+GPSRO_SOURCE=0          # GPS-RO
+GPSRO_OBS=0             # LIMB observations - GPS Radio Occultations
+
+RADAR_OBS=1             # Radar 
+
+#---------------------------------------------------
+# GNSS OBSERVATIONS (GPS ZTD) SETTINGS
+#---------------------------------------------------
+LSTATIC_BIAS="F"        # Switch for bias correction or not, (T|F)
+LVARBC_GNSS="T"         # Switch for GNSS varbc 
+#
+#---------------------------------------------------
+# BIAS CORRECTION SETTINGS
+#---------------------------------------------------
+LVARBC="F"        # T|F
+
+#---------------------------------------------------
+# Start with empty VARBC coefficients
+#---------------------------------------------------
+VARBC_COLD_START="no" # no|yes
+
+

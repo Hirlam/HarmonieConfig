@@ -1,0 +1,28 @@
+[GENERAL]
+HH_LIST = "0-21:3"
+
+[GEOMETRY]
+DOMAIN = "DKCOEXP"
+VLEV = "65"
+
+[NESTING]
+HOST_MODEL = "ifs"
+BDINT = 3
+BDSTRATEGY = "simulate_operational"
+
+[INITIAL_CONDITIONS]
+LSMIXBC = "no"
+ANAATMO = "blending"
+ANASURF = "CANARI"
+DFI = "none"
+
+[FORECAST]
+ENSMSEL = []
+PHYSICS = "alaro"
+ALARO_VERSION = 0
+DYNAMICS = "nh"
+
+[EPS]
+ENSINIPERT = "none"
+
+

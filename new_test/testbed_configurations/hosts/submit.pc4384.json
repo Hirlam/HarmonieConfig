@@ -1,0 +1,50 @@
+{
+  "2D": {
+    "parallel": {
+      "HOST": "0",
+      "HOSTNAME": "pc4384",
+      "SUBMIT": "",
+      "SUBMIT_HOOK": "",
+      "OMP_NUM_THREADS": "export OMP_NUM_THREADS=1",
+      "DR_HOOK": "export DR_HOOK=1",
+      "NODES": "#PBS -l select=1:ncpus=28:mpiprocs=6:ompthreads=1,place=scatter",
+      "NPROC": "export NPROC=6",
+      "NPROCX": "export NPROCX=2",
+      "NPROCY": "export NPROCY=3",
+      "NPOOLS": "export NPOOLS=4",
+      "NPOOLS_CANARI": "export NPOOLS_CANARI=4",
+      "KILL": "qdel $PBS_JOB_ID",
+      "tasks": [
+        "Forecast",
+        "Screening",
+        "Minim",
+        "Canari",
+        "Bator"
+      ]
+    }
+  },
+  "1D": {
+    "parallel": {
+      "HOST": "0",
+      "HOSTNAME": "pc4384",
+      "SUBMIT": "",
+      "SUBMIT_HOOK": "", 
+      "OMP_NUM_THREADS": "export OMP_NUM_THREADS=1",
+      "DR_HOOK": "export DR_HOOK=1",
+      "NODES": "#PBS -l select=1:ncpus=28:mpiprocs=6:ompthreads=1,place=scatter",
+      "NPROC": "export NPROC=6",
+      "NPROCX": "export NPROCX=1",
+      "NPROCY": "export NPROCY=6",
+      "NPOOLS": "export NPOOLS=4",
+      "NPOOLS_CANARI": "export NPOOLS_CANARI=4",
+      "KILL": "qdel $PBS_JOB_ID",
+      "tasks": [
+        "Forecast",
+        "Screening",
+        "Minim",
+        "Canari",
+        "Bator"
+      ]
+    }
+  }
+}

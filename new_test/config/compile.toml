@@ -1,0 +1,10 @@
+[COMPILE]
+####################################################################################################
+# Compilation settings
+#####################################################################################################
+
+BUILD = "yes"                           # Turn on or off the compilation and binary build ( yes|no)
+COMPILE_ENKF = "no"                     # Compile LETKF code (yes|no)
+COMPILE_DABYFA = "no"                   # Compile FA/VC code (yes|no)
+SURFEX_OFFLINE_BINARIES = "no"          # Switch to compile and use offline SURFEX binaries
+

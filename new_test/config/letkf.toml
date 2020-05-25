@@ -1,0 +1,24 @@
+# HARMONIE experiment configuration file
+#
+# Please read the documentation on https://hirlam.org/trac/wiki/HarmonieSystemDocumentation first
+#
+# NB! All combinations may not be valid or well tested
+#
+# **** Build and bin paths ****
+# Definitions about Build, should fit with hm_rev
+
+# **** LETKF ****
+[LETKF.INITIAL_CONDITIONS]
+ANASURF_MODE="after"                  # Highly recommended so far. Better scores than "before". This needs research...
+ADDITIVE_INFLATION="TRUE"             # Default option... So far better scores
+HYBRID="no"                           # (yes|no) to allow hybrid 3DVAR/LETKF analysis. Gain recentred ensemble method
+KHYBRID=0.5                           # Weight factor for hybrid analysis (only valid if HYBRID=yes)
+LETKF_3DSCREEN="yes"                  # (yes|no) to compute H(x) in Screening (no integration along analysis window, much cheaper computing)
+LSMIXBC="no"                          # LSMIXBC is yes only for the control member (see harmonie.pm). LSMIX has very positive impact
+CH_RES_SPEC="no"                      # This is for when using LETKF_3DSCREEN="no"
+NOUTERLOOP=1                          # This is for when using LETKF_3DSCREEN="no"
+AI_ARCH="$HM_DATA/add_infl"           # archive directory for additive inflation. Useful if one reruns an experiment not to use MARS again
+LETKF_LAG="no"                        # (yes|no) to double ensemble size by using ENSSIZE members from previous run
+LETKF_CONTROL="yes"                   # (yes|no) to use background from control member to construct LETKF analysis (KENDA approximation)
+
+

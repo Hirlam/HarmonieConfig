@@ -1,0 +1,3 @@
+[TESTBED]
+DESCRIPTION = "Default AROME configuration"
+CONFIGURATION = "AROME"

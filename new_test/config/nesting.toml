@@ -1,0 +1,64 @@
+
+[NESTING]
+#####################################################################################################
+# Nesting
+#####################################################################################################
+
+HOST_MODEL = "ifs"                      # Host model (ifs|hir|ald|ala|aro)
+                                        # ifs : ecmwf data
+                                        # hir : hirlam data
+                                        # ald : Output from aladin physics
+                                        # ala : Output from alaro physics
+                                        # aro : Output from arome physics
+
+HOST_SURFEX = "no"                      # yes if the host model is run with SURFEX
+NBDMAX = 1                              # Number of parallel interpolation tasks
+BDLIB = "ECMWF"                         # Boundary experiment, set:
+                                        # ECMWF to use MARS data
+                                        # RCRa  to use RCRa data from ECFS
+                                        # Other HARMONIE/HIRLAM experiment
+
+BDDIR = "$HM_DATA/archive/ECMWF/@YYYY@/@MM@/@DD@/@HH@" # Boundary file directory,
+                                                       # For more information, read in scr/Boundary_strategy.pl
+INT_BDFILE = "$WRK/ELSCF${CNMEXP}ALBC@NNN@"            # Interpolated boundary file name and location
+
+
+BDSTRATEGY = "available"        # Which boundary strategy to follow 
+                                # as defined in scr/Boundary_strategy.pl
+                                #
+                                # available            : Search for available files in BDDIR, try to keep forecast consistency
+                                #                        This is ment to be used operationally.
+                                # available_dis_[ens|det] : Search for available ENS/HRES files in BDDIR expecting dissemination style file content, 
+                                #                           try to keep forecast consistency. This is ment to be used operationally. 
+                                # simulate_operational[_dis[_ens|_det]] : Mimic the behaviour of the operational runs using ECMWF LBC, ie
+                                #                        6h old boundaries at 00,06,12,18
+                                #                        7-11h at the other cycles
+                                # simulate_metcoop     : Mimic the behaviour of the MetCoOp operational runs using ECMWF LBC ie
+                                #                        6h old boundaries at 00,06,12,18
+                                #                        3h old boundaries at 03,09,15,21
+                                # same_forecast        : Use all boundaries from the same forecast, start from analysis
+                                # analysis_only        : Use only analysises as boundaries
+                                # era                  : As for analysis_only but using ERA interim data
+                                # e40                  : As for analysis_only but using ERA40 data
+                                # era5                 : As for analysis_only but using ERA5 data
+                                # latest               : Use the latest possible boundary with the shortest forecast length
+                                # RCR_operational      : Mimic the behaviour of the RCR runs, ie
+                                #                        12h old boundaries at 00 and 12 and
+                                #                        06h old boundaries at 06 and 18
+
+                                # Special ensemble strategies
+                                # Only meaningful with ENSMSEL non-empty, i.e., ENSSIZE > 0
+
+                                # enda                 : use ECMWF ENDA data for running ensemble data assimilation
+                                #                        or generation of background statistic.
+                                #                        Note that only LL up to 9h is supported
+                                #                        with this you should set your ENSMSEL members
+                                # eps_ec               : ECMWF ENS members from the GLAMEPS ECFS archive.
+                                #                        Data available from Feb 2013 - June 2019
+                                # eps_ec_oper          : ECMWF ENS members from the operational archives
+                                #                        note that data has a limited lifetime in MARS
+
+BDINT = 1                       # Boundary interval in hours
+PERTDIA_BDINT = 6               # Perturbation diagnostics interval
+IO_SERVER_BD = "yes"            # Use IO server for reading of boundary data
+

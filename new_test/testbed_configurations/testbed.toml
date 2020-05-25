@@ -1,0 +1,7 @@
+testbed_list = ["arome_3dvar", "arome_1d", "arome", "arome_musc", "arome_3denvar", "arome_3dvar_marsobs", "arome_bd_aro", "arome_bd_aro_io_serv", "harmoneps harmoneps_ifsens", "arome_eps_comp", "arome_jb"]
+
+[dependencies]
+arome_musc = ["arome"]
+arome_bd_aro = ["arome"]
+arome_bd_aro_io_serv = ["arome"]
+

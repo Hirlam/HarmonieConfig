@@ -1,0 +1,22 @@
+[TESTBED]
+CONFIGURATION = "AROME"
+PLAYFILE = "musc"
+
+[GEOMETRY]
+DOMAIN = "MUSC"
+
+[NESTING]
+BDSTRATEGY = "available"
+HOST_MODEL = "aro"
+HOST_SURFEX = "yes"
+BDCLIM = ""
+BDDIR = "$HM_DATA/../AROME/archive/@YYYY@/@MM@/@DD@/@HH@/"
+
+[INITIAL_CONDITIONS]
+ANASURF = "none"
+LSMIXBC = "no"
+ANAATMO = "none"
+
+[FORECAST]
+SURFEX_LSELECT = "no"
+
